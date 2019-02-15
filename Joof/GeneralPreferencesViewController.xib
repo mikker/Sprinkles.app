@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GeneralPreferencesViewController" customModule="Joof" customModuleProvider="target">
+            <connections>
+                <outlet property="directoryPathControl" destination="fMM-Ef-qed" id="R2c-u7-jgk"/>
+                <outlet property="installationInstructionsButton" destination="8AU-Fv-0at" id="syj-uW-7pI"/>
+                <outlet property="launchAtLoginCheckbox" destination="14M-io-wAx" id="JQH-4W-vyQ"/>
+                <outlet property="quitButton" destination="MyY-wX-bwV" id="nO0-z7-AFI"/>
+                <outlet property="statusLabel" destination="iMp-W0-EzQ" id="6ap-ir-jLF"/>
+                <outlet property="statusLight" destination="9y7-oo-htG" id="B4X-Wv-kKC"/>
+                <outlet property="view" destination="XrK-ce-fWQ" id="4ZO-xK-X42"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="XrK-ce-fWQ">
+            <rect key="frame" x="0.0" y="0.0" width="481" height="261"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fMM-Ef-qed">
+                    <rect key="frame" x="129" y="173" width="281" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="hxN-j4-9QY"/>
+                    </constraints>
+                    <pathCell key="cell" controlSize="small" selectable="YES" enabled="NO" alignment="left" placeholderString="" id="cTG-qh-iHI">
+                        <font key="font" metaFont="system"/>
+                        <url key="url" string="file:///"/>
+                    </pathCell>
+                    <connections>
+                        <outlet property="delegate" destination="-2" id="Ef4-Fu-cz1"/>
+                    </connections>
+                </pathControl>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ikd-ag-vPn">
+                    <rect key="frame" x="413" y="168" width="53" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="LQc-Pb-7tO"/>
+                        <constraint firstAttribute="width" constant="43" id="wFx-xP-0or"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" title="Set…" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rlj-Bc-gjd">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="pickDirectoryPressed:" target="-2" id="YFT-A0-ZXa"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wqv-Tf-AjW">
+                    <rect key="frame" x="18" y="174" width="105" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="8jv-ob-g5z"/>
+                    </constraints>
+                    <textFieldCell key="cell" controlSize="small" lineBreakMode="clipping" alignment="right" title="Source directory" id="7Kl-C3-EXP">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wPC-av-VFz">
+                    <rect key="frame" x="18" y="223" width="105" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="101" id="BWk-nZ-MI8"/>
+                        <constraint firstAttribute="height" constant="18" id="gmz-7I-fY2"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="pbB-A4-Gxg"/>
+                    </constraints>
+                    <textFieldCell key="cell" controlSize="small" lineBreakMode="clipping" alignment="right" title="Server status" id="P7h-td-Ga0">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iMp-W0-EzQ">
+                    <rect key="frame" x="143" y="223" width="320" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="2HB-gT-vON"/>
+                    </constraints>
+                    <textFieldCell key="cell" controlSize="small" lineBreakMode="clipping" alignment="left" title="Running" id="gr3-Vi-wGe">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="JYl-gy-4Ev">
+                    <rect key="frame" x="127" y="123" width="336" height="42"/>
+                    <textFieldCell key="cell" controlSize="small" refusesFirstResponder="YES" id="lvA-TV-v4U">
+                        <font key="font" metaFont="smallSystem"/>
+                        <string key="title">This is the directory that holds your JavaScript and CSS files. It can reside anywhere on your harddrive – I suggest you keep it in you dotfiles.</string>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="14M-io-wAx">
+                    <rect key="frame" x="126" y="74" width="337" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="xtf-hl-qR1"/>
+                    </constraints>
+                    <buttonCell key="cell" type="check" title="Start joof at login" bezelStyle="regularSquare" imagePosition="left" controlSize="small" inset="2" id="m64-vd-pjC">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="launchAtStartupPressed:" target="-2" id="Alm-WF-Eio"/>
+                    </connections>
+                </button>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="9y7-oo-htG" customClass="StatusLightView" customModule="Joof" customModuleProvider="target">
+                    <rect key="frame" x="129" y="225" width="14" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="14" id="P7y-c8-2M4"/>
+                        <constraint firstAttribute="height" constant="14" id="UVC-lw-nd5"/>
+                    </constraints>
+                </customView>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MyY-wX-bwV">
+                    <rect key="frame" x="391" y="14" width="75" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="65" id="8uH-pe-vjP"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" title="Quit Joof" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iPx-hR-qKQ">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="quitPressed:" target="-2" id="dYU-HD-jWd"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8AU-Fv-0at">
+                    <rect key="frame" x="197" y="14" width="196" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="186" id="KvV-DZ-GYo"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" title="Open Installation Instructions" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="b66-j1-5FD">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="installationInstructionsPressed:" target="-2" id="AXL-zg-LZB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="14M-io-wAx" firstAttribute="leading" secondItem="Wqv-Tf-AjW" secondAttribute="trailing" constant="8" id="0dN-qg-4cR"/>
+                <constraint firstItem="iMp-W0-EzQ" firstAttribute="centerY" secondItem="9y7-oo-htG" secondAttribute="centerY" id="2RY-n7-0hp"/>
+                <constraint firstItem="Ikd-ag-vPn" firstAttribute="centerY" secondItem="Wqv-Tf-AjW" secondAttribute="centerY" id="2uS-Tw-fEs"/>
+                <constraint firstItem="Wqv-Tf-AjW" firstAttribute="top" secondItem="wPC-av-VFz" secondAttribute="bottom" constant="31" id="45r-Gh-EK6"/>
+                <constraint firstItem="9y7-oo-htG" firstAttribute="leading" secondItem="wPC-av-VFz" secondAttribute="trailing" constant="8" id="9Ri-R7-s7g"/>
+                <constraint firstAttribute="trailing" secondItem="iMp-W0-EzQ" secondAttribute="trailing" constant="20" id="9ul-Qj-s5A"/>
+                <constraint firstAttribute="trailing" secondItem="MyY-wX-bwV" secondAttribute="trailing" constant="20" id="9wa-gO-6Ye"/>
+                <constraint firstItem="fMM-Ef-qed" firstAttribute="leading" secondItem="Wqv-Tf-AjW" secondAttribute="trailing" constant="8" id="E8w-u4-1gM"/>
+                <constraint firstItem="wPC-av-VFz" firstAttribute="leading" secondItem="XrK-ce-fWQ" secondAttribute="leading" constant="20" id="H4J-rB-xgC"/>
+                <constraint firstItem="JYl-gy-4Ev" firstAttribute="leading" secondItem="Wqv-Tf-AjW" secondAttribute="trailing" constant="8" id="LDM-nF-1qE"/>
+                <constraint firstItem="fMM-Ef-qed" firstAttribute="centerY" secondItem="Wqv-Tf-AjW" secondAttribute="centerY" id="MtR-lb-kWf"/>
+                <constraint firstAttribute="trailing" secondItem="JYl-gy-4Ev" secondAttribute="trailing" constant="20" id="Pve-E3-KJ8"/>
+                <constraint firstItem="9y7-oo-htG" firstAttribute="centerY" secondItem="wPC-av-VFz" secondAttribute="centerY" id="QDe-zU-VRb"/>
+                <constraint firstAttribute="trailing" secondItem="14M-io-wAx" secondAttribute="trailing" constant="20" id="Qvo-Ga-1Ju"/>
+                <constraint firstItem="wPC-av-VFz" firstAttribute="top" secondItem="XrK-ce-fWQ" secondAttribute="top" constant="20" id="TjS-kc-DJa"/>
+                <constraint firstItem="Wqv-Tf-AjW" firstAttribute="leading" secondItem="XrK-ce-fWQ" secondAttribute="leading" constant="20" id="WUR-4V-nBM"/>
+                <constraint firstItem="8AU-Fv-0at" firstAttribute="centerY" secondItem="MyY-wX-bwV" secondAttribute="centerY" id="XMb-Uc-RbN"/>
+                <constraint firstAttribute="trailing" secondItem="14M-io-wAx" secondAttribute="trailing" constant="20" id="Yg5-W9-lh7"/>
+                <constraint firstItem="Ikd-ag-vPn" firstAttribute="leading" secondItem="fMM-Ef-qed" secondAttribute="trailing" constant="8" id="eB4-rj-Xty"/>
+                <constraint firstItem="14M-io-wAx" firstAttribute="top" secondItem="JYl-gy-4Ev" secondAttribute="bottom" constant="30" id="f0n-6Y-wPp"/>
+                <constraint firstItem="MyY-wX-bwV" firstAttribute="leading" secondItem="8AU-Fv-0at" secondAttribute="trailing" constant="8" id="kQy-Z0-Lhp"/>
+                <constraint firstAttribute="trailing" secondItem="Ikd-ag-vPn" secondAttribute="trailing" constant="20" id="lvB-pr-Mwo"/>
+                <constraint firstItem="iMp-W0-EzQ" firstAttribute="leading" secondItem="9y7-oo-htG" secondAttribute="trailing" constant="2" id="shE-5U-gtO"/>
+                <constraint firstAttribute="bottom" secondItem="MyY-wX-bwV" secondAttribute="bottom" constant="20" id="vRV-Vx-RHc"/>
+                <constraint firstItem="JYl-gy-4Ev" firstAttribute="top" secondItem="fMM-Ef-qed" secondAttribute="bottom" constant="8" id="vnC-1m-1B8"/>
+            </constraints>
+            <point key="canvasLocation" x="-269.5" y="-148.5"/>
+        </customView>
+    </objects>
+</document>

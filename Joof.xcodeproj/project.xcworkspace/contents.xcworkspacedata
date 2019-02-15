@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:../AppIcon.appiconset"
+      name = "AppIcon.appiconset">
+      <FileRef
+         location = "group:AppIcon-64px-32pt@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:AppIcon-512px-256pt@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:AppIcon-32px-32pt@1x.png">
+      </FileRef>
+      <FileRef
+         location = "group:AppIcon-256px-128pt@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:AppIcon-16px-16pt@1x.png">
+      </FileRef>
+      <FileRef
+         location = "group:AppIcon-1024px.png">
+      </FileRef>
+      <FileRef
+         location = "group:AppIcon-128px-128pt@1x.png">
+      </FileRef>
+      <FileRef
+         location = "group:AppIcon-512px.png">
+      </FileRef>
+      <FileRef
+         location = "group:Contents.json">
+      </FileRef>
+      <FileRef
+         location = "group:AppIcon-32px-16pt@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:AppIcon-256px-256pt@1x.png">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "self:">
+   </FileRef>
+</Workspace>
