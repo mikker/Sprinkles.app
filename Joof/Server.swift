@@ -1,6 +1,7 @@
 import Foundation
 import Criollo
 import Regex
+import Sentry
 
 func injectStyleElement(_ css: String) -> String {
     return """
@@ -103,8 +104,16 @@ class Server: NSObject {
 extension Server: CRServerDelegate {
     func serverDidStartListening(_ server: CRServer) {
         Server.instance.state = .running
+
+        let event = Event(level: .info)
+        event.message = "Server running"
+        Client.shared?.send(event: event, completion: nil)
     }
     func serverDidStopListening(_ server: CRServer) {
         Server.instance.state = .stopped
+
+        let event = Event(level: .info)
+        event.message = "Server stopped"
+        Client.shared?.send(event: event, completion: nil)
     }
 }

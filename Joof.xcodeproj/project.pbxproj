@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42012E072227315B001F5F4F /* Sentry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42012E0422273159001F5F4F /* Sentry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		421FDA0A21F513EB004BDB68 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FDA0921F513EB004BDB68 /* Defaults.swift */; };
 		425A177721EFC86600C57D44 /* Joof.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 425A177621EFC86600C57D44 /* Joof.entitlements */; };
 		425A177921EFC86600C57D44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A177821EFC86600C57D44 /* AppDelegate.swift */; };
@@ -30,12 +31,12 @@
 		42690B612216CCC400DF8AB3 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 42690B602216CCC400DF8AB3 /* index.html */; };
 		42690B642216D0A300DF8AB3 /* favicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42690B622216D0A300DF8AB3 /* favicon.png */; };
 		42690B652216D0A300DF8AB3 /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 42690B632216D0A300DF8AB3 /* favicon.ico */; };
-		429543DD21F26796007EBAF3 /* LaunchAtLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 429543DA21F26783007EBAF3 /* LaunchAtLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		429543E121F27387007EBAF3 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429543E021F27387007EBAF3 /* Bookmark.swift */; };
 		429543EB21F50D22007EBAF3 /* Defaults.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 429543E721F50D15007EBAF3 /* Defaults.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		429543ED21F50D22007EBAF3 /* Preferences.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 429543E621F50D15007EBAF3 /* Preferences.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		429543EF21F50D4F007EBAF3 /* GeneralPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429543EE21F50D4F007EBAF3 /* GeneralPreferencesViewController.swift */; };
 		429543F321F51225007EBAF3 /* GeneralPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 429543F221F51225007EBAF3 /* GeneralPreferencesViewController.xib */; };
+		42E5023A2217501E009A6253 /* LaunchAtLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42E5023722175015009A6253 /* LaunchAtLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,10 +82,11 @@
 			dstSubfolderSpec = 10;
 			files = (
 				425A17E121F138F000C57D44 /* Criollo.framework in Embed Frameworks */,
+				42012E072227315B001F5F4F /* Sentry.framework in Embed Frameworks */,
 				425A17F021F1DAC500C57D44 /* Regex.framework in Embed Frameworks */,
+				42E5023A2217501E009A6253 /* LaunchAtLogin.framework in Embed Frameworks */,
 				429543EB21F50D22007EBAF3 /* Defaults.framework in Embed Frameworks */,
 				429543ED21F50D22007EBAF3 /* Preferences.framework in Embed Frameworks */,
-				429543DD21F26796007EBAF3 /* LaunchAtLogin.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +94,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		42012E0422273159001F5F4F /* Sentry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sentry.framework; path = Carthage/Build/Mac/Sentry.framework; sourceTree = "<group>"; };
 		421FDA0921F513EB004BDB68 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		425A177321EFC86500C57D44 /* Joof.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Joof.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		425A177621EFC86600C57D44 /* Joof.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Joof.entitlements; sourceTree = "<group>"; };
@@ -123,12 +126,12 @@
 		42690B602216CCC400DF8AB3 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		42690B622216D0A300DF8AB3 /* favicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favicon.png; sourceTree = "<group>"; };
 		42690B632216D0A300DF8AB3 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
-		429543DA21F26783007EBAF3 /* LaunchAtLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LaunchAtLogin.framework; sourceTree = "<group>"; };
 		429543E021F27387007EBAF3 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		429543E621F50D15007EBAF3 /* Preferences.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Preferences.framework; path = Carthage/Build/Mac/Preferences.framework; sourceTree = "<group>"; };
 		429543E721F50D15007EBAF3 /* Defaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Defaults.framework; path = Carthage/Build/Mac/Defaults.framework; sourceTree = "<group>"; };
 		429543EE21F50D4F007EBAF3 /* GeneralPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesViewController.swift; sourceTree = "<group>"; };
 		429543F221F51225007EBAF3 /* GeneralPreferencesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralPreferencesViewController.xib; sourceTree = "<group>"; };
+		42E5023722175015009A6253 /* LaunchAtLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LaunchAtLogin.framework; path = Carthage/Build/Mac/LaunchAtLogin.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,9 +236,10 @@
 		425A17A021EFC86700C57D44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42012E0422273159001F5F4F /* Sentry.framework */,
+				42E5023722175015009A6253 /* LaunchAtLogin.framework */,
 				429543E721F50D15007EBAF3 /* Defaults.framework */,
 				429543E621F50D15007EBAF3 /* Preferences.framework */,
-				429543DA21F26783007EBAF3 /* LaunchAtLogin.framework */,
 				425A17ED21F1DABD00C57D44 /* Regex.framework */,
 				425A17DE21F138E200C57D44 /* Criollo.framework */,
 				425A17A121EFC86700C57D44 /* Cocoa.framework */,
@@ -278,6 +282,7 @@
 				428B7C4721F1FAE80065EE2B /* Carthage: Copy frameworks */,
 				425A17D521F0CCD000C57D44 /* Embed Frameworks */,
 				429543DF21F26864007EBAF3 /* LaunchAtLogin: Copy helper */,
+				42012E0822273222001F5F4F /* Upload DSYM to Sentry */,
 			);
 			buildRules = (
 			);
@@ -450,6 +455,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		42012E0822273222001F5F4F /* Upload DSYM to Sentry */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Upload DSYM to Sentry";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which sentry-cli >/dev/null; then\n    export SENTRY_ORG=brainbow\n    export SENTRY_PROJECT=joofapp\n    export SENTRY_AUTH_TOKEN=\"27b17a4769dc45f7bf42df5b08a1c1a98442d83e133143c996e9dcf8903e9e29\"\n    ERROR=$(sentry-cli upload-dif \"$DWARF_DSYM_FOLDER_PATH\" 2>&1 >/dev/null)\n    if [ ! $? -eq 0 ]; then\n        echo \"warning: sentry-cli - $ERROR\"\n    fi\nelse\n    echo \"warning: sentry-cli not installed, download from https://github.com/getsentry/sentry-cli/releases\"\nfi\n";
+		};
 		428B7C4721F1FAE80065EE2B /* Carthage: Copy frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -502,7 +525,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -747,6 +770,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (

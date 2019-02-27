@@ -2,6 +2,7 @@ import Cocoa
 import Preferences
 import LaunchAtLogin
 import Defaults
+import Sentry
 
 final class GeneralPreferencesViewController: NSViewController, Preferenceable {
     let toolbarItemTitle = "General"
@@ -68,6 +69,7 @@ final class GeneralPreferencesViewController: NSViewController, Preferenceable {
     }
 
     @IBAction func installationInstructionsPressed(_ sender: Any?) {
+        Client.shared?.crash()
         NSWorkspace.shared.open(URL(string: "https://joof.app/installation-instructions")!)
     }
 

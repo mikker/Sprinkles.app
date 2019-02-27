@@ -10,6 +10,7 @@ import Cocoa
 import Preferences
 import Defaults
 import SafariServices
+import Sentry
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -21,6 +22,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     )
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        initSentry()
+
         NSApp.setActivationPolicy(.accessory)
 
         if let menubarButton = statusItem.button {
@@ -55,6 +58,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc func showPreferences() {
         preferencesWindowController.showWindow()
+    }
+
+    private func initSentry() {
+        do {
+            Client.shared = try Client(dsn: "https://b0298bed5c364de2862c0760a881112b@sentry.io/1404238")
+            try Client.shared?.startCrashHandler()
+        } catch let error {
+            print("\(error)")
+        }
+
+        let event = Event(level: .info)
+        event.message = "Joof booted"
+        Client.shared?.send(event: event, completion: nil)
     }
 
     private func buildMenubarMenu() {
