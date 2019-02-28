@@ -9,6 +9,6 @@ class JoofUITests: XCTestCase {
     override func tearDown() {
     }
 
-//    func testExample() {
-//    }
+    func testExample() {
+    }
 }

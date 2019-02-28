@@ -39,8 +39,9 @@ class Server: NSObject {
         server.delegate = self
 
         server.mount("/", fileAtPath: Bundle.main.path(forResource: "index", ofType: "html")!)
-        server.mount("/favicon.ico", fileAtPath: Bundle.main.path(forResource: "favicon", ofType: "ico")!)
-        server.mount("/favicon.png", fileAtPath: Bundle.main.path(forResource: "favicon", ofType: "png")!)
+
+        server.get("/favicon.ico") { (_, res, _) in res.send(favicon("ico")) }
+        server.get("/favicon.png") { (_, res, _) in res.send(favicon("png")) }
 
         server.get("/[a-zA-Z0-9-\\.]+") { (req, res, _) in
             res.setAllHTTPHeaderFields([
@@ -115,5 +116,16 @@ extension Server: CRServerDelegate {
         let event = Event(level: .info)
         event.message = "Server stopped"
         Client.shared?.send(event: event, completion: nil)
+    }
+}
+
+func favicon(_ ext: String) -> Data {
+    let url = Bundle.main.url(forResource: "favicon", withExtension: ext)!
+    do {
+        let data = try Data(contentsOf: url)
+        return (data)
+    } catch {
+        print(error)
+        return Data(capacity: 0)
     }
 }
