@@ -40,9 +40,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             store.dispatch(.setDirectory(directory))
         } else {
             preferencesWindowController.showWindow()
+            openSafariExtensionsIfDisabled()
         }
-
-        openSafariExtensionsIfDisabled()
 
         unsubscribe = store.subscribe { state in
             if state.directory != nil && state.hasCert {
