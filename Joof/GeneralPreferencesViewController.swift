@@ -69,7 +69,6 @@ final class GeneralPreferencesViewController: NSViewController, Preferenceable {
     }
 
     @IBAction func installationInstructionsPressed(_ sender: Any?) {
-        Client.shared?.crash()
         NSWorkspace.shared.open(URL(string: "https://joof.app/installation-instructions")!)
     }
 
