@@ -11,6 +11,7 @@ import Preferences
 import Defaults
 import SafariServices
 import Sentry
+import Sparkle
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -23,8 +24,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         initSentry()
-
-        NSApp.setActivationPolicy(.accessory)
 
         if let menubarButton = statusItem.button {
             menubarButton.image = NSImage(named: NSImage.Name("ToolbarItemIcon"))
@@ -40,11 +39,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             store.dispatch(.setDirectory(directory))
         } else {
             preferencesWindowController.showWindow()
-            openSafariExtensionsIfDisabled()
+//            openSafariExtensionsIfDisabled()
         }
 
         unsubscribe = store.subscribe { state in
             if state.directory != nil && state.hasCert {
+                NSApp.setActivationPolicy(.accessory)
                 Server.instance.start(3133)
             }
         }

@@ -121,11 +121,20 @@ extension Server: CRServerDelegate {
 
 func favicon(_ ext: String) -> Data {
     let url = Bundle.main.url(forResource: "favicon", withExtension: ext)!
+
+    if cache[url] != nil {
+        return cache[url]!
+    }
+
     do {
         let data = try Data(contentsOf: url)
+        cache[url] = data
         return (data)
     } catch {
         print(error)
-        return Data(capacity: 0)
+        cache[url] = Data(capacity: 0)
+        return cache[url]!
     }
 }
+
+var cache: [URL: Data] = [:]

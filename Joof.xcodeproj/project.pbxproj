@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		42012E072227315B001F5F4F /* Sentry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42012E0422273159001F5F4F /* Sentry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		421FDA0A21F513EB004BDB68 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FDA0921F513EB004BDB68 /* Defaults.swift */; };
+		423945A422289DA80018B53A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423945A322289DA80018B53A /* Security.framework */; };
 		425A177721EFC86600C57D44 /* Joof.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 425A177621EFC86600C57D44 /* Joof.entitlements */; };
 		425A177921EFC86600C57D44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A177821EFC86600C57D44 /* AppDelegate.swift */; };
 		425A177C21EFC86600C57D44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425A177A21EFC86600C57D44 /* Main.storyboard */; };
@@ -96,6 +97,7 @@
 /* Begin PBXFileReference section */
 		42012E0422273159001F5F4F /* Sentry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sentry.framework; path = Carthage/Build/Mac/Sentry.framework; sourceTree = "<group>"; };
 		421FDA0921F513EB004BDB68 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		423945A322289DA80018B53A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		425A177321EFC86500C57D44 /* Joof.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Joof.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		425A177621EFC86600C57D44 /* Joof.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Joof.entitlements; sourceTree = "<group>"; };
 		425A177821EFC86600C57D44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				423945A422289DA80018B53A /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,23 +196,20 @@
 		425A177521EFC86500C57D44 /* Joof */ = {
 			isa = PBXGroup;
 			children = (
+				42ADBA382229664000F39D4C /* Meta */,
 				425A177821EFC86600C57D44 /* AppDelegate.swift */,
 				425A177F21EFC86700C57D44 /* Assets.xcassets */,
 				429543E021F27387007EBAF3 /* Bookmark.swift */,
 				421FDA0921F513EB004BDB68 /* Defaults.swift */,
 				429543EE21F50D4F007EBAF3 /* GeneralPreferencesViewController.swift */,
 				429543F221F51225007EBAF3 /* GeneralPreferencesViewController.xib */,
-				425A178121EFC86700C57D44 /* Info.plist */,
-				425A177621EFC86600C57D44 /* Joof.entitlements */,
+				42690B5A2216019100DF8AB3 /* JoofCertificate.swift */,
 				425A177A21EFC86600C57D44 /* Main.storyboard */,
 				425A17EB21F1C1AF00C57D44 /* Server.swift */,
+				42ADBA36222965F600F39D4C /* Static */,
 				425A17F721F1F6BF00C57D44 /* StatusLightView.swift */,
 				425A17CD21F0875300C57D44 /* Store.swift */,
 				425A17CF21F08BED00C57D44 /* Taste.swift */,
-				42690B5A2216019100DF8AB3 /* JoofCertificate.swift */,
-				42690B632216D0A300DF8AB3 /* favicon.ico */,
-				42690B622216D0A300DF8AB3 /* favicon.png */,
-				42690B602216CCC400DF8AB3 /* index.html */,
 			);
 			path = Joof;
 			sourceTree = "<group>";
@@ -236,6 +236,7 @@
 		425A17A021EFC86700C57D44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				423945A322289DA80018B53A /* Security.framework */,
 				42012E0422273159001F5F4F /* Sentry.framework */,
 				42E5023722175015009A6253 /* LaunchAtLogin.framework */,
 				429543E721F50D15007EBAF3 /* Defaults.framework */,
@@ -265,6 +266,25 @@
 				425A17C921EFD54F00C57D44 /* global.js */,
 			);
 			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		42ADBA36222965F600F39D4C /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				42690B632216D0A300DF8AB3 /* favicon.ico */,
+				42690B622216D0A300DF8AB3 /* favicon.png */,
+				42690B602216CCC400DF8AB3 /* index.html */,
+			);
+			path = Static;
+			sourceTree = "<group>";
+		};
+		42ADBA382229664000F39D4C /* Meta */ = {
+			isa = PBXGroup;
+			children = (
+				425A178121EFC86700C57D44 /* Info.plist */,
+				425A177621EFC86600C57D44 /* Joof.entitlements */,
+			);
+			name = Meta;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,7 +381,7 @@
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.HardenedRuntime = {
 								enabled = 1;
@@ -383,7 +403,7 @@
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.HardenedRuntime = {
 								enabled = 1;
