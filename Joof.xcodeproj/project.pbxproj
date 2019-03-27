@@ -379,6 +379,7 @@
 				TargetAttributes = {
 					425A177221EFC86500C57D44 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
 								enabled = 0;
@@ -393,14 +394,17 @@
 					};
 					425A178521EFC86700C57D44 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 425A177221EFC86500C57D44;
 					};
 					425A179021EFC86700C57D44 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 425A177221EFC86500C57D44;
 					};
 					425A179B21EFC86700C57D44 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
 								enabled = 0;
@@ -755,7 +759,7 @@
 				PRODUCT_MODULE_NAME = Joof_Extension;
 				PRODUCT_NAME = Joof;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -777,7 +781,7 @@
 				PRODUCT_MODULE_NAME = Joof_Extension;
 				PRODUCT_NAME = Joof;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -807,7 +811,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.Joof;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -836,7 +840,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.Joof;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -856,7 +860,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.JoofTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Joof.app/Contents/MacOS/Joof";
 			};
 			name = Debug;
@@ -877,7 +881,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.JoofTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Joof.app/Contents/MacOS/Joof";
 			};
 			name = Release;
@@ -897,7 +901,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.JoofUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = Joof;
 			};
 			name = Debug;
@@ -917,7 +921,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.JoofUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = Joof;
 			};
 			name = Release;
