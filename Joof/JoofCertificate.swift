@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import Security
+import Defaults
 
 class JoofCertificate {
-    static let keyPath = "\(NSHomeDirectory())/joof.key"
-    static let certPath = "\(NSHomeDirectory())/joof.crt"
+    static let scriptPath = Bundle.main.path(forResource: "gen_cert", ofType: "sh")!
+    static let keyPath = "\(NSHomeDirectory())/Certs/joof.key"
+    static let certPath = "\(NSHomeDirectory())/Certs/joof.crt"
 
     static func generateCertsIfMissing(_ callback: @escaping (Bool) -> Void) {
         let certAndKey = FileManager.default.fileExists(atPath: certPath) &&
@@ -20,19 +23,35 @@ class JoofCertificate {
             callback(true)
         } else {
             let task = Process()
-            task.launchPath = "/usr/bin/openssl"
-            task.arguments = [
-                "req", "-new", "-newkey", "rsa:2048", "-days", "3652", "-nodes", "-x509",
-                "-subj", "/C=DK/ST=Denmark/O=Brainbow/CN=localhost",
-                "-keyout", "joof.key", "-out", "joof.crt"
-            ]
-            task.launch()
+            task.launchPath = JoofCertificate.scriptPath
+            task.arguments = [Bundle.main.resourcePath!, NSHomeDirectory(), defaults[.userId]]
 
             DispatchQueue.main.async {
+                task.launch()
                 task.waitUntilExit()
 
+                self.acceptCert()
+                
                 callback(task.terminationStatus == 0)
             }
         }
     }
+    
+    static func acceptCert() {
+        let data = NSData(contentsOf: URL(fileURLWithPath: "Certs/rootCA.der"))!
+        var err: OSStatus = noErr
+        
+        let rootCert = SecCertificateCreateWithData(nil, data)!
+        let dict = NSDictionary.init(
+            objects: [kSecClassCertificate, rootCert],
+            forKeys: [kSecClass as! NSCopying, kSecValueRef as! NSCopying])
+        
+        err = SecItemAdd(dict, nil)
+        print(SecCopyErrorMessageString(err, nil)!)
+        
+        var status: OSStatus = noErr
+        status = SecTrustSettingsSetTrustSettings(rootCert, SecTrustSettingsDomain.user, nil)
+        print(SecCopyErrorMessageString(status, nil)!)
+    }
+
 }

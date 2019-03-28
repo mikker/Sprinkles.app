@@ -10,6 +10,10 @@
 		42012E072227315B001F5F4F /* Sentry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42012E0422273159001F5F4F /* Sentry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		421FDA0A21F513EB004BDB68 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FDA0921F513EB004BDB68 /* Defaults.swift */; };
 		423945A422289DA80018B53A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423945A322289DA80018B53A /* Security.framework */; };
+		423D94F6224C1DED0079CEFE /* gen_cert.sh in Resources */ = {isa = PBXBuildFile; fileRef = 423D94ED224C1DED0079CEFE /* gen_cert.sh */; };
+		423D94FA224C1DED0079CEFE /* joof.csr.conf in Resources */ = {isa = PBXBuildFile; fileRef = 423D94F1224C1DED0079CEFE /* joof.csr.conf */; };
+		423D94FE224C1DED0079CEFE /* v3.ext in Resources */ = {isa = PBXBuildFile; fileRef = 423D94F5224C1DED0079CEFE /* v3.ext */; };
+		423D9500224C2CC00079CEFE /* rootCA.csr.conf in Resources */ = {isa = PBXBuildFile; fileRef = 423D94FF224C2B440079CEFE /* rootCA.csr.conf */; };
 		425A177721EFC86600C57D44 /* Joof.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 425A177621EFC86600C57D44 /* Joof.entitlements */; };
 		425A177921EFC86600C57D44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A177821EFC86600C57D44 /* AppDelegate.swift */; };
 		425A177C21EFC86600C57D44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425A177A21EFC86600C57D44 /* Main.storyboard */; };
@@ -98,6 +102,10 @@
 		42012E0422273159001F5F4F /* Sentry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sentry.framework; path = Carthage/Build/Mac/Sentry.framework; sourceTree = "<group>"; };
 		421FDA0921F513EB004BDB68 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		423945A322289DA80018B53A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		423D94ED224C1DED0079CEFE /* gen_cert.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = gen_cert.sh; sourceTree = "<group>"; };
+		423D94F1224C1DED0079CEFE /* joof.csr.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = joof.csr.conf; sourceTree = "<group>"; };
+		423D94F5224C1DED0079CEFE /* v3.ext */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = v3.ext; sourceTree = "<group>"; };
+		423D94FF224C2B440079CEFE /* rootCA.csr.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = rootCA.csr.conf; sourceTree = "<group>"; };
 		425A177321EFC86500C57D44 /* Joof.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Joof.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		425A177621EFC86600C57D44 /* Joof.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Joof.entitlements; sourceTree = "<group>"; };
 		425A177821EFC86600C57D44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +178,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		423D94EC224C1DED0079CEFE /* SSL */ = {
+			isa = PBXGroup;
+			children = (
+				423D94ED224C1DED0079CEFE /* gen_cert.sh */,
+				423D94F1224C1DED0079CEFE /* joof.csr.conf */,
+				423D94FF224C2B440079CEFE /* rootCA.csr.conf */,
+				423D94F5224C1DED0079CEFE /* v3.ext */,
+			);
+			path = SSL;
+			sourceTree = "<group>";
+		};
 		425A176A21EFC86500C57D44 = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +229,7 @@
 				425A17F721F1F6BF00C57D44 /* StatusLightView.swift */,
 				425A17CD21F0875300C57D44 /* Store.swift */,
 				425A17CF21F08BED00C57D44 /* Taste.swift */,
+				423D94EC224C1DED0079CEFE /* SSL */,
 			);
 			path = Joof;
 			sourceTree = "<group>";
@@ -442,12 +462,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				423D94FA224C1DED0079CEFE /* joof.csr.conf in Resources */,
 				42690B612216CCC400DF8AB3 /* index.html in Resources */,
+				423D9500224C2CC00079CEFE /* rootCA.csr.conf in Resources */,
 				429543F321F51225007EBAF3 /* GeneralPreferencesViewController.xib in Resources */,
 				42690B642216D0A300DF8AB3 /* favicon.png in Resources */,
+				423D94F6224C1DED0079CEFE /* gen_cert.sh in Resources */,
 				425A177721EFC86600C57D44 /* Joof.entitlements in Resources */,
 				425A178021EFC86700C57D44 /* Assets.xcassets in Resources */,
 				425A177C21EFC86600C57D44 /* Main.storyboard in Resources */,
+				423D94FE224C1DED0079CEFE /* v3.ext in Resources */,
 				42690B652216D0A300DF8AB3 /* favicon.ico in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,7 +519,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which sentry-cli >/dev/null; then\n    export SENTRY_ORG=brainbow\n    export SENTRY_PROJECT=joofapp\n    export SENTRY_AUTH_TOKEN=\"27b17a4769dc45f7bf42df5b08a1c1a98442d83e133143c996e9dcf8903e9e29\"\n    ERROR=$(sentry-cli upload-dif \"$DWARF_DSYM_FOLDER_PATH\" 2>&1 >/dev/null)\n    if [ ! $? -eq 0 ]; then\n        echo \"warning: sentry-cli - $ERROR\"\n    fi\nelse\n    echo \"warning: sentry-cli not installed, download from https://github.com/getsentry/sentry-cli/releases\"\nfi\n";
+			shellScript = "if [ \"${CONFIGURATION}\" != \"Release\" ]; then\n    exit 0\nfi\n\nif which sentry-cli >/dev/null; then\n    export SENTRY_ORG=brainbow\n    export SENTRY_PROJECT=joofapp\n    export SENTRY_AUTH_TOKEN=\"27b17a4769dc45f7bf42df5b08a1c1a98442d83e133143c996e9dcf8903e9e29\"\n    ERROR=$(sentry-cli upload-dif \"$DWARF_DSYM_FOLDER_PATH\" 2>&1 >/dev/null)\n    if [ ! $? -eq 0 ]; then\n        echo \"warning: sentry-cli - $ERROR\"\n    fi\nelse\n    echo \"warning: sentry-cli not installed, download from https://github.com/getsentry/sentry-cli/releases\"\nfi\n";
 		};
 		428B7C4721F1FAE80065EE2B /* Carthage: Copy frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -549,7 +573,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "echo 'No lint'\nexit 0\n\nif which swiftlint >/dev/null; then\n    swiftlint autocorrect\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

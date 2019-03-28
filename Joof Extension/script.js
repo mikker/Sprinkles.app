@@ -16,12 +16,8 @@ function apply(script) {
     }
 }
 
-var xhr = new XMLHttpRequest();
-var filename = location.hostname.replace(/^www\./, "") + ".js";
+const filename = location.hostname.replace(/^www\./, "") + ".js";
 
-xhr.open("get", "https://localhost:3133/" + filename, true);
-xhr.responseType = "text";
-xhr.onload = function(event) {
-    apply(this.responseText);
-};
-xhr.send();
+fetch('https://localhost:3133/' + filename)
+.then(resp => resp.text())
+.then(apply)

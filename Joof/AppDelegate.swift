@@ -86,6 +86,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func openSafariExtensionsIfDisabled() {
         let identifier = "com.brnbw.Joof.extension"
+        
         SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: identifier) { (state, error) in
             guard error == nil else { print(error!); return }
             guard state == nil || !(state!.isEnabled) else { return }
