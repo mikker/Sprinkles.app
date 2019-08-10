@@ -2,10 +2,11 @@ import Cocoa
 import Preferences
 import LaunchAtLogin
 import Defaults
-import Sentry
+import Preferences
 
-final class GeneralPreferencesViewController: NSViewController, Preferenceable {
-    let toolbarItemTitle = "General"
+final class GeneralPreferencesViewController: NSViewController, PreferencePane {
+    let preferencePaneIdentifier = PreferencePane.Identifier.general
+    let preferencePaneTitle = "Joof"
     let toolbarItemIcon = NSImage(named: NSImage.preferencesGeneralName)!
 
     var unsubscribe: UnsubscribeFn?
@@ -70,6 +71,10 @@ final class GeneralPreferencesViewController: NSViewController, Preferenceable {
 
     @IBAction func installationInstructionsPressed(_ sender: Any?) {
         NSWorkspace.shared.open(URL(string: "https://joof.app/installation-instructions")!)
+    }
+    
+    @IBAction func cycleCertificatedPressed(_ sender: Any?) {
+        
     }
 
     @IBAction func quitPressed(_ sender: Any?) {

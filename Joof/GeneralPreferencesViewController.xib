@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14810.11"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -44,7 +44,7 @@
                     </constraints>
                     <buttonCell key="cell" type="push" title="Set…" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rlj-Bc-gjd">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" metaFont="controlContent" size="11"/>
                     </buttonCell>
                     <connections>
                         <action selector="pickDirectoryPressed:" target="-2" id="YFT-A0-ZXa"/>
@@ -88,7 +88,7 @@
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="JYl-gy-4Ev">
                     <rect key="frame" x="127" y="123" width="336" height="42"/>
                     <textFieldCell key="cell" controlSize="small" refusesFirstResponder="YES" id="lvA-TV-v4U">
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" metaFont="controlContent" size="11"/>
                         <string key="title">This is the directory that holds your JavaScript and CSS files. It can reside anywhere on your harddrive – I suggest you keep it in you dotfiles.</string>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -121,7 +121,7 @@
                     </constraints>
                     <buttonCell key="cell" type="push" title="Quit Joof" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iPx-hR-qKQ">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" metaFont="controlContent" size="11"/>
                     </buttonCell>
                     <connections>
                         <action selector="quitPressed:" target="-2" id="dYU-HD-jWd"/>
@@ -134,11 +134,21 @@
                     </constraints>
                     <buttonCell key="cell" type="push" title="Open Installation Instructions" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="b66-j1-5FD">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" metaFont="controlContent" size="11"/>
                     </buttonCell>
                     <connections>
                         <action selector="installationInstructionsPressed:" target="-2" id="AXL-zg-LZB"/>
                     </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e61-2w-O51">
+                    <rect key="frame" x="77" y="14" width="118" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="108" id="GBS-cS-x3p"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" title="Cycle certificates" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uj3-9h-0At">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="controlContent" size="11"/>
+                    </buttonCell>
                 </button>
             </subviews>
             <constraints>
@@ -149,6 +159,7 @@
                 <constraint firstItem="9y7-oo-htG" firstAttribute="leading" secondItem="wPC-av-VFz" secondAttribute="trailing" constant="8" id="9Ri-R7-s7g"/>
                 <constraint firstAttribute="trailing" secondItem="iMp-W0-EzQ" secondAttribute="trailing" constant="20" id="9ul-Qj-s5A"/>
                 <constraint firstAttribute="trailing" secondItem="MyY-wX-bwV" secondAttribute="trailing" constant="20" id="9wa-gO-6Ye"/>
+                <constraint firstItem="8AU-Fv-0at" firstAttribute="leading" secondItem="e61-2w-O51" secondAttribute="trailing" constant="12" id="D55-rb-Og5"/>
                 <constraint firstItem="fMM-Ef-qed" firstAttribute="leading" secondItem="Wqv-Tf-AjW" secondAttribute="trailing" constant="8" id="E8w-u4-1gM"/>
                 <constraint firstItem="wPC-av-VFz" firstAttribute="leading" secondItem="XrK-ce-fWQ" secondAttribute="leading" constant="20" id="H4J-rB-xgC"/>
                 <constraint firstItem="JYl-gy-4Ev" firstAttribute="leading" secondItem="Wqv-Tf-AjW" secondAttribute="trailing" constant="8" id="LDM-nF-1qE"/>
@@ -156,6 +167,7 @@
                 <constraint firstAttribute="trailing" secondItem="JYl-gy-4Ev" secondAttribute="trailing" constant="20" id="Pve-E3-KJ8"/>
                 <constraint firstItem="9y7-oo-htG" firstAttribute="centerY" secondItem="wPC-av-VFz" secondAttribute="centerY" id="QDe-zU-VRb"/>
                 <constraint firstAttribute="trailing" secondItem="14M-io-wAx" secondAttribute="trailing" constant="20" id="Qvo-Ga-1Ju"/>
+                <constraint firstAttribute="bottom" secondItem="e61-2w-O51" secondAttribute="bottom" constant="20" id="TiA-sG-JQn"/>
                 <constraint firstItem="wPC-av-VFz" firstAttribute="top" secondItem="XrK-ce-fWQ" secondAttribute="top" constant="20" id="TjS-kc-DJa"/>
                 <constraint firstItem="Wqv-Tf-AjW" firstAttribute="leading" secondItem="XrK-ce-fWQ" secondAttribute="leading" constant="20" id="WUR-4V-nBM"/>
                 <constraint firstItem="8AU-Fv-0at" firstAttribute="centerY" secondItem="MyY-wX-bwV" secondAttribute="centerY" id="XMb-Uc-RbN"/>

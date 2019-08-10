@@ -12,4 +12,3 @@ mkdir -p Certs && cd Certs
 /usr/bin/openssl x509 -outform der -in rootCA.pem -out rootCA.der
 /usr/bin/openssl req -new -sha256 -nodes -out joof.csr -newkey rsa:2048 -keyout joof.key -config $bundle/joof.csr.conf
 /usr/bin/openssl x509 -req -in joof.csr -CA rootCA.pem -CAkey rootCA.key -set_serial 1 -out joof.crt -days 3652 -sha256 -extfile $bundle/v3.ext -passin pass:$password
-

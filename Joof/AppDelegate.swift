@@ -13,18 +13,29 @@ import SafariServices
 import Sentry
 import Sparkle
 
+extension PreferencePane.Identifier {
+    static let general = Identifier("general")
+}
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     var unsubscribe: UnsubscribeFn?
     var statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
 
-    let preferencesWindowController = PreferencesWindowController(
-        viewControllers: [GeneralPreferencesViewController()]
+    lazy var preferences: [PreferencePane] = [
+        GeneralPreferencesViewController()
+    ]
+    
+    lazy var preferencesWindowController = PreferencesWindowController(
+        preferencePanes: preferences,
+        style: .segmentedControl,
+        animated: true,
+        hidesToolbarForSingleItem: true
     )
-
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         initSentry()
-
+        
         if let menubarButton = statusItem.button {
             menubarButton.image = NSImage(named: NSImage.Name("ToolbarItemIcon"))
         }
@@ -38,7 +49,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let directory = Bookmark.url {
             store.dispatch(.setDirectory(directory))
         } else {
-            preferencesWindowController.showWindow()
+            preferencesWindowController.show()
 //            openSafariExtensionsIfDisabled()
         }
 
@@ -56,7 +67,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc func showPreferences() {
-        preferencesWindowController.showWindow()
+        preferencesWindowController.show()
     }
 
     private func initSentry() {
