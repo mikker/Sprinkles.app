@@ -75,7 +75,7 @@ class Server: NSObject {
         }
     }
 
-    public func start(_ port: UInt) {
+    public func start(_ port: UInt = 3133) {
         if state != .stopped { return }
 
         state = .booting

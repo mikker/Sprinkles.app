@@ -2,6 +2,7 @@ import Cocoa
 import LaunchAtLogin
 import Defaults
 import Preferences
+import SafariServices
 
 final class GeneralPreferencesViewController: NSViewController, PreferencePane {
     let preferencePaneIdentifier = PreferencePane.Identifier.general
@@ -14,9 +15,13 @@ final class GeneralPreferencesViewController: NSViewController, PreferencePane {
     @IBOutlet var statusLabel: NSTextField!
     @IBOutlet var directoryPathControl: NSPathControl!
     @IBOutlet var launchAtLoginCheckbox: NSButton!
-    @IBOutlet var installationInstructionsButton: NSButton!
+    @IBOutlet var supportButton: NSButton!
+    @IBOutlet var safariButton: NSButton!
+    @IBOutlet var firefoxButton: NSButton!
+    @IBOutlet var chromeButton: NSButton!
     @IBOutlet var quitButton: NSButton!
     @IBOutlet var cycleCertificatesButton: NSButton!
+    @IBOutlet var passwordField: NSTextField!
 
     override var nibName: NSNib.Name? {
         return "GeneralPreferencesViewController"
@@ -24,8 +29,10 @@ final class GeneralPreferencesViewController: NSViewController, PreferencePane {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        passwordField.stringValue = defaults[.userId]
 
-        self.preferredContentSize = NSSize(width: 480, height: 260)
+        self.preferredContentSize = NSSize(width: 480, height: 325)
 
         unsubscribe = store.subscribe { state in
             self.directoryPathControl.url = state.directory
@@ -71,17 +78,28 @@ final class GeneralPreferencesViewController: NSViewController, PreferencePane {
         LaunchAtLogin.isEnabled = state
     }
 
-    @IBAction func installationInstructionsPressed(_ sender: Any?) {
-        NSWorkspace.shared.open(URL(string: "https://joof.app/installation-instructions")!)
+    @IBAction func supportPressed(_ sender: Any?) {
+        NSWorkspace.shared.open(URL(string: "https://joof.app/")!)
     }
 
+    @IBAction func safariPressed(_ sender: Any?) {
+        SFSafariApplication.showPreferencesForExtension(withIdentifier: "com.brnbw.Joof.extension", completionHandler: nil)
+    }
+    
+    @IBAction func firefoxPressed(_ sender: Any?) {
+        NSWorkspace.shared.open(URL(string: "https://addons.mozilla.org/en-US/firefox/addon/joof-app/?src=search")!)
+    }
+    
+    @IBAction func chromePressed(_ sender: Any?) {
+        NSWorkspace.shared.open(URL(string: "https://chrome.google.com/webstore/detail/joofapp/knknjjghhkppgfkkclcdefohkfdnhfan")!)
+    }
+    
     @IBAction func cycleCertificatedPressed(_ sender: Any?) {
         cycleCertificatesButton.isEnabled = false
 
         JoofCertificate.destroy()
-        JoofCertificate.generateCertsIfMissing { (_) in
-            self.cycleCertificatesButton.isEnabled = true
-        }
+        
+        NSApplication.shared.terminate(nil)
     }
 
     @IBAction func quitPressed(_ sender: Any?) {
