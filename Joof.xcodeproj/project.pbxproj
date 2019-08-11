@@ -769,7 +769,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Joof Extension/Joof_Extension.entitlements";
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -783,6 +783,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.Joof.extension;
 				PRODUCT_MODULE_NAME = Joof_Extension;
 				PRODUCT_NAME = Joof;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -792,7 +793,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Joof Extension/Joof_Extension.entitlements";
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -806,6 +807,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.Joof.extension;
 				PRODUCT_MODULE_NAME = Joof_Extension;
 				PRODUCT_NAME = Joof;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};

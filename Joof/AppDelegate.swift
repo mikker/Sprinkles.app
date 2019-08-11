@@ -25,17 +25,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     lazy var preferences: [PreferencePane] = [
         GeneralPreferencesViewController()
     ]
-    
+
     lazy var preferencesWindowController = PreferencesWindowController(
         preferencePanes: preferences,
         style: .segmentedControl,
         animated: true,
         hidesToolbarForSingleItem: true
     )
-    
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         initSentry()
-        
+
         if let menubarButton = statusItem.button {
             menubarButton.image = NSImage(named: NSImage.Name("ToolbarItemIcon"))
         }
@@ -49,8 +49,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let directory = Bookmark.url {
             store.dispatch(.setDirectory(directory))
         } else {
-            preferencesWindowController.show()
-//            openSafariExtensionsIfDisabled()
+            showPreferences()
+            // openSafariExtensionsIfDisabled()
         }
 
         unsubscribe = store.subscribe { state in
@@ -97,7 +97,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func openSafariExtensionsIfDisabled() {
         let identifier = "com.brnbw.Joof.extension"
-        
+
         SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: identifier) { (state, error) in
             guard error == nil else { print(error!); return }
             guard state == nil || !(state!.isEnabled) else { return }

@@ -1,5 +1,4 @@
 import Cocoa
-import Preferences
 import LaunchAtLogin
 import Defaults
 import Preferences
@@ -17,6 +16,7 @@ final class GeneralPreferencesViewController: NSViewController, PreferencePane {
     @IBOutlet var launchAtLoginCheckbox: NSButton!
     @IBOutlet var installationInstructionsButton: NSButton!
     @IBOutlet var quitButton: NSButton!
+    @IBOutlet var cycleCertificatesButton: NSButton!
 
     override var nibName: NSNib.Name? {
         return "GeneralPreferencesViewController"
@@ -24,6 +24,8 @@ final class GeneralPreferencesViewController: NSViewController, PreferencePane {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.preferredContentSize = NSSize(width: 480, height: 260)
 
         unsubscribe = store.subscribe { state in
             self.directoryPathControl.url = state.directory
@@ -72,9 +74,14 @@ final class GeneralPreferencesViewController: NSViewController, PreferencePane {
     @IBAction func installationInstructionsPressed(_ sender: Any?) {
         NSWorkspace.shared.open(URL(string: "https://joof.app/installation-instructions")!)
     }
-    
+
     @IBAction func cycleCertificatedPressed(_ sender: Any?) {
-        
+        cycleCertificatesButton.isEnabled = false
+
+        JoofCertificate.destroy()
+        JoofCertificate.generateCertsIfMissing { (_) in
+            self.cycleCertificatesButton.isEnabled = true
+        }
     }
 
     @IBAction func quitPressed(_ sender: Any?) {
