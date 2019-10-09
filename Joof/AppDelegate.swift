@@ -78,7 +78,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             print("\(error)")
         }
 
-        Client.shared?.user = User(userId: defaults[.userId])
+        Client.shared?.user = User(userId: Defaults[.userId])
 
         let event = Event(level: .info)
         event.message = "Joof booted"

@@ -30,7 +30,7 @@ final class GeneralPreferencesViewController: NSViewController, PreferencePane {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        passwordField.stringValue = defaults[.userId]
+        passwordField.stringValue = Defaults[.userId]
 
         self.preferredContentSize = NSSize(width: 480, height: 325)
 

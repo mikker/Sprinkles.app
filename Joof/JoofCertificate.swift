@@ -25,7 +25,7 @@ class JoofCertificate {
         } else {
             let task = Process()
             task.launchPath = JoofCertificate.scriptPath
-            task.arguments = [Bundle.main.resourcePath!, NSHomeDirectory(), defaults[.userId]]
+            task.arguments = [Bundle.main.resourcePath!, NSHomeDirectory(), Defaults[.userId]]
 
             DispatchQueue.main.async {
                 task.launch()
