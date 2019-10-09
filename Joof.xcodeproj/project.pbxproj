@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,7 +29,6 @@
 		425A17D021F08BED00C57D44 /* Taste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A17CF21F08BED00C57D44 /* Taste.swift */; };
 		425A17E121F138F000C57D44 /* Criollo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 425A17DE21F138E200C57D44 /* Criollo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		425A17EC21F1C1AF00C57D44 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A17EB21F1C1AF00C57D44 /* Server.swift */; };
-		425A17F021F1DAC500C57D44 /* Regex.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 425A17ED21F1DABD00C57D44 /* Regex.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		425A17F821F1F6BF00C57D44 /* StatusLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A17F721F1F6BF00C57D44 /* StatusLightView.swift */; };
 		42690B5B2216019100DF8AB3 /* JoofCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42690B5A2216019100DF8AB3 /* JoofCertificate.swift */; };
 		42690B5F2216AC7C00DF8AB3 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 42690B5E2216AC7C00DF8AB3 /* ToolbarItemIcon.pdf */; };
@@ -37,10 +36,11 @@
 		42690B642216D0A300DF8AB3 /* favicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42690B622216D0A300DF8AB3 /* favicon.png */; };
 		42690B652216D0A300DF8AB3 /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 42690B632216D0A300DF8AB3 /* favicon.ico */; };
 		429543E121F27387007EBAF3 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429543E021F27387007EBAF3 /* Bookmark.swift */; };
-		429543EB21F50D22007EBAF3 /* Defaults.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 429543E721F50D15007EBAF3 /* Defaults.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		429543ED21F50D22007EBAF3 /* Preferences.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 429543E621F50D15007EBAF3 /* Preferences.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		429543EF21F50D4F007EBAF3 /* GeneralPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429543EE21F50D4F007EBAF3 /* GeneralPreferencesViewController.swift */; };
 		429543F321F51225007EBAF3 /* GeneralPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 429543F221F51225007EBAF3 /* GeneralPreferencesViewController.xib */; };
+		42DFEDDF234E204400916DCB /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 42DFEDDE234E204400916DCB /* Defaults */; };
+		42DFEDE2234E209400916DCB /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = 42DFEDE1234E209400916DCB /* Preferences */; };
+		42DFEDE5234E217C00916DCB /* Regex in Frameworks */ = {isa = PBXBuildFile; productRef = 42DFEDE4234E217C00916DCB /* Regex */; };
 		42E5023A2217501E009A6253 /* LaunchAtLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42E5023722175015009A6253 /* LaunchAtLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -88,10 +88,7 @@
 			files = (
 				425A17E121F138F000C57D44 /* Criollo.framework in Embed Frameworks */,
 				42012E072227315B001F5F4F /* Sentry.framework in Embed Frameworks */,
-				425A17F021F1DAC500C57D44 /* Regex.framework in Embed Frameworks */,
 				42E5023A2217501E009A6253 /* LaunchAtLogin.framework in Embed Frameworks */,
-				429543EB21F50D22007EBAF3 /* Defaults.framework in Embed Frameworks */,
-				429543ED21F50D22007EBAF3 /* Preferences.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,7 +126,6 @@
 		425A17CF21F08BED00C57D44 /* Taste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taste.swift; sourceTree = "<group>"; };
 		425A17DE21F138E200C57D44 /* Criollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Criollo.framework; path = Carthage/Build/Mac/Criollo.framework; sourceTree = "<group>"; };
 		425A17EB21F1C1AF00C57D44 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
-		425A17ED21F1DABD00C57D44 /* Regex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Regex.framework; path = Carthage/Build/Mac/Regex.framework; sourceTree = "<group>"; };
 		425A17F721F1F6BF00C57D44 /* StatusLightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusLightView.swift; sourceTree = "<group>"; };
 		42690B5A2216019100DF8AB3 /* JoofCertificate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoofCertificate.swift; sourceTree = "<group>"; };
 		42690B5E2216AC7C00DF8AB3 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
@@ -137,8 +133,6 @@
 		42690B622216D0A300DF8AB3 /* favicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favicon.png; sourceTree = "<group>"; };
 		42690B632216D0A300DF8AB3 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
 		429543E021F27387007EBAF3 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
-		429543E621F50D15007EBAF3 /* Preferences.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Preferences.framework; path = Carthage/Build/Mac/Preferences.framework; sourceTree = "<group>"; };
-		429543E721F50D15007EBAF3 /* Defaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Defaults.framework; path = Carthage/Build/Mac/Defaults.framework; sourceTree = "<group>"; };
 		429543EE21F50D4F007EBAF3 /* GeneralPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesViewController.swift; sourceTree = "<group>"; };
 		429543F221F51225007EBAF3 /* GeneralPreferencesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralPreferencesViewController.xib; sourceTree = "<group>"; };
 		42E5023722175015009A6253 /* LaunchAtLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LaunchAtLogin.framework; path = Carthage/Build/Mac/LaunchAtLogin.framework; sourceTree = "<group>"; };
@@ -149,6 +143,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42DFEDE5234E217C00916DCB /* Regex in Frameworks */,
+				42DFEDDF234E204400916DCB /* Defaults in Frameworks */,
+				42DFEDE2234E209400916DCB /* Preferences in Frameworks */,
 				423945A422289DA80018B53A /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,9 +256,6 @@
 				423945A322289DA80018B53A /* Security.framework */,
 				42012E0422273159001F5F4F /* Sentry.framework */,
 				42E5023722175015009A6253 /* LaunchAtLogin.framework */,
-				429543E721F50D15007EBAF3 /* Defaults.framework */,
-				429543E621F50D15007EBAF3 /* Preferences.framework */,
-				425A17ED21F1DABD00C57D44 /* Regex.framework */,
 				425A17DE21F138E200C57D44 /* Criollo.framework */,
 				425A17A121EFC86700C57D44 /* Cocoa.framework */,
 			);
@@ -330,6 +324,11 @@
 				425A179F21EFC86700C57D44 /* PBXTargetDependency */,
 			);
 			name = Joof;
+			packageProductDependencies = (
+				42DFEDDE234E204400916DCB /* Defaults */,
+				42DFEDE1234E209400916DCB /* Preferences */,
+				42DFEDE4234E217C00916DCB /* Regex */,
+			);
 			productName = Joof;
 			productReference = 425A177321EFC86500C57D44 /* Joof.app */;
 			productType = "com.apple.product-type.application";
@@ -445,6 +444,11 @@
 				Base,
 			);
 			mainGroup = 425A176A21EFC86500C57D44;
+			packageReferences = (
+				42DFEDDD234E204400916DCB /* XCRemoteSwiftPackageReference "Defaults" */,
+				42DFEDE0234E209400916DCB /* XCRemoteSwiftPackageReference "Preferences" */,
+				42DFEDE3234E217C00916DCB /* XCRemoteSwiftPackageReference "Regex" */,
+			);
 			productRefGroup = 425A177421EFC86500C57D44 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1003,6 +1007,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		42DFEDDD234E204400916DCB /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:sindresorhus/Defaults.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		42DFEDE0234E209400916DCB /* XCRemoteSwiftPackageReference "Preferences" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:sindresorhus/Preferences.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.0;
+			};
+		};
+		42DFEDE3234E217C00916DCB /* XCRemoteSwiftPackageReference "Regex" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:crossroadlabs/Regex.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		42DFEDDE234E204400916DCB /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42DFEDDD234E204400916DCB /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+		42DFEDE1234E209400916DCB /* Preferences */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42DFEDE0234E209400916DCB /* XCRemoteSwiftPackageReference "Preferences" */;
+			productName = Preferences;
+		};
+		42DFEDE4234E217C00916DCB /* Regex */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42DFEDE3234E217C00916DCB /* XCRemoteSwiftPackageReference "Regex" */;
+			productName = Regex;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 425A176B21EFC86500C57D44 /* Project object */;
 }

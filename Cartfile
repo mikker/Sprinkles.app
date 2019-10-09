@@ -1,6 +1,3 @@
 github "thecatalinstan/Criollo"
-github "crossroadlabs/Regex"
 github "sindresorhus/LaunchAtLogin"
-github "sindresorhus/Defaults"
-github "sindresorhus/Preferences"
 github "getsentry/sentry-cocoa"
