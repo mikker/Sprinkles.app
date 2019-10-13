@@ -37,7 +37,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         initSentry()
-
+        
+//        Defaults[.hasOnboarded] = false
+        
         if let menubarButton = statusItem.button {
             menubarButton.image = NSImage(named: NSImage.Name("ToolbarItemIcon"))
         }
@@ -52,9 +54,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 store.dispatch(.setIsOnboarding(true))
             }
             
-            if state.directory != nil && state.hasCert && !state.isOnboarding {
+            if state.directory != nil && state.hasCert && !state.isOnboarding && Defaults[.hasOnboarded] {
                 NSApp.setActivationPolicy(.accessory)
             }
+        }
+        
+        if !Defaults[.hasOnboarded] {
+            self.onboarding.showWindow(nil)
         }
     }
 

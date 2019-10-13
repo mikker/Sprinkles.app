@@ -11,4 +11,5 @@ import Defaults
 
 extension Defaults.Keys {
     static let userId = Key<String>("userId", default: UUID().uuidString)
+    static let hasOnboarded = Key<Bool>("hasOnboarded", default: false)
 }

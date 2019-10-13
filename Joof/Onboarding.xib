@@ -42,7 +42,7 @@
                                     </textFieldCell>
                                 </textField>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ARP-IE-BxD">
-                                    <rect key="frame" x="43" y="61" width="364" height="51"/>
+                                    <rect key="frame" x="43" y="40" width="364" height="72"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <textFieldCell key="cell" alignment="left" id="qpR-yy-f5j">
                                         <font key="font" metaFont="menu" size="14"/>
@@ -61,83 +61,84 @@
                         <view key="contentView" ambiguous="YES" id="pOy-wE-jVO">
                             <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <customView identifier="step-01" ambiguous="YES" id="g7y-be-tf7" customClass="OnboardingStep1View" customModule="Joof" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2kO-kj-bW7">
+                                            <rect key="frame" x="45" y="335" width="52" height="19"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Step 1" id="Uel-7k-maP">
+                                                <font key="font" metaFont="systemBold" size="16"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iOe-iP-2Ds">
+                                            <rect key="frame" x="45" y="315" width="230" height="19"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Pick your Joof scripts directory" id="zsM-1y-aVr">
+                                                <font key="font" metaFont="label" size="16"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h2n-i7-uKW">
+                                            <rect key="frame" x="45" y="259" width="360" height="48"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" id="Fkq-96-rld">
+                                                <font key="font" metaFont="system"/>
+                                                <string key="title">You decide where you keep your .js and .css files. Picking the directory gives Joof permission to reads its contents per Apple's sandbox rules.</string>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <pathControl verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fcu-tt-Yn2">
+                                            <rect key="frame" x="45" y="183" width="360" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <pathCell key="cell" selectable="YES" editable="YES" alignment="left" id="lpp-hC-8bR">
+                                                <font key="font" metaFont="system"/>
+                                                <url key="url" string="file:///"/>
+                                            </pathCell>
+                                        </pathControl>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zbU-k2-67f">
+                                            <rect key="frame" x="41" y="144" width="124" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Pick directory" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aGy-So-aDz">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="didPressPick:" target="g7y-be-tf7" id="W4g-3S-Ner"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTu-0a-F6i">
+                                            <rect key="frame" x="312" y="32" width="99" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Next step" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FlP-vo-qjx">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="didPressNext:" target="g7y-be-tf7" id="VKl-pv-LGF"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <connections>
+                                        <outlet property="controller" destination="-2" id="IKv-gf-fsz"/>
+                                        <outlet property="directoryPathControl" destination="Fcu-tt-Yn2" id="3bB-Gx-Qhp"/>
+                                        <outlet property="nextButton" destination="BTu-0a-F6i" id="rqy-A4-9Qt"/>
+                                        <outlet property="pickButton" destination="zbU-k2-67f" id="y9q-bF-nWS"/>
+                                    </connections>
+                                </customView>
+                            </subviews>
                         </view>
                     </box>
                 </subviews>
             </view>
             <point key="canvasLocation" x="684" y="149"/>
         </window>
-        <customView identifier="step-01" id="g7y-be-tf7" customClass="OnboardingStep1View" customModule="Joof" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2kO-kj-bW7">
-                    <rect key="frame" x="45" y="335" width="52" height="19"/>
-                    <autoresizingMask key="autoresizingMask"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Step 1" id="Uel-7k-maP">
-                        <font key="font" metaFont="systemBold" size="16"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iOe-iP-2Ds">
-                    <rect key="frame" x="45" y="315" width="230" height="19"/>
-                    <autoresizingMask key="autoresizingMask"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Pick your Joof scripts directory" id="zsM-1y-aVr">
-                        <font key="font" metaFont="system" size="16"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h2n-i7-uKW">
-                    <rect key="frame" x="45" y="259" width="360" height="48"/>
-                    <autoresizingMask key="autoresizingMask"/>
-                    <textFieldCell key="cell" id="Fkq-96-rld">
-                        <font key="font" metaFont="system"/>
-                        <string key="title">You decide where you keep your .js and .css files. Picking the directory gives Joof permission to reads its contents per Apple's sandbox rules.</string>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <pathControl verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fcu-tt-Yn2">
-                    <rect key="frame" x="45" y="183" width="360" height="22"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <pathCell key="cell" selectable="YES" editable="YES" alignment="left" id="lpp-hC-8bR">
-                        <font key="font" metaFont="system"/>
-                        <url key="url" string="file:///"/>
-                    </pathCell>
-                </pathControl>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zbU-k2-67f">
-                    <rect key="frame" x="41" y="144" width="124" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Pick directory" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aGy-So-aDz">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="didPressPick:" target="g7y-be-tf7" id="W4g-3S-Ner"/>
-                    </connections>
-                </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTu-0a-F6i">
-                    <rect key="frame" x="312" y="32" width="99" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Next step" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FlP-vo-qjx">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="didPressNext:" target="g7y-be-tf7" id="VKl-pv-LGF"/>
-                    </connections>
-                </button>
-            </subviews>
-            <connections>
-                <outlet property="controller" destination="-2" id="IKv-gf-fsz"/>
-                <outlet property="directoryPathControl" destination="Fcu-tt-Yn2" id="3bB-Gx-Qhp"/>
-                <outlet property="nextButton" destination="BTu-0a-F6i" id="rqy-A4-9Qt"/>
-                <outlet property="pickButton" destination="zbU-k2-67f" id="y9q-bF-nWS"/>
-            </connections>
-            <point key="canvasLocation" x="1195" y="-44"/>
-        </customView>
         <customView identifier="step-02" id="zHn-oz-BJc" customClass="OnboardingStep2View" customModule="Joof" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -155,7 +156,7 @@
                     <rect key="frame" x="45" y="315" width="279" height="19"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Generate and trust unique certificates" id="7yi-d6-G4J">
-                        <font key="font" metaFont="system" size="16"/>
+                        <font key="font" metaFont="label" size="16"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -210,7 +211,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                 <outlet property="generateButton" destination="cnE-9e-60f" id="SFu-c9-SOT"/>
                 <outlet property="nextButton" destination="bPR-hf-JhW" id="E5L-x4-B0f"/>
             </connections>
-            <point key="canvasLocation" x="1195" y="409"/>
+            <point key="canvasLocation" x="1195" y="49"/>
         </customView>
         <customView identifier="step-03" id="7Pa-qY-U6y" customClass="OnboardingStep3View" customModule="Joof" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
@@ -229,7 +230,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                     <rect key="frame" x="45" y="315" width="272" height="19"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Install or activate browser extensions" id="1bc-l4-hkX">
-                        <font key="font" metaFont="system" size="16"/>
+                        <font key="font" metaFont="label" size="16"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -307,7 +308,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                 <outlet property="launchAtLoginCheckbox" destination="vat-kH-NEe" id="jVh-hv-Z8b"/>
                 <outlet property="safariButton" destination="UE4-Ss-UJq" id="90Z-ye-VhX"/>
             </connections>
-            <point key="canvasLocation" x="1195" y="862"/>
+            <point key="canvasLocation" x="1195" y="507"/>
         </customView>
     </objects>
     <resources>

@@ -8,6 +8,7 @@
 
 import Cocoa
 import SafariServices
+import Defaults
 import LaunchAtLogin
 
 class OnboardingController: NSWindowController {
@@ -155,6 +156,7 @@ class OnboardingStep3View: NSView {
 
     @IBAction func didPressDone(_ sender: Any) {
         controller.close()
+        Defaults[.hasOnboarded] = true
         store.dispatch(.setIsOnboarding(false))
     }
     
