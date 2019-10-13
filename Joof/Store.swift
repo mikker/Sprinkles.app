@@ -2,20 +2,17 @@ import Foundation
 
 public enum Action {
     case setDirectory(URL?)
-
-    case listFiles
-    case setFiles([String])
-
     case serverStateChanged(ServerState)
-
     case hasCert(Bool)
+    case setIsOnboarding(Bool)
 }
 
 public struct State {
-    var directory: URL?
+    var directory = Bookmark.url
     var files: [String] = []
     var serverState: ServerState = .stopped
-    var hasCert = false
+    var hasCert = JoofCertificate.exists
+    var isOnboarding = false
 }
 
 public let reducer = Reducer<Action, State> { action, state in
@@ -23,24 +20,15 @@ public let reducer = Reducer<Action, State> { action, state in
 
     case .setDirectory(let url):
         state.directory = url
-        return [.listFiles]
-
-    case .listFiles:
-        do {
-            let files = try FileManager.default.contentsOfDirectory(atPath: state.directory!.path)
-            return [.setFiles(files)]
-        } catch {
-            print(error)
-        }
-
-    case .setFiles(let files):
-        state.files = files
 
     case .serverStateChanged(let serverState):
         state.serverState = serverState
 
-    case .hasCert(let has):
-        state.hasCert = has
+    case .hasCert(let value):
+        state.hasCert = value
+        
+    case .setIsOnboarding(let value):
+        state.isOnboarding = value
     }
 
     return nil

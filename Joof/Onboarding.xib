@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="OnboardingController" customModule="Joof" customModuleProvider="target">
+            <connections>
+                <outlet property="contentBox" destination="JeL-PT-DpD" id="dU8-Fs-gqL"/>
+                <outlet property="step1" destination="g7y-be-tf7" id="6dp-WL-C5r"/>
+                <outlet property="step2" destination="zHn-oz-BJc" id="uEt-fi-uqh"/>
+                <outlet property="step3" destination="7Pa-qY-U6y" id="uHu-rV-cuw"/>
+                <outlet property="window" destination="Mfr-h5-bc1" id="Uof-TJ-0Qn"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="Mfr-h5-bc1">
+            <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
+            <rect key="contentRect" x="427" y="270" width="450" height="600"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" wantsLayer="YES" id="fZc-5R-Xb1">
+                <rect key="frame" x="0.0" y="0.0" width="450" height="600"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <box fixedFrame="YES" boxType="custom" borderType="none" cornerRadius="1" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Epj-fO-65c">
+                        <rect key="frame" x="0.0" y="400" width="450" height="200"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <view key="contentView" ambiguous="YES" id="rWB-Pp-bMk">
+                            <rect key="frame" x="0.0" y="0.0" width="450" height="200"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wFU-HI-x7T">
+                                    <rect key="frame" x="43" y="120" width="123" height="19"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Setting up Joof" id="gLf-J2-xHP">
+                                        <font key="font" metaFont="systemBold" size="16"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ARP-IE-BxD">
+                                    <rect key="frame" x="43" y="61" width="364" height="51"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <textFieldCell key="cell" alignment="left" id="qpR-yy-f5j">
+                                        <font key="font" metaFont="menu" size="14"/>
+                                        <string key="title">Joof runs a tiny webserver on your computer, serving the JavaScript and CSS files you provide it. To get it running we need to set up a few things.</string>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                        </view>
+                        <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </box>
+                    <box fixedFrame="YES" boxType="custom" borderType="none" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="JeL-PT-DpD">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <view key="contentView" ambiguous="YES" id="pOy-wE-jVO">
+                            <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </view>
+                    </box>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="684" y="149"/>
+        </window>
+        <customView identifier="step-01" id="g7y-be-tf7" customClass="OnboardingStep1View" customModule="Joof" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2kO-kj-bW7">
+                    <rect key="frame" x="45" y="335" width="52" height="19"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Step 1" id="Uel-7k-maP">
+                        <font key="font" metaFont="systemBold" size="16"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iOe-iP-2Ds">
+                    <rect key="frame" x="45" y="315" width="230" height="19"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Pick your Joof scripts directory" id="zsM-1y-aVr">
+                        <font key="font" metaFont="system" size="16"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h2n-i7-uKW">
+                    <rect key="frame" x="45" y="259" width="360" height="48"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" id="Fkq-96-rld">
+                        <font key="font" metaFont="system"/>
+                        <string key="title">You decide where you keep your .js and .css files. Picking the directory gives Joof permission to reads its contents per Apple's sandbox rules.</string>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <pathControl verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fcu-tt-Yn2">
+                    <rect key="frame" x="45" y="183" width="360" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <pathCell key="cell" selectable="YES" editable="YES" alignment="left" id="lpp-hC-8bR">
+                        <font key="font" metaFont="system"/>
+                        <url key="url" string="file:///"/>
+                    </pathCell>
+                </pathControl>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zbU-k2-67f">
+                    <rect key="frame" x="41" y="144" width="124" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Pick directory" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aGy-So-aDz">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didPressPick:" target="g7y-be-tf7" id="W4g-3S-Ner"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTu-0a-F6i">
+                    <rect key="frame" x="312" y="32" width="99" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Next step" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FlP-vo-qjx">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didPressNext:" target="g7y-be-tf7" id="VKl-pv-LGF"/>
+                    </connections>
+                </button>
+            </subviews>
+            <connections>
+                <outlet property="controller" destination="-2" id="IKv-gf-fsz"/>
+                <outlet property="directoryPathControl" destination="Fcu-tt-Yn2" id="3bB-Gx-Qhp"/>
+                <outlet property="nextButton" destination="BTu-0a-F6i" id="rqy-A4-9Qt"/>
+                <outlet property="pickButton" destination="zbU-k2-67f" id="y9q-bF-nWS"/>
+            </connections>
+            <point key="canvasLocation" x="1195" y="-44"/>
+        </customView>
+        <customView identifier="step-02" id="zHn-oz-BJc" customClass="OnboardingStep2View" customModule="Joof" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0dS-dO-idU">
+                    <rect key="frame" x="45" y="335" width="54" height="19"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Step 2" id="H4C-Jn-FNG">
+                        <font key="font" metaFont="systemBold" size="16"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MdO-IE-qfj">
+                    <rect key="frame" x="45" y="315" width="279" height="19"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Generate and trust unique certificates" id="7yi-d6-G4J">
+                        <font key="font" metaFont="system" size="16"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bPR-hf-JhW">
+                    <rect key="frame" x="312" y="32" width="99" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Next step" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MfS-Ex-AtT">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didPressNext:" target="zHn-oz-BJc" id="eQ4-dp-iwu"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZ2-F6-4bP">
+                    <rect key="frame" x="45" y="195" width="360" height="112"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" id="0DA-Og-IDA">
+                        <font key="font" metaFont="system"/>
+                        <string key="title">To keep your browser's lock icon green and prevent tampering, Joof generates a unique set of website certificates for you.
+
+You will be asked your password. This is necessary to mark the freshly generated certificates as trusted by your system.</string>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnE-9e-60f">
+                    <rect key="frame" x="41" y="159" width="226" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Generate and trust certificates" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LeJ-52-Bc6">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didPressGenerate:" target="zHn-oz-BJc" id="EgA-q8-nfM"/>
+                    </connections>
+                </button>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AeX-gf-Pb0">
+                    <rect key="frame" x="258" y="165" width="38" height="20"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="✅" id="SPH-al-87n">
+                        <font key="font" size="14" name=".AppleColorEmojiUI"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <connections>
+                <outlet property="checkmark" destination="AeX-gf-Pb0" id="Iyr-hS-px1"/>
+                <outlet property="controller" destination="-2" id="l3m-Qr-Nwu"/>
+                <outlet property="generateButton" destination="cnE-9e-60f" id="SFu-c9-SOT"/>
+                <outlet property="nextButton" destination="bPR-hf-JhW" id="E5L-x4-B0f"/>
+            </connections>
+            <point key="canvasLocation" x="1195" y="409"/>
+        </customView>
+        <customView identifier="step-03" id="7Pa-qY-U6y" customClass="OnboardingStep3View" customModule="Joof" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eQL-aB-hhn">
+                    <rect key="frame" x="45" y="335" width="55" height="19"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Step 3" id="ThV-5x-86f">
+                        <font key="font" metaFont="systemBold" size="16"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Itr-g4-E0o">
+                    <rect key="frame" x="45" y="315" width="272" height="19"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Install or activate browser extensions" id="1bc-l4-hkX">
+                        <font key="font" metaFont="system" size="16"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U28-Lz-l7z">
+                    <rect key="frame" x="337" y="32" width="72" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SMo-bQ-nco">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didPressDone:" target="7Pa-qY-U6y" id="7fy-x4-TbT"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bAM-T9-mhu">
+                    <rect key="frame" x="45" y="270" width="360" height="37"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" title="Joof uses browser extensions to inject your scripts into the webpages that you visit." id="sLy-F0-p03">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UE4-Ss-UJq">
+                    <rect key="frame" x="42" y="222" width="197" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Open Safari Extensions" bezelStyle="rounded" image="NSTouchBarOpenInBrowserTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nZC-O8-LDP">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didPressSafari:" target="7Pa-qY-U6y" id="IAx-QN-A8h"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O7U-AH-WP8">
+                    <rect key="frame" x="41" y="189" width="244" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Install Mozilla Firefox extension" bezelStyle="rounded" image="NSTouchBarOpenInBrowserTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4dC-O5-7HP">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didPressFirefox:" target="7Pa-qY-U6y" id="7H2-OB-bYc"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1c8-cV-8ON">
+                    <rect key="frame" x="41" y="156" width="252" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Install Google Chrome extension" bezelStyle="rounded" image="NSTouchBarOpenInBrowserTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OnO-jb-KCc">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didPressChrome:" target="7Pa-qY-U6y" id="1c3-2s-NIr"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vat-kH-NEe">
+                    <rect key="frame" x="46" y="41" width="204" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Start Joof when system starts" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="d8V-rL-1ch">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="launchAtLoginPressed:" target="7Pa-qY-U6y" id="vID-cT-AMu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <connections>
+                <outlet property="chromeButton" destination="1c8-cV-8ON" id="Plk-vF-IW3"/>
+                <outlet property="controller" destination="-2" id="BUF-CB-7Ae"/>
+                <outlet property="doneButton" destination="U28-Lz-l7z" id="PaP-Eh-DPd"/>
+                <outlet property="firefoxButton" destination="O7U-AH-WP8" id="Zmc-CN-v4s"/>
+                <outlet property="launchAtLoginCheckbox" destination="vat-kH-NEe" id="jVh-hv-Z8b"/>
+                <outlet property="safariButton" destination="UE4-Ss-UJq" id="90Z-ye-VhX"/>
+            </connections>
+            <point key="canvasLocation" x="1195" y="862"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSTouchBarOpenInBrowserTemplate" width="18" height="30"/>
+    </resources>
+</document>

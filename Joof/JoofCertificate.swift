@@ -16,11 +16,15 @@ class JoofCertificate {
     static let keyPath = "\(dir)/joof.key"
     static let certPath = "\(dir)/joof.crt"
 
-    static func generateCertsIfMissing(_ callback: @escaping (Bool) -> Void) {
-        let certAndKey = FileManager.default.fileExists(atPath: certPath) &&
-            FileManager.default.fileExists(atPath: keyPath)
+    static var exists: Bool {
+        get {
+            return FileManager.default.fileExists(atPath: certPath) &&
+                FileManager.default.fileExists(atPath: keyPath)
+        }
+    }
 
-        if certAndKey {
+    static func generateCertsIfMissing(_ callback: @escaping (Bool) -> Void) {
+        if exists {
             callback(true)
         } else {
             let task = Process()
@@ -31,13 +35,17 @@ class JoofCertificate {
                 task.launch()
                 task.waitUntilExit()
 
+                if task.terminationStatus != 0 {
+                    callback(false)
+                }
+
                 self.acceptCert()
 
-                callback(task.terminationStatus == 0)
+                callback(true)
             }
         }
     }
-
+    
     static func acceptCert() {
         let data = NSData(contentsOf: URL(fileURLWithPath: "Certs/rootCA.der"))!
         var err: OSStatus = noErr

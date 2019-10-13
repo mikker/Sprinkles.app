@@ -21,6 +21,8 @@ extension PreferencePane.Identifier {
 class AppDelegate: NSObject, NSApplicationDelegate {
     var unsubscribe: UnsubscribeFn?
     var statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
+  
+    @IBOutlet var onboarding: OnboardingController!
 
     lazy var preferences: [PreferencePane] = [
         GeneralPreferencesViewController()
@@ -42,21 +44,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         buildMenubarMenu()
 
-        JoofCertificate.generateCertsIfMissing { hasCert in
-            store.dispatch(.hasCert(hasCert))
-        }
-
-        if let directory = Bookmark.url {
-            store.dispatch(.setDirectory(directory))
-        } else {
-            showPreferences()
-            // openSafariExtensionsIfDisabled()
-        }
-
         unsubscribe = store.subscribe { state in
             if state.directory != nil && state.hasCert {
-                NSApp.setActivationPolicy(.accessory)
                 Server.instance.start(3133)
+            } else {
+                self.onboarding.showWindow(nil)
+                store.dispatch(.setIsOnboarding(true))
+            }
+            
+            if state.directory != nil && state.hasCert && !state.isOnboarding {
+                NSApp.setActivationPolicy(.accessory)
             }
         }
     }
@@ -93,16 +90,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(NSMenuItem(title: "Quit Joof", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
 
         statusItem.menu = menu
-    }
-
-    private func openSafariExtensionsIfDisabled() {
-        let identifier = "com.brnbw.Joof.extension"
-
-        SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: identifier) { (state, error) in
-            guard error == nil else { print(error!); return }
-            guard state == nil || !(state!.isEnabled) else { return }
-
-            SFSafariApplication.showPreferencesForExtension(withIdentifier: identifier, completionHandler: nil)
-        }
     }
 }
