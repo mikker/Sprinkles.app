@@ -72,6 +72,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func showPreferences() {
         preferencesWindowController.show()
     }
+    
+    @objc func showOnboarding() {
+        Defaults[.hasOnboarded] = false
+        NSApp.setActivationPolicy(.regular)
+        self.onboarding.showWindow(nil)
+    }
 
     private func initSentry() {
         do {
@@ -92,6 +98,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let menu = NSMenu()
 
         menu.addItem(NSMenuItem(title: "Preferences…", action: #selector(showPreferences), keyEquivalent: ","))
+        let alternate = NSMenuItem(title: "Onboarding…", action: #selector(showOnboarding), keyEquivalent: ",")
+        alternate.isAlternate = true
+        alternate.keyEquivalentModifierMask = .option
+        menu.addItem(alternate)
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit Joof", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
 

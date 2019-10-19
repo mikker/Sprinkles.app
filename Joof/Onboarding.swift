@@ -64,7 +64,7 @@ class OnboardingStep1View: NSView {
     var unsubscribe: UnsubscribeFn?
     
     override func awakeFromNib() {
-        pickButton.becomeFirstResponder()
+        pickButton.highlight(true)
         
         unsubscribe = store.subscribe { state in
             if state.directory != nil {
