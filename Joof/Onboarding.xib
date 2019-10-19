@@ -17,7 +17,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="Mfr-h5-bc1">
+        <window title="Setting up Joof" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="Mfr-h5-bc1">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="427" y="270" width="450" height="600"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
@@ -199,7 +199,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                     <rect key="frame" x="258" y="165" width="38" height="20"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="✅" id="SPH-al-87n">
-                        <font key="font" size="14" name=".AppleColorEmojiUI"/>
+                        <font key="font" metaFont="menu" size="14"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>

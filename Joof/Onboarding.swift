@@ -70,6 +70,7 @@ class OnboardingStep1View: NSView {
             if state.directory != nil {
                 self.directoryPathControl.url = state.directory
                 self.nextButton.isEnabled = true
+                self.pickButton.highlight(false)
                 self.nextButton.highlight(true)
             }
         }
