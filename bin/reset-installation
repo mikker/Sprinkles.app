@@ -1,0 +1,4 @@
+#!/bin/bash -x
+osascript -e 'tell application "Joof" to quit'
+rm -rf ~/Library/Containers/com.brnbw.Joof*
+
