@@ -71,11 +71,17 @@ public class Bookmark {
     
     private func ensureDefaultDir() -> URL {
         let url = URL(fileURLWithPath: Bookmark.defaultScriptsDirectoryPath)
+
+        if FileManager.default.fileExists(atPath: url.path) { return url }
+
         do {
             try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true, attributes: nil)
         } catch {
             fatalError(error.localizedDescription)
         }
+        
+        self.url = url
+        
         return url
     }
     

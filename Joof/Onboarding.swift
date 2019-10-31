@@ -87,6 +87,7 @@ class OnboardingStep1View: NSView {
     }
     
     @IBAction func didPressNext(_ sender: Any) {
+        ExampleFiles.copyTo(directoryAtPath: store.state.directory.path)
         controller.goToPage(.page2)
     }
 }
