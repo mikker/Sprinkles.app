@@ -79,7 +79,7 @@ class OnboardingStep1View: NSView {
     deinit {
         unsubscribe?()
     }
-
+    
     @IBAction func didPressPick(_ sender: Any) {
         let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
@@ -121,7 +121,7 @@ class OnboardingStep2View: NSView {
     deinit {
         unsubscribe?()
     }
-
+    
     @IBAction func didPressGenerate(_ sender: Any) {
         JoofCertificate.generateCertsIfMissing { hasCert in
             store.dispatch(.hasCert(hasCert))
@@ -135,26 +135,26 @@ class OnboardingStep2View: NSView {
 
 class OnboardingStep3View: NSView {
     @IBOutlet weak var controller: OnboardingController!
-
+    
     @IBOutlet weak var safariButton: NSButton!
     @IBOutlet weak var firefoxButton: NSButton!
     @IBOutlet weak var chromeButton: NSButton!
     @IBOutlet weak var doneButton: NSButton!
     @IBOutlet weak var launchAtLoginCheckbox: NSButton!
-
+    
     @IBAction func didPressSafari(_ sender: Any) {
         let identifier = "com.brnbw.Joof.extension"
         SFSafariApplication.showPreferencesForExtension(withIdentifier: identifier, completionHandler: nil)
     }
-
+    
     @IBAction func didPressFirefox(_ sender: Any) {
         NSWorkspace.shared.openFile("https://joof.app/firefox", withApplication: "Firefox")
     }
-
+    
     @IBAction func didPressChrome(_ sender: Any) {
         NSWorkspace.shared.openFile("https://joof.app/chrome", withApplication: "Google Chrome")
     }
-
+    
     @IBAction func didPressDone(_ sender: Any) {
         controller.close()
         Defaults[.hasOnboarded] = true
