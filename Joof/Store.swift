@@ -1,7 +1,7 @@
 import Foundation
 
 public enum Action {
-    case setDirectory(URL?)
+    case setDirectory(URL)
     case serverStateChanged(ServerState)
     case hasCert(Bool)
     case setIsOnboarding(Bool)

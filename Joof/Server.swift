@@ -52,8 +52,7 @@ class Server: NSObject {
             guard let domain = "/(.*)\\.js".r?.findFirst(in: req.url.path)?.group(at: 1)
                 else { return res.send("console.log('Failed parsing domain')") }
 
-            guard let directory = store.state.directory
-                else { return res.send("console.log('No joof dir yet?')") }
+            let directory = store.state.directory
 
             let globalJsURL = directory.appendingPathComponent("global.js")
             let jsURL = directory.appendingPathComponent("\(domain).js")

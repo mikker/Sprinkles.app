@@ -45,7 +45,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         buildMenubarMenu()
 
         unsubscribe = store.subscribe { state in
-            if state.directory != nil && state.hasCert && Defaults[.hasOnboarded] {
+            if state.hasCert && Defaults[.hasOnboarded] {
                 Server.instance.start(3133)
                 NSApp.setActivationPolicy(.accessory)
             }
@@ -59,16 +59,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         Server.instance.stop()
         unsubscribe?()
-    }
-
-    @objc func showPreferences() {
-        preferencesWindowController.show()
-    }
-    
-    @objc func showOnboarding() {
-        Defaults[.hasOnboarded] = false
-        NSApp.setActivationPolicy(.regular)
-        self.onboarding.showWindow(nil)
     }
 
     private func initSentry() {
@@ -89,14 +79,31 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private func buildMenubarMenu() {
         let menu = NSMenu()
 
-        menu.addItem(NSMenuItem(title: "Preferences…", action: #selector(showPreferences), keyEquivalent: ","))
+        menu.addItem(withTitle: "Preferences…", action: #selector(showPreferences), keyEquivalent: ",")
         let alternate = NSMenuItem(title: "Onboarding…", action: #selector(showOnboarding), keyEquivalent: ",")
         alternate.isAlternate = true
         alternate.keyEquivalentModifierMask = .option
         menu.addItem(alternate)
+        
+        menu.addItem(withTitle: "Open directory…", action: #selector(openDirectory), keyEquivalent: "o")
+        
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit Joof", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
 
         statusItem.menu = menu
+    }
+
+    @objc private func showPreferences() {
+        preferencesWindowController.show()
+    }
+    
+    @objc private func showOnboarding() {
+        Defaults[.hasOnboarded] = false
+        NSApp.setActivationPolicy(.regular)
+        self.onboarding.showWindow(nil)
+    }
+    
+    @objc private func openDirectory() {
+        NSWorkspace.shared.open(store.state.directory)
     }
 }

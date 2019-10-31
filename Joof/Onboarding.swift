@@ -67,12 +67,10 @@ class OnboardingStep1View: NSView {
         pickButton.highlight(true)
         
         unsubscribe = store.subscribe { state in
-            if state.directory != nil {
-                self.directoryPathControl.url = state.directory
-                self.nextButton.isEnabled = true
-                self.pickButton.highlight(false)
-                self.nextButton.highlight(true)
-            }
+            self.directoryPathControl.url = state.directory
+            self.nextButton.isEnabled = true
+            self.pickButton.highlight(false)
+            self.nextButton.highlight(true)
         }
     }
     
@@ -81,18 +79,10 @@ class OnboardingStep1View: NSView {
     }
     
     @IBAction func didPressPick(_ sender: Any) {
-        let openPanel = NSOpenPanel()
-        openPanel.allowsMultipleSelection = false
-        openPanel.canChooseDirectories = true
-        openPanel.canCreateDirectories = true
-        let path = NSString(string: store.state.directory?.path ?? "~").expandingTildeInPath
-        openPanel.directoryURL = NSURL.fileURL(withPath: path, isDirectory: true)
-        openPanel.canChooseFiles = false
-        openPanel.resolvesAliases = true
-        openPanel.begin { (result) in
-            guard result == NSApplication.ModalResponse.OK else { return }
-            Bookmark.url = openPanel.url
-            store.dispatch(.setDirectory(openPanel.url))
+        OpenPanel.pick { url in
+            guard url != nil else { return }
+            Bookmark.url = url!
+            store.dispatch(.setDirectory(url!))
         }
     }
     

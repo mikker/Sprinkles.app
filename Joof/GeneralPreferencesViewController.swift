@@ -58,18 +58,10 @@ final class GeneralPreferencesViewController: NSViewController, PreferencePane {
     }
 
     @IBAction func pickDirectoryPressed(_ sender: Any?) {
-        let openPanel = NSOpenPanel()
-        openPanel.allowsMultipleSelection = false
-        openPanel.canChooseDirectories = true
-        openPanel.canCreateDirectories = true
-        let path = NSString(string: store.state.directory?.path ?? "~").expandingTildeInPath
-        openPanel.directoryURL = NSURL.fileURL(withPath: path, isDirectory: true)
-        openPanel.canChooseFiles = false
-        openPanel.resolvesAliases = true
-        openPanel.begin { (result) in
-            guard result == NSApplication.ModalResponse.OK else { return }
-            Bookmark.url = openPanel.url
-            store.dispatch(.setDirectory(openPanel.url))
+        OpenPanel.pick { url in
+            guard url != nil else { return }
+            Bookmark.url = url!
+            store.dispatch(.setDirectory(url!))
         }
     }
 
