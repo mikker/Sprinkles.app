@@ -14,3 +14,6 @@ echo "${VERSION} (${BUILD})"
 
 agvtool new-marketing-version ${VERSION}
 agvtool new-version -all ${BUILD}
+
+git add .
+git commit -m "v$VERSION ($BUILD)"
