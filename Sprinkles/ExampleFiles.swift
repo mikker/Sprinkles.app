@@ -1,0 +1,53 @@
+//
+//  ExampleFiles.swift
+//  Sprinkles
+//
+//  Created by Mikkel Malmberg on 31/10/2019.
+//  Copyright © 2019 Brainbow. All rights reserved.
+//
+
+import Foundation
+
+class ExampleFiles {
+    static let globalCSS =
+        """
+        /* This is global.css.
+         *
+         * The styles you add here will be added to every page you visit.
+         *
+         * To add styles specific to a single domain, create files in this directory, named
+         * after the domain, eg. "twitter.com.css".
+         *
+         * For example, uncomment the line below to get an extra creamy web experience: */
+
+         /* body { background-color: papayawhip; } */
+        """
+    
+    static let globalJS =
+        """
+        // This is global.js.
+        //
+        // The JavaScript code you add here will be run on every page you visit.
+        //
+        // To add scripts specific to a single domain, create files in this directory, name
+        // after the domain, eg. "twitter.com.js".
+        //
+        // For example, uncomment the lines below to change all images to random ones:
+        
+        // for (const elm of document.querySelectorAll("img")) {
+        //   elm.src = `//picsum.photos/${elm.width}`
+        // }
+        """
+    
+    static func copyTo(directoryAtPath path: String) {
+        writeIfNotExists(path: path + "/global.css", content: globalCSS)
+        writeIfNotExists(path: path + "/global.js", content: globalJS)
+    }
+    
+    private static func writeIfNotExists(path: String, content: String) {
+        if !FileManager.default.fileExists(atPath: path) {
+            print("Writing default \(path)")
+            FileManager.default.createFile(atPath: path, contents: content.data(using: .utf8), attributes: nil)
+        }
+    }
+}
