@@ -54,21 +54,21 @@
 			containerPortal = 425A176B21EFC86500C57D44 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 425A177221EFC86500C57D44;
-			remoteInfo = Joof;
+			remoteInfo = Sprinkles;
 		};
 		425A179221EFC86700C57D44 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 425A176B21EFC86500C57D44 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 425A177221EFC86500C57D44;
-			remoteInfo = Joof;
+			remoteInfo = Sprinkles;
 		};
 		425A179E21EFC86700C57D44 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 425A176B21EFC86500C57D44 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 425A179B21EFC86700C57D44;
-			remoteInfo = "Joof Extension";
+			remoteInfo = "Sprinkles Extension";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -126,7 +126,7 @@
 		425A17A421EFC86700C57D44 /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
 		425A17AB21EFC86700C57D44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		425A17AC21EFC86700C57D44 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
-		425A17B021EFC86700C57D44 /* Joof_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Joof_Extension.entitlements; sourceTree = "<group>"; };
+		425A17B021EFC86700C57D44 /* Sprinkles_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sprinkles_Extension.entitlements; sourceTree = "<group>"; };
 		425A17C921EFD54F00C57D44 /* global.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = global.js; sourceTree = "<group>"; };
 		425A17CD21F0875300C57D44 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		425A17CF21F08BED00C57D44 /* Taste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taste.swift; sourceTree = "<group>"; };
@@ -281,7 +281,7 @@
 				428B9DBA23753753005D307F /* ToolbarItemIcon.pdf */,
 				425A17AB21EFC86700C57D44 /* Info.plist */,
 				425A17AC21EFC86700C57D44 /* script.js */,
-				425A17B021EFC86700C57D44 /* Joof_Extension.entitlements */,
+				425A17B021EFC86700C57D44 /* Sprinkles_Extension.entitlements */,
 			);
 			path = "Sprinkles Extension";
 			sourceTree = "<group>";
@@ -341,7 +341,7 @@
 				42DFEDE1234E209400916DCB /* Preferences */,
 				42DFEDE4234E217C00916DCB /* Regex */,
 			);
-			productName = Joof;
+			productName = Sprinkles;
 			productReference = 425A177321EFC86500C57D44 /* Sprinkles.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -359,7 +359,7 @@
 				425A178821EFC86700C57D44 /* PBXTargetDependency */,
 			);
 			name = SprinklesTests;
-			productName = JoofTests;
+			productName = SprinklesTests;
 			productReference = 425A178621EFC86700C57D44 /* SprinklesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -377,7 +377,7 @@
 				425A179321EFC86700C57D44 /* PBXTargetDependency */,
 			);
 			name = SprinklesUITests;
-			productName = JoofUITests;
+			productName = SprinklesUITests;
 			productReference = 425A179121EFC86700C57D44 /* SprinklesUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
@@ -394,7 +394,7 @@
 			dependencies = (
 			);
 			name = "Sprinkles Extension";
-			productName = "Joof Extension";
+			productName = "Sprinkles Extension";
 			productReference = 425A179C21EFC86700C57D44 /* Sprinkles.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
@@ -536,7 +536,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"${CONFIGURATION}\" != \"Release\" ]; then\n    exit 0\nfi\n\nif which sentry-cli >/dev/null; then\n    export SENTRY_ORG=brainbow\n    export SENTRY_PROJECT=joofapp\n    export SENTRY_AUTH_TOKEN=\"27b17a4769dc45f7bf42df5b08a1c1a98442d83e133143c996e9dcf8903e9e29\"\n    ERROR=$(sentry-cli upload-dif \"$DWARF_DSYM_FOLDER_PATH\" 2>&1 >/dev/null)\n    if [ ! $? -eq 0 ]; then\n        echo \"warning: sentry-cli - $ERROR\"\n    fi\nelse\n    echo \"warning: sentry-cli not installed, download from https://github.com/getsentry/sentry-cli/releases\"\nfi\n";
+			shellScript = "if [ \"${CONFIGURATION}\" != \"Release\" ]; then\n    exit 0\nfi\n\nif which sentry-cli >/dev/null; then\n    export SENTRY_ORG=brainbow\n    export SENTRY_PROJECT=sprinklesapp\n    export SENTRY_AUTH_TOKEN=\"27b17a4769dc45f7bf42df5b08a1c1a98442d83e133143c996e9dcf8903e9e29\"\n    ERROR=$(sentry-cli upload-dif \"$DWARF_DSYM_FOLDER_PATH\" 2>&1 >/dev/null)\n    if [ ! $? -eq 0 ]; then\n        echo \"warning: sentry-cli - $ERROR\"\n    fi\nelse\n    echo \"warning: sentry-cli not installed, download from https://github.com/getsentry/sentry-cli/releases\"\nfi\n";
 		};
 		428B7C4721F1FAE80065EE2B /* Carthage: Copy frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -788,12 +788,12 @@
 		425A17B421EFC86700C57D44 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Joof Extension/Joof_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Sprinkles Extension/Sprinkles_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Joof Extension/Info.plist";
+				INFOPLIST_FILE = "Sprinkles Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -801,7 +801,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.Sprinkles.extension;
-				PRODUCT_MODULE_NAME = Joof_Extension;
+				PRODUCT_MODULE_NAME = Sprinkles_Extension;
 				PRODUCT_NAME = Sprinkles;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -812,12 +812,12 @@
 		425A17B521EFC86700C57D44 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Joof Extension/Joof_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Sprinkles Extension/Sprinkles_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Joof Extension/Info.plist";
+				INFOPLIST_FILE = "Sprinkles Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -825,7 +825,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.Sprinkles.extension;
-				PRODUCT_MODULE_NAME = Joof_Extension;
+				PRODUCT_MODULE_NAME = Sprinkles_Extension;
 				PRODUCT_NAME = Sprinkles;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -838,7 +838,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Joof/Joof.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Sprinkles/Sprinkles.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -850,7 +850,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = Joof/Info.plist;
+				INFOPLIST_FILE = Sprinkles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -868,7 +868,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Joof/Joof.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Sprinkles/Sprinkles.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -879,7 +879,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = Joof/Info.plist;
+				INFOPLIST_FILE = Sprinkles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -900,13 +900,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
-				INFOPLIST_FILE = JoofTests/Info.plist;
+				INFOPLIST_FILE = SprinklesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.JoofTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.SprinklesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sprinkles.app/Contents/MacOS/Sprinkles";
@@ -921,13 +921,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
-				INFOPLIST_FILE = JoofTests/Info.plist;
+				INFOPLIST_FILE = SprinklesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.JoofTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.SprinklesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sprinkles.app/Contents/MacOS/Sprinkles";
@@ -941,16 +941,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
-				INFOPLIST_FILE = JoofUITests/Info.plist;
+				INFOPLIST_FILE = SprinklesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.JoofUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.SprinklesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Joof;
+				TEST_TARGET_NAME = Sprinkles;
 			};
 			name = Debug;
 		};
@@ -961,16 +961,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
-				INFOPLIST_FILE = JoofUITests/Info.plist;
+				INFOPLIST_FILE = SprinklesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.JoofUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.SprinklesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Joof;
+				TEST_TARGET_NAME = Sprinkles;
 			};
 			name = Release;
 		};

@@ -5,7 +5,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="GeneralPreferencesViewController" customModule="Joof" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="GeneralPreferencesViewController" customModule="Sprinkles" customModuleProvider="target">
             <connections>
                 <outlet property="chromeButton" destination="u7c-Lg-38Q" id="a3i-0l-yp7"/>
                 <outlet property="cycleCertificatesButton" destination="e61-2w-O51" id="lcL-G0-Jc1"/>
@@ -96,7 +96,7 @@
                         <action selector="launchAtStartupPressed:" target="-2" id="Alm-WF-Eio"/>
                     </connections>
                 </button>
-                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9y7-oo-htG" customClass="StatusLightView" customModule="Joof" customModuleProvider="target">
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9y7-oo-htG" customClass="StatusLightView" customModule="Sprinkles" customModuleProvider="target">
                     <rect key="frame" x="129" y="289" width="14" height="14"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </customView>

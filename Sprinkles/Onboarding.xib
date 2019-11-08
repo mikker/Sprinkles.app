@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="OnboardingController" customModule="Joof" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="OnboardingController" customModule="Sprinkles" customModuleProvider="target">
             <connections>
                 <outlet property="contentBox" destination="JeL-PT-DpD" id="dU8-Fs-gqL"/>
                 <outlet property="step1" destination="g7y-be-tf7" id="6dp-WL-C5r"/>
@@ -61,7 +62,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <customView identifier="step-01" ambiguous="YES" id="g7y-be-tf7" customClass="OnboardingStep1View" customModule="Joof" customModuleProvider="target">
+                                <customView identifier="step-01" ambiguous="YES" id="g7y-be-tf7" customClass="OnboardingStep1View" customModule="Sprinkles" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <subviews>
@@ -87,7 +88,7 @@
                                             <rect key="frame" x="45" y="259" width="360" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" id="Fkq-96-rld">
-                                                <font key="font" metaFont="message"/>
+                                                <font key="font" metaFont="system"/>
                                                 <string key="title">You decide where you keep your .js and .css files. Picking the directory gives Sprinkles permission to reads its contents per Apple's sandbox rules.</string>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -97,7 +98,7 @@
                                             <rect key="frame" x="45" y="183" width="360" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <pathCell key="cell" selectable="YES" editable="YES" alignment="left" id="lpp-hC-8bR">
-                                                <font key="font" metaFont="message"/>
+                                                <font key="font" metaFont="system"/>
                                                 <url key="url" string="file:///"/>
                                             </pathCell>
                                         </pathControl>
@@ -106,7 +107,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="push" title="Pick directory" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aGy-So-aDz">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="message"/>
+                                                <font key="font" metaFont="system"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="didPressPick:" target="g7y-be-tf7" id="W4g-3S-Ner"/>
@@ -117,7 +118,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="push" title="Next step" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FlP-vo-qjx">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="message"/>
+                                                <font key="font" metaFont="system"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="didPressNext:" target="g7y-be-tf7" id="VKl-pv-LGF"/>
@@ -138,7 +139,7 @@
             </view>
             <point key="canvasLocation" x="684" y="149"/>
         </window>
-        <customView identifier="step-02" id="zHn-oz-BJc" customClass="OnboardingStep2View" customModule="Joof" customModuleProvider="target">
+        <customView identifier="step-02" id="zHn-oz-BJc" customClass="OnboardingStep2View" customModule="Sprinkles" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
@@ -165,7 +166,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Next step" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MfS-Ex-AtT">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="message"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
                         <action selector="didPressNext:" target="zHn-oz-BJc" id="eQ4-dp-iwu"/>
@@ -175,7 +176,7 @@
                     <rect key="frame" x="45" y="195" width="360" height="112"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" id="0DA-Og-IDA">
-                        <font key="font" metaFont="message"/>
+                        <font key="font" metaFont="system"/>
                         <string key="title">To keep your browser's lock icon green and prevent tampering, Sprinkles generates a unique set of website certificates for you.
 
 You will be asked your password. This is necessary to mark the freshly generated certificates as trusted by your system.</string>
@@ -188,7 +189,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Generate and trust certificates" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LeJ-52-Bc6">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="message"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
                         <action selector="didPressGenerate:" target="zHn-oz-BJc" id="EgA-q8-nfM"/>
@@ -212,7 +213,7 @@ You will be asked your password. This is necessary to mark the freshly generated
             </connections>
             <point key="canvasLocation" x="1195" y="49"/>
         </customView>
-        <customView identifier="step-03" id="7Pa-qY-U6y" customClass="OnboardingStep3View" customModule="Joof" customModuleProvider="target">
+        <customView identifier="step-03" id="7Pa-qY-U6y" customClass="OnboardingStep3View" customModule="Sprinkles" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
@@ -239,7 +240,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SMo-bQ-nco">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="message"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
                         <action selector="didPressDone:" target="7Pa-qY-U6y" id="7fy-x4-TbT"/>
@@ -249,7 +250,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                     <rect key="frame" x="45" y="270" width="360" height="37"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" title="Sprinkles uses browser extensions to inject your scripts into the webpages that you visit." id="sLy-F0-p03">
-                        <font key="font" metaFont="message"/>
+                        <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -259,7 +260,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Open Safari Extensions" bezelStyle="rounded" image="NSTouchBarOpenInBrowserTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nZC-O8-LDP">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="message"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
                         <action selector="didPressSafari:" target="7Pa-qY-U6y" id="IAx-QN-A8h"/>
@@ -270,7 +271,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Install Mozilla Firefox extension" bezelStyle="rounded" image="NSTouchBarOpenInBrowserTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4dC-O5-7HP">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="message"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
                         <action selector="didPressFirefox:" target="7Pa-qY-U6y" id="7H2-OB-bYc"/>
@@ -281,7 +282,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Install Google Chrome extension" bezelStyle="rounded" image="NSTouchBarOpenInBrowserTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OnO-jb-KCc">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="message"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
                         <action selector="didPressChrome:" target="7Pa-qY-U6y" id="1c3-2s-NIr"/>
@@ -292,7 +293,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Start Sprinkles when system starts" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="d8V-rL-1ch">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="message"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
                         <action selector="launchAtLoginPressed:" target="7Pa-qY-U6y" id="vID-cT-AMu"/>

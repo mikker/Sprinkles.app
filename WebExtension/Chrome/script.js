@@ -4,7 +4,7 @@ function apply(script) {
       try {
         eval(script);
       } catch (e) {
-        console.groupCollapsed('%cjoof failed eval\'ing your script', 'color:red')
+        console.groupCollapsed('%cSprinkles failed eval\'ing your script', 'color:red')
         console.error(e)
         console.groupEnd()
       }

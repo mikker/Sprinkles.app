@@ -1,5 +1,5 @@
 {
-  "name": "Joof.app",
+  "name": "Sprinkles",
   "manifest_version": 2,
   "version": "1.0",
   "description": "Add custom scripts and styles to any webpage",
@@ -8,7 +8,7 @@
     "32": "icon32.png",
     "128": "icon128.png"
   },
-  "homepage_url": "https://joof.app",
+  "homepage_url": "https://sprinkles.app",
   "content_scripts": [
     {
       "all_frames": true,

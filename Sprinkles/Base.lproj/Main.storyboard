@@ -9,12 +9,12 @@
             <objects>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Joof" customModuleProvider="target">
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Sprinkles" customModuleProvider="target">
                     <connections>
                         <outlet property="onboarding" destination="3yY-xa-3uR" id="sK7-vk-Izb"/>
                     </connections>
                 </customObject>
-                <customObject id="3yY-xa-3uR" customClass="OnboardingController" customModule="Joof" customModuleProvider="target"/>
+                <customObject id="3yY-xa-3uR" customClass="OnboardingController" customModule="Sprinkles" customModuleProvider="target"/>
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>

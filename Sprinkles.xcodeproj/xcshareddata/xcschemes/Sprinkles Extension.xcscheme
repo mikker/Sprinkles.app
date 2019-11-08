@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "425A179B21EFC86700C57D44"
-               BuildableName = "Joof.appex"
+               BuildableName = "Sprinkles.appex"
                BlueprintName = "Sprinkles Extension"
                ReferencedContainer = "container:Sprinkles.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "425A179B21EFC86700C57D44"
-            BuildableName = "Joof.appex"
+            BuildableName = "Sprinkles.appex"
             BlueprintName = "Sprinkles Extension"
             ReferencedContainer = "container:Sprinkles.xcodeproj">
          </BuildableReference>
