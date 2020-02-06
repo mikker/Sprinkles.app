@@ -11,12 +11,12 @@ import Foundation
 class ExampleFiles {
     static let globalCSS =
         """
-        /* This is global.css.
+        /* This is Sprinkles' global.css.
          *
          * The styles you add here will be added to every page you visit.
          *
          * To add styles specific to a single domain, create files in this directory, named
-         * after the domain, eg. "twitter.com.css".
+         * after the (full) domain, eg. "twitter.com.css" or "subdomain.example.com.css".
          *
          * For example, uncomment the line below to get an extra creamy web experience: */
 
@@ -25,14 +25,14 @@ class ExampleFiles {
     
     static let globalJS =
         """
-        // This is global.js.
+        // This is Sprinkles' global.js.
         //
         // The JavaScript code you add here will be run on every page you visit.
         //
         // To add scripts specific to a single domain, create files in this directory, name
-        // after the domain, eg. "twitter.com.js".
+        // after the domain, eg. "twitter.com.js" or "subdomain.example.com.js".
         //
-        // For example, uncomment the lines below to change all images to random ones:
+        // For example, uncomment the lines below to change every image on the web to random new one:
         
         // for (const elm of document.querySelectorAll("img")) {
         //   elm.src = `//picsum.photos/${elm.width}`
