@@ -24,7 +24,9 @@ class PreferencesController: NSViewController {
     
     var unsubscribe: UnsubscribeFn?
     var dockTimer: Timer?
-    
+    var diagnosticsObservation: DefaultsObservation?
+    var dockIconObservation: DefaultsObservation?
+
     deinit {
         unsubscribe?()
     }
@@ -46,16 +48,23 @@ class PreferencesController: NSViewController {
             }
         }
         
+        diagnosticsObservation = Defaults.observe(.enableDiagnostics) { (change) in
+            self.diagnosticsCheckbox.state = change.newValue ? .on : .off
+        }.tieToLifetime(of: self)
+        
+        dockIconObservation = Defaults.observe(.enableDockIcon) { change in
+            self.dockIconCheckbox.state = change.newValue ? .on : .off
+        }.tieToLifetime(of: self)
+        
         launchAtLoginCheckbox.state = LaunchAtLogin.isEnabled ? .on : .off
-        diagnosticsCheckbox.state = Defaults[.enableDiagnostics] ? .on : .off
-        dockIconCheckbox.state = Defaults[.enableDockIcon] ? .on : .off
     }
     
-    @IBAction func pickDirectoryPressed(_ sender: Any?) {
-        OpenPanel.pick { url in
-            guard url != nil else { return }
-            Bookmark.url = url!
-            store.dispatch(.setDirectory(url!))
+    @IBAction func chooseLocationPressed(_ sender: Any?) {
+        OpenPanel.pick { result in
+            guard let url = result else { return }
+            
+            Bookmark.url = url
+            store.dispatch(.setDirectory(url))
         }
     }
     
@@ -67,7 +76,6 @@ class PreferencesController: NSViewController {
     @IBAction func diagnosticsCheckboxPressed(_ sender: Any?) {
         let state = diagnosticsCheckbox.state.rawValue == 1
         Defaults[.enableDiagnostics] = state
-        
     }
     
     @IBAction func dockIconCheckboxPressed(_ sender: Any?) {
@@ -93,20 +101,12 @@ class PreferencesController: NSViewController {
     }
     
     @IBAction func firefoxPressed(_ sender: Any?) {
-        NSWorkspace.shared.open(URL(string: "https://addons.mozilla.org/en-US/firefox/addon/Sprinkles-app/?src=search")!)
+        NSWorkspace.shared.openFile("https://sprinkles.website/firefox", withApplication: "Firefox")
     }
     
     @IBAction func chromePressed(_ sender: Any?) {
-        NSWorkspace.shared.open(URL(string: "https://chrome.google.com/webstore/detail/Sprinklesapp/knknjjghhkppgfkkclcdefohkfdnhfan")!)
+        NSWorkspace.shared.openFile("https://sprinkles.website/chrome", withApplication: "Google Chrome")
     }
-    
-    //    @IBAction func cycleCertificatedPressed(_ sender: Any?) {
-    //        cycleCertificatesButton.isEnabled = false
-    //
-    //        SprinklesCertificate.destroy()
-    //
-    //        NSApplication.shared.terminate(nil)
-    //    }
     
     @IBAction func quitPressed(_ sender: Any?) {
         NSApp.terminate(nil)

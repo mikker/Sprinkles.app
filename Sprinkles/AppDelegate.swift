@@ -18,17 +18,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet var onboarding: OnboardingController!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        preferences = NSApplication.shared.windows.last!
+        if (Defaults[.enableDiagnostics]) { Diagnostics.enable() }
+        Diagnostics.send("[app] Boot")
         
+        preferences = NSApplication.shared.windows.last!
+
         statusItem.handleOnboarding = { self.showOnboarding() }
         statusItem.handlePreferences = { self.showPreferences() }
         statusItem.enable()
         
         if (Defaults[.enableDockIcon]) { NSApp.setActivationPolicy(.regular) }
 
-        if (Defaults[.enableDiagnostics]) { Diagnostics.enable() }
-        Diagnostics.send("Appliction boot")
-        
         unsubscribe = store.subscribe { state in
             if state.hasCert && Defaults[.hasOnboarded] {
                 Server.instance.start(3133)
@@ -36,8 +36,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         if !Defaults[.hasOnboarded] {
-            self.onboarding.showWindow(nil)
-            self.preferences!.close()
+            showOnboarding()
         }
     }
 

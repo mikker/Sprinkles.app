@@ -58,19 +58,16 @@ class OnboardingController: NSWindowController {
 class OnboardingStep1View: NSView {
     @IBOutlet weak var controller: OnboardingController!
     @IBOutlet weak var directoryPathControl: NSPathControl!
-    @IBOutlet weak var pickButton: NSButton!
+    @IBOutlet weak var chooseLocationButton: NSButton!
     @IBOutlet weak var nextButton: NSButton!
     
     var unsubscribe: UnsubscribeFn?
     
     override func awakeFromNib() {
-        pickButton.highlight(true)
+        self.window?.makeFirstResponder(chooseLocationButton)
         
         unsubscribe = store.subscribe { state in
             self.directoryPathControl.url = state.directory
-            self.nextButton.isEnabled = true
-            self.pickButton.highlight(false)
-            self.nextButton.highlight(true)
         }
     }
     
@@ -79,10 +76,11 @@ class OnboardingStep1View: NSView {
     }
     
     @IBAction func didPressPick(_ sender: Any) {
-        OpenPanel.pick { url in
-            guard url != nil else { return }
-            Bookmark.url = url!
-            store.dispatch(.setDirectory(url!))
+        OpenPanel.pick { result in
+            guard let url = result else { return }
+            
+            Bookmark.url = url
+            store.dispatch(.setDirectory(url))
         }
     }
     
@@ -101,11 +99,17 @@ class OnboardingStep2View: NSView {
     var unsubscribe: UnsubscribeFn?
     
     override func awakeFromNib() {
+        self.window?.makeFirstResponder(generateButton)
+
         unsubscribe = store.subscribe { state in
             self.nextButton.isEnabled = state.hasCert
-            self.nextButton.isHighlighted = state.hasCert
+            
             self.generateButton.isEnabled = !state.hasCert
             self.checkmark.isHidden = !state.hasCert
+            
+            if (state.hasCert) {
+                self.window?.makeFirstResponder(self.nextButton)
+            }
         }
     }
     
@@ -139,32 +143,32 @@ class OnboardingStep3View: NSView {
         launchAtLoginCheckbox.state = LaunchAtLogin.isEnabled ? .on : .off
     }
     
-    @IBAction func didPressSafari(_ sender: Any) {
+    @IBAction func safariPressed(_ sender: Any) {
         let identifier = "com.brnbw.Sprinkles.extension"
         SFSafariApplication.showPreferencesForExtension(withIdentifier: identifier, completionHandler: nil)
     }
     
-    @IBAction func didPressFirefox(_ sender: Any) {
+    @IBAction func firefoxPressed(_ sender: Any) {
         NSWorkspace.shared.openFile("https://sprinkles.website/firefox", withApplication: "Firefox")
     }
     
-    @IBAction func didPressChrome(_ sender: Any) {
+    @IBAction func googleChromePressed(_ sender: Any) {
         NSWorkspace.shared.openFile("https://sprinkles.website/chrome", withApplication: "Google Chrome")
-    }
-    
-    @IBAction func didPressDone(_ sender: Any) {
-        controller.close()
-        
-        Defaults[.hasOnboarded] = true
-        store.dispatch(.setIsOnboarding(false))
-        
-        if let delegate = NSApplication.shared.delegate as? AppDelegate {
-            delegate.preferences!.makeKeyAndOrderFront(nil)
-        }
     }
     
     @IBAction func launchAtLoginPressed(_ sender: Any?) {
         let state = launchAtLoginCheckbox.state.rawValue == 1
         LaunchAtLogin.isEnabled = state
+    }
+    
+    @IBAction func donePressed(_ sender: Any) {
+        Defaults[.hasOnboarded] = true
+        store.dispatch(.setIsOnboarding(false))
+        
+        controller.close()
+        
+        if let delegate = NSApplication.shared.delegate as? AppDelegate {
+            delegate.preferences!.makeKeyAndOrderFront(nil)
+        }
     }
 }

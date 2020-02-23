@@ -1,18 +1,22 @@
+let attempt = 0
+
 function apply(script) {
-    if (document.body) {
-        if (script) {
-            try {
-                eval(script);
-            } catch (e) {
-                console.groupCollapsed('%cSprinkles failed eval\'ing your script', 'color:red')
-                console.error(e)
-                console.groupEnd()
-            }
-        }
-    } else {
-        setTimeout(function() {
-                   apply(script);
-                   }, 200);
+    if (!script) { return }
+    
+    if (!document.body) {
+        attempt++;
+        if (attempt >= 5) return;
+        
+        setTimeout(function() { apply(script); }, 200);
+        return;
+    }
+    
+    try {
+        eval(script);
+    } catch (e) {
+        console.groupCollapsed('%cSprinkles failed eval\'ing your script', 'color:red')
+        console.error(e)
+        console.groupEnd()
     }
 }
 

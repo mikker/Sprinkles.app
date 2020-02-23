@@ -121,7 +121,7 @@
                                         </button>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BTu-0a-F6i">
                                             <rect key="frame" x="337" y="13" width="99" height="32"/>
-                                            <buttonCell key="cell" type="push" title="Next step" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FlP-vo-qjx">
+                                            <buttonCell key="cell" type="push" title="Next step" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FlP-vo-qjx">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
@@ -146,10 +146,10 @@
                                         <constraint firstItem="2kO-kj-bW7" firstAttribute="top" secondItem="g7y-be-tf7" secondAttribute="top" constant="46" id="skP-Gd-uhE"/>
                                     </constraints>
                                     <connections>
+                                        <outlet property="chooseLocationButton" destination="zbU-k2-67f" id="y9q-bF-nWS"/>
                                         <outlet property="controller" destination="-2" id="IKv-gf-fsz"/>
                                         <outlet property="directoryPathControl" destination="Fcu-tt-Yn2" id="3bB-Gx-Qhp"/>
                                         <outlet property="nextButton" destination="BTu-0a-F6i" id="rqy-A4-9Qt"/>
-                                        <outlet property="pickButton" destination="zbU-k2-67f" id="y9q-bF-nWS"/>
                                     </connections>
                                 </customView>
                             </subviews>
@@ -284,7 +284,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="didPressDone:" target="7Pa-qY-U6y" id="7fy-x4-TbT"/>
+                        <action selector="donePressed:" target="7Pa-qY-U6y" id="7fy-x4-TbT"/>
                     </connections>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bAM-T9-mhu">
@@ -305,7 +305,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="didPressSafari:" target="7Pa-qY-U6y" id="IAx-QN-A8h"/>
+                        <action selector="safariPressed:" target="7Pa-qY-U6y" id="IAx-QN-A8h"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="O7U-AH-WP8">
@@ -315,7 +315,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="didPressFirefox:" target="7Pa-qY-U6y" id="7H2-OB-bYc"/>
+                        <action selector="firefoxPressed:" target="7Pa-qY-U6y" id="7H2-OB-bYc"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1c8-cV-8ON">
@@ -325,7 +325,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="didPressChrome:" target="7Pa-qY-U6y" id="1c3-2s-NIr"/>
+                        <action selector="googleChromePressed:" target="7Pa-qY-U6y" id="1c3-2s-NIr"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vat-kH-NEe">

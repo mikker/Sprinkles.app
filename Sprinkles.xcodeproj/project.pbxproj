@@ -25,7 +25,6 @@
 		425A17A221EFC86700C57D44 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425A17A121EFC86700C57D44 /* Cocoa.framework */; };
 		425A17A521EFC86700C57D44 /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A17A421EFC86700C57D44 /* SafariExtensionHandler.swift */; };
 		425A17AD21EFC86700C57D44 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 425A17AC21EFC86700C57D44 /* script.js */; };
-		425A17CA21EFD54F00C57D44 /* global.js in Resources */ = {isa = PBXBuildFile; fileRef = 425A17C921EFD54F00C57D44 /* global.js */; };
 		425A17CE21F0875300C57D44 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A17CD21F0875300C57D44 /* Store.swift */; };
 		425A17D021F08BED00C57D44 /* Taste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A17CF21F08BED00C57D44 /* Taste.swift */; };
 		425A17E121F138F000C57D44 /* Criollo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 425A17DE21F138E200C57D44 /* Criollo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -126,7 +125,6 @@
 		425A17AB21EFC86700C57D44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		425A17AC21EFC86700C57D44 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		425A17B021EFC86700C57D44 /* Sprinkles_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sprinkles_Extension.entitlements; sourceTree = "<group>"; };
-		425A17C921EFD54F00C57D44 /* global.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = global.js; sourceTree = "<group>"; };
 		425A17CD21F0875300C57D44 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		425A17CF21F08BED00C57D44 /* Taste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taste.swift; sourceTree = "<group>"; };
 		425A17DE21F138E200C57D44 /* Criollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Criollo.framework; path = Carthage/Build/Mac/Criollo.framework; sourceTree = "<group>"; };
@@ -221,24 +219,23 @@
 			isa = PBXGroup;
 			children = (
 				425A177821EFC86600C57D44 /* AppDelegate.swift */,
-				425A177F21EFC86700C57D44 /* Assets.xcassets */,
 				429543E021F27387007EBAF3 /* Bookmark.swift */,
 				421FDA0921F513EB004BDB68 /* Defaults.swift */,
+				42D0053B240336E7002565FE /* Diagnostics.swift */,
 				420AFFBF236B8D6F00413745 /* ExampleFiles.swift */,
-				42ABC9682400A0E2009CA2CE /* Main.storyboard */,
-				42ADBA382229664000F39D4C /* Meta */,
-				42FA61AE23528A1E006A1029 /* Onboarding.xib */,
 				42FA61B12353449E006A1029 /* OnboardingController.swift */,
 				420AFFBD236B852000413745 /* OpenPanel.swift */,
 				42FBC4EA23EEA9E0004C710E /* PreferencesController.swift */,
 				425A17EB21F1C1AF00C57D44 /* Server.swift */,
 				42690B5A2216019100DF8AB3 /* SprinklesCertificate.swift */,
-				423D94EC224C1DED0079CEFE /* SSL */,
-				42ADBA36222965F600F39D4C /* Static */,
 				42ABC96A240265FB009CA2CE /* StatusItem.swift */,
 				425A17CD21F0875300C57D44 /* Store.swift */,
 				425A17CF21F08BED00C57D44 /* Taste.swift */,
-				42D0053B240336E7002565FE /* Diagnostics.swift */,
+				425A177F21EFC86700C57D44 /* Assets.xcassets */,
+				42ADBA382229664000F39D4C /* Meta */,
+				42D0053E24033A35002565FE /* NIBs */,
+				423D94EC224C1DED0079CEFE /* SSL */,
+				42ADBA36222965F600F39D4C /* Static */,
 			);
 			path = Sprinkles;
 			sourceTree = "<group>";
@@ -246,7 +243,6 @@
 		425A178921EFC86700C57D44 /* SprinklesTests */ = {
 			isa = PBXGroup;
 			children = (
-				425A17C821EFD53500C57D44 /* Fixtures */,
 				425A178A21EFC86700C57D44 /* SprinklesTests.swift */,
 				425A178C21EFC86700C57D44 /* Info.plist */,
 			);
@@ -286,14 +282,6 @@
 			path = "Sprinkles Extension";
 			sourceTree = "<group>";
 		};
-		425A17C821EFD53500C57D44 /* Fixtures */ = {
-			isa = PBXGroup;
-			children = (
-				425A17C921EFD54F00C57D44 /* global.js */,
-			);
-			path = Fixtures;
-			sourceTree = "<group>";
-		};
 		42ADBA36222965F600F39D4C /* Static */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +300,15 @@
 				425A177621EFC86600C57D44 /* Sprinkles.entitlements */,
 			);
 			name = Meta;
+			sourceTree = "<group>";
+		};
+		42D0053E24033A35002565FE /* NIBs */ = {
+			isa = PBXGroup;
+			children = (
+				42ABC9682400A0E2009CA2CE /* Main.storyboard */,
+				42FA61AE23528A1E006A1029 /* Onboarding.xib */,
+			);
+			path = NIBs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,7 +493,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				425A17CA21EFD54F00C57D44 /* global.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
