@@ -39,6 +39,7 @@
 		42ABC9692400A0E3009CA2CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42ABC9682400A0E2009CA2CE /* Main.storyboard */; };
 		42ABC96B240265FB009CA2CE /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABC96A240265FB009CA2CE /* StatusItem.swift */; };
 		42ABC96F24026A70009CA2CE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ABC96E24026A70009CA2CE /* logo.png */; };
+		42D0053C240336E7002565FE /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0053B240336E7002565FE /* Diagnostics.swift */; };
 		42DFEDDF234E204400916DCB /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 42DFEDDE234E204400916DCB /* Defaults */; };
 		42DFEDE5234E217C00916DCB /* Regex in Frameworks */ = {isa = PBXBuildFile; productRef = 42DFEDE4234E217C00916DCB /* Regex */; };
 		42E5023A2217501E009A6253 /* LaunchAtLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42E5023722175015009A6253 /* LaunchAtLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -139,6 +140,7 @@
 		42ABC9682400A0E2009CA2CE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		42ABC96A240265FB009CA2CE /* StatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItem.swift; sourceTree = "<group>"; };
 		42ABC96E24026A70009CA2CE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		42D0053B240336E7002565FE /* Diagnostics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagnostics.swift; sourceTree = "<group>"; };
 		42E5023722175015009A6253 /* LaunchAtLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LaunchAtLogin.framework; path = Carthage/Build/Mac/LaunchAtLogin.framework; sourceTree = "<group>"; };
 		42FA61AE23528A1E006A1029 /* Onboarding.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Onboarding.xib; sourceTree = "<group>"; };
 		42FA61B12353449E006A1029 /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				42ABC96A240265FB009CA2CE /* StatusItem.swift */,
 				425A17CD21F0875300C57D44 /* Store.swift */,
 				425A17CF21F08BED00C57D44 /* Taste.swift */,
+				42D0053B240336E7002565FE /* Diagnostics.swift */,
 			);
 			path = Sprinkles;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 			files = (
 				421FDA0A21F513EB004BDB68 /* Defaults.swift in Sources */,
 				425A177921EFC86600C57D44 /* AppDelegate.swift in Sources */,
+				42D0053C240336E7002565FE /* Diagnostics.swift in Sources */,
 				42690B5B2216019100DF8AB3 /* SprinklesCertificate.swift in Sources */,
 				425A17D021F08BED00C57D44 /* Taste.swift in Sources */,
 				425A17EC21F1C1AF00C57D44 /* Server.swift in Sources */,

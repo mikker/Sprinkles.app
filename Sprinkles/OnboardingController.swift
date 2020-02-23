@@ -114,6 +114,8 @@ class OnboardingStep2View: NSView {
     }
     
     @IBAction func didPressGenerate(_ sender: Any) {
+        generateButton.isEnabled = false
+        
         SprinklesCertificate.generateCertsIfMissing { hasCert in
             store.dispatch(.hasCert(hasCert))
         }
@@ -133,6 +135,10 @@ class OnboardingStep3View: NSView {
     @IBOutlet weak var doneButton: NSButton!
     @IBOutlet weak var launchAtLoginCheckbox: NSButton!
     
+    override func awakeFromNib() {
+        launchAtLoginCheckbox.state = LaunchAtLogin.isEnabled ? .on : .off
+    }
+    
     @IBAction func didPressSafari(_ sender: Any) {
         let identifier = "com.brnbw.Sprinkles.extension"
         SFSafariApplication.showPreferencesForExtension(withIdentifier: identifier, completionHandler: nil)
@@ -148,6 +154,7 @@ class OnboardingStep3View: NSView {
     
     @IBAction func didPressDone(_ sender: Any) {
         controller.close()
+        
         Defaults[.hasOnboarded] = true
         store.dispatch(.setIsOnboarding(false))
         

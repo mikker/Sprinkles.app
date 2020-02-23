@@ -47,7 +47,7 @@
                                     </constraints>
                                     <textFieldCell key="cell" alignment="left" id="qpR-yy-f5j">
                                         <font key="font" metaFont="menu" size="14"/>
-                                        <string key="title">Sprinkles runs a tiny webserver on your computer, serving the JavaScript and CSS files you provide it. To get it running we need to set up a few things.</string>
+                                        <string key="title">Sprinkles runs a tiny webserver, serving the JavaScript and CSS files you provide it. To get it up and running we need to set up a few things.</string>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
@@ -76,17 +76,17 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2kO-kj-bW7">
-                                            <rect key="frame" x="45" y="335" width="52" height="19"/>
+                                            <rect key="frame" x="45" y="335" width="49" height="19"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Step 1" id="Uel-7k-maP">
-                                                <font key="font" metaFont="systemBold" size="16"/>
+                                                <font key="font" metaFont="label" size="16"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iOe-iP-2Ds">
-                                            <rect key="frame" x="45" y="315" width="264" height="19"/>
+                                            <rect key="frame" x="45" y="315" width="286" height="19"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Pick your Sprinkles scripts directory" id="zsM-1y-aVr">
-                                                <font key="font" metaFont="label" size="16"/>
+                                                <font key="font" metaFont="systemBold" size="16"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -96,9 +96,8 @@
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="356" id="SLK-V4-PHE"/>
                                             </constraints>
-                                            <textFieldCell key="cell" id="Fkq-96-rld">
+                                            <textFieldCell key="cell" title="You decide where you keep your .js and .css files. Picking the directory gives Sprinkles permission to read its contents." id="Fkq-96-rld">
                                                 <font key="font" metaFont="system"/>
-                                                <string key="title">You decide where you keep your .js and .css files. Picking the directory gives Sprinkles permission to reads its contents per Apple's sandbox rules.</string>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -111,8 +110,8 @@
                                             </pathCell>
                                         </pathControl>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zbU-k2-67f">
-                                            <rect key="frame" x="41" y="151" width="124" height="32"/>
-                                            <buttonCell key="cell" type="push" title="Pick directory" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aGy-So-aDz">
+                                            <rect key="frame" x="41" y="151" width="149" height="32"/>
+                                            <buttonCell key="cell" type="push" title="Change location…" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aGy-So-aDz">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
@@ -174,17 +173,17 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0dS-dO-idU">
-                    <rect key="frame" x="45" y="335" width="54" height="19"/>
+                    <rect key="frame" x="45" y="335" width="52" height="19"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Step 2" id="H4C-Jn-FNG">
-                        <font key="font" metaFont="systemBold" size="16"/>
+                        <font key="font" metaFont="label" size="16"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MdO-IE-qfj">
-                    <rect key="frame" x="45" y="315" width="279" height="19"/>
+                    <rect key="frame" x="45" y="315" width="300" height="19"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Generate and trust unique certificates" id="7yi-d6-G4J">
-                        <font key="font" metaFont="label" size="16"/>
+                        <font key="font" metaFont="systemBold" size="16"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -200,22 +199,22 @@
                     </connections>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LZ2-F6-4bP">
-                    <rect key="frame" x="45" y="195" width="360" height="112"/>
+                    <rect key="frame" x="45" y="211" width="360" height="96"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="356" id="hGQ-z3-F97"/>
                     </constraints>
                     <textFieldCell key="cell" id="0DA-Og-IDA">
                         <font key="font" metaFont="system"/>
-                        <string key="title">To keep your browser's lock icon green and prevent tampering, Sprinkles generates a unique set of website certificates for you.
+                        <string key="title">To keep your browser's lock icon green and prevent tampering, Sprinkles generates a unique set of secure certificates just for you.
 
-You will be asked your password. This is necessary to mark the freshly generated certificates as trusted by your system.</string>
+You will be asked your password. This is necessary to mark the freshly generated certificates as trusted.</string>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cnE-9e-60f">
-                    <rect key="frame" x="41" y="147" width="226" height="32"/>
-                    <buttonCell key="cell" type="push" title="Generate and trust certificates" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LeJ-52-Bc6">
+                <button verticalHuggingPriority="750" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnE-9e-60f">
+                    <rect key="frame" x="41" y="163" width="242" height="32"/>
+                    <buttonCell key="cell" type="push" title="Generate and trust certificates" bezelStyle="rounded" image="NSLockLockedTemplate" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LeJ-52-Bc6">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -224,9 +223,9 @@ You will be asked your password. This is necessary to mark the freshly generated
                     </connections>
                 </button>
                 <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AeX-gf-Pb0">
-                    <rect key="frame" x="267" y="156" width="28" height="17"/>
+                    <rect key="frame" x="283" y="171" width="28" height="18"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="17" id="JxG-rR-Q7X"/>
+                        <constraint firstAttribute="height" constant="18" id="JxG-rR-Q7X"/>
                         <constraint firstAttribute="width" constant="24" id="poo-f9-Nkz"/>
                     </constraints>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="✅" id="SPH-al-87n">
@@ -240,12 +239,12 @@ You will be asked your password. This is necessary to mark the freshly generated
                 <constraint firstItem="0dS-dO-idU" firstAttribute="top" secondItem="zHn-oz-BJc" secondAttribute="top" constant="46" id="23L-QE-Zaz"/>
                 <constraint firstItem="MdO-IE-qfj" firstAttribute="leading" secondItem="0dS-dO-idU" secondAttribute="leading" id="6VY-XB-lba"/>
                 <constraint firstItem="LZ2-F6-4bP" firstAttribute="leading" secondItem="MdO-IE-qfj" secondAttribute="leading" id="6qZ-Sc-Gqi"/>
-                <constraint firstItem="cnE-9e-60f" firstAttribute="centerY" secondItem="AeX-gf-Pb0" secondAttribute="centerY" id="8Yi-3c-9ea"/>
                 <constraint firstItem="LZ2-F6-4bP" firstAttribute="top" secondItem="MdO-IE-qfj" secondAttribute="bottom" constant="8" id="In8-Y3-bij"/>
                 <constraint firstItem="cnE-9e-60f" firstAttribute="top" secondItem="LZ2-F6-4bP" secondAttribute="bottom" constant="20" id="KEp-si-Y4h"/>
                 <constraint firstItem="cnE-9e-60f" firstAttribute="leading" secondItem="LZ2-F6-4bP" secondAttribute="leading" id="MJc-1m-kiR"/>
                 <constraint firstAttribute="trailing" secondItem="bPR-hf-JhW" secondAttribute="trailing" constant="20" symbolic="YES" id="NLU-ty-Oht"/>
                 <constraint firstItem="MdO-IE-qfj" firstAttribute="top" secondItem="0dS-dO-idU" secondAttribute="bottom" constant="1" id="dZR-uu-VaC"/>
+                <constraint firstItem="AeX-gf-Pb0" firstAttribute="centerY" secondItem="cnE-9e-60f" secondAttribute="centerY" constant="1" id="eQj-KP-M1S"/>
                 <constraint firstAttribute="bottom" secondItem="bPR-hf-JhW" secondAttribute="bottom" constant="20" symbolic="YES" id="iQE-gQ-Acm"/>
                 <constraint firstItem="0dS-dO-idU" firstAttribute="leading" secondItem="zHn-oz-BJc" secondAttribute="leading" constant="47" id="jGi-mM-KVu"/>
                 <constraint firstItem="AeX-gf-Pb0" firstAttribute="leading" secondItem="cnE-9e-60f" secondAttribute="trailing" constant="8" symbolic="YES" id="o2K-BP-oAg"/>
@@ -263,17 +262,17 @@ You will be asked your password. This is necessary to mark the freshly generated
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eQL-aB-hhn">
-                    <rect key="frame" x="45" y="335" width="55" height="19"/>
+                    <rect key="frame" x="45" y="335" width="52" height="19"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Step 3" id="ThV-5x-86f">
-                        <font key="font" metaFont="systemBold" size="16"/>
+                        <font key="font" metaFont="label" size="16"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Itr-g4-E0o">
-                    <rect key="frame" x="45" y="315" width="272" height="19"/>
+                    <rect key="frame" x="45" y="315" width="294" height="19"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Install or activate browser extensions" id="1bc-l4-hkX">
-                        <font key="font" metaFont="label" size="16"/>
+                        <font key="font" metaFont="systemBold" size="16"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -372,6 +371,7 @@ You will be asked your password. This is necessary to mark the freshly generated
     <resources>
         <image name="Chrome" width="48" height="48"/>
         <image name="Firefox" width="48" height="48"/>
+        <image name="NSLockLockedTemplate" width="10" height="14"/>
         <image name="Safari" width="48" height="48"/>
     </resources>
 </document>

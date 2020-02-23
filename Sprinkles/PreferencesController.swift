@@ -11,7 +11,7 @@ import Defaults
 import LaunchAtLogin
 import SafariServices
 
-class PreferencesController: NSViewController, NSPathControlDelegate {
+class PreferencesController: NSViewController {
     @IBOutlet var statusLight: NSButton!
     @IBOutlet var statusLabel: NSTextField!
     @IBOutlet var directoryPathControl: NSPathControl!
@@ -23,6 +23,7 @@ class PreferencesController: NSViewController, NSPathControlDelegate {
     @IBOutlet var chromeButton: NSButton!
     
     var unsubscribe: UnsubscribeFn?
+    var dockTimer: Timer?
     
     deinit {
         unsubscribe?()
@@ -66,12 +67,21 @@ class PreferencesController: NSViewController, NSPathControlDelegate {
     @IBAction func diagnosticsCheckboxPressed(_ sender: Any?) {
         let state = diagnosticsCheckbox.state.rawValue == 1
         Defaults[.enableDiagnostics] = state
+        
     }
     
     @IBAction func dockIconCheckboxPressed(_ sender: Any?) {
-        let state = dockIconCheckbox.state.rawValue == 1
-        Defaults[.enableDockIcon] = state
-        NSApp.setActivationPolicy(state ? .regular : .accessory)
+        dockTimer?.invalidate()
+        
+        dockTimer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false, block: { _ in
+            let state = self.dockIconCheckbox.state.rawValue == 1
+            
+            Defaults[.enableDockIcon] = state
+            
+            NSApp.setActivationPolicy(state ? .regular : .accessory)
+            
+            if state == false { NSApp.activate(ignoringOtherApps: true) }
+        })
     }
     
     @IBAction func supportPressed(_ sender: Any?) {
@@ -99,10 +109,6 @@ class PreferencesController: NSViewController, NSPathControlDelegate {
     //    }
     
     @IBAction func quitPressed(_ sender: Any?) {
-        NSApplication.shared.terminate(nil)
-    }
-    
-    func pathControl(_ pathControl: NSPathControl, acceptDrop info: NSDraggingInfo) -> Bool {
-        return true
+        NSApp.terminate(nil)
     }
 }
