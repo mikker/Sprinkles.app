@@ -18,7 +18,6 @@
 		423D9500224C2CC00079CEFE /* rootCA.csr.conf in Resources */ = {isa = PBXBuildFile; fileRef = 423D94FF224C2B440079CEFE /* rootCA.csr.conf */; };
 		425A177721EFC86600C57D44 /* Sprinkles.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 425A177621EFC86600C57D44 /* Sprinkles.entitlements */; };
 		425A177921EFC86600C57D44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A177821EFC86600C57D44 /* AppDelegate.swift */; };
-		425A177C21EFC86600C57D44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425A177A21EFC86600C57D44 /* Main.storyboard */; };
 		425A178021EFC86700C57D44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 425A177F21EFC86700C57D44 /* Assets.xcassets */; };
 		425A178B21EFC86700C57D44 /* SprinklesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A178A21EFC86700C57D44 /* SprinklesTests.swift */; };
 		425A179621EFC86700C57D44 /* SprinklesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A179521EFC86700C57D44 /* SprinklesUITests.swift */; };
@@ -31,21 +30,21 @@
 		425A17D021F08BED00C57D44 /* Taste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A17CF21F08BED00C57D44 /* Taste.swift */; };
 		425A17E121F138F000C57D44 /* Criollo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 425A17DE21F138E200C57D44 /* Criollo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		425A17EC21F1C1AF00C57D44 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A17EB21F1C1AF00C57D44 /* Server.swift */; };
-		425A17F821F1F6BF00C57D44 /* StatusLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A17F721F1F6BF00C57D44 /* StatusLightView.swift */; };
 		42690B5B2216019100DF8AB3 /* SprinklesCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42690B5A2216019100DF8AB3 /* SprinklesCertificate.swift */; };
 		42690B612216CCC400DF8AB3 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 42690B602216CCC400DF8AB3 /* index.html */; };
 		42690B642216D0A300DF8AB3 /* favicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42690B622216D0A300DF8AB3 /* favicon.png */; };
 		42690B652216D0A300DF8AB3 /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 42690B632216D0A300DF8AB3 /* favicon.ico */; };
 		428B9DBB23753753005D307F /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 428B9DBA23753753005D307F /* ToolbarItemIcon.pdf */; };
 		429543E121F27387007EBAF3 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429543E021F27387007EBAF3 /* Bookmark.swift */; };
-		429543EF21F50D4F007EBAF3 /* GeneralPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429543EE21F50D4F007EBAF3 /* GeneralPreferencesViewController.swift */; };
-		429543F321F51225007EBAF3 /* GeneralPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 429543F221F51225007EBAF3 /* GeneralPreferencesViewController.xib */; };
+		42ABC9692400A0E3009CA2CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42ABC9682400A0E2009CA2CE /* Main.storyboard */; };
+		42ABC96B240265FB009CA2CE /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABC96A240265FB009CA2CE /* StatusItem.swift */; };
+		42ABC96F24026A70009CA2CE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ABC96E24026A70009CA2CE /* logo.png */; };
 		42DFEDDF234E204400916DCB /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 42DFEDDE234E204400916DCB /* Defaults */; };
-		42DFEDE2234E209400916DCB /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = 42DFEDE1234E209400916DCB /* Preferences */; };
 		42DFEDE5234E217C00916DCB /* Regex in Frameworks */ = {isa = PBXBuildFile; productRef = 42DFEDE4234E217C00916DCB /* Regex */; };
 		42E5023A2217501E009A6253 /* LaunchAtLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42E5023722175015009A6253 /* LaunchAtLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42FA61AF23528A1E006A1029 /* Onboarding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42FA61AE23528A1E006A1029 /* Onboarding.xib */; };
-		42FA61B22353449E006A1029 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FA61B12353449E006A1029 /* Onboarding.swift */; };
+		42FA61B22353449E006A1029 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FA61B12353449E006A1029 /* OnboardingController.swift */; };
+		42FBC4EB23EEA9E0004C710E /* PreferencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FBC4EA23EEA9E0004C710E /* PreferencesController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,7 +111,6 @@
 		425A177321EFC86500C57D44 /* Sprinkles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sprinkles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		425A177621EFC86600C57D44 /* Sprinkles.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sprinkles.entitlements; sourceTree = "<group>"; };
 		425A177821EFC86600C57D44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		425A177B21EFC86600C57D44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		425A177F21EFC86700C57D44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		425A178121EFC86700C57D44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		425A178621EFC86700C57D44 /* SprinklesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SprinklesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,18 +130,19 @@
 		425A17CF21F08BED00C57D44 /* Taste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taste.swift; sourceTree = "<group>"; };
 		425A17DE21F138E200C57D44 /* Criollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Criollo.framework; path = Carthage/Build/Mac/Criollo.framework; sourceTree = "<group>"; };
 		425A17EB21F1C1AF00C57D44 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
-		425A17F721F1F6BF00C57D44 /* StatusLightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusLightView.swift; sourceTree = "<group>"; };
 		42690B5A2216019100DF8AB3 /* SprinklesCertificate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprinklesCertificate.swift; sourceTree = "<group>"; };
 		42690B602216CCC400DF8AB3 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		42690B622216D0A300DF8AB3 /* favicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favicon.png; sourceTree = "<group>"; };
 		42690B632216D0A300DF8AB3 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
 		428B9DBA23753753005D307F /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		429543E021F27387007EBAF3 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
-		429543EE21F50D4F007EBAF3 /* GeneralPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesViewController.swift; sourceTree = "<group>"; };
-		429543F221F51225007EBAF3 /* GeneralPreferencesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralPreferencesViewController.xib; sourceTree = "<group>"; };
+		42ABC9682400A0E2009CA2CE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		42ABC96A240265FB009CA2CE /* StatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItem.swift; sourceTree = "<group>"; };
+		42ABC96E24026A70009CA2CE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		42E5023722175015009A6253 /* LaunchAtLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LaunchAtLogin.framework; path = Carthage/Build/Mac/LaunchAtLogin.framework; sourceTree = "<group>"; };
 		42FA61AE23528A1E006A1029 /* Onboarding.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Onboarding.xib; sourceTree = "<group>"; };
-		42FA61B12353449E006A1029 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		42FA61B12353449E006A1029 /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
+		42FBC4EA23EEA9E0004C710E /* PreferencesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +152,6 @@
 			files = (
 				42DFEDE5234E217C00916DCB /* Regex in Frameworks */,
 				42DFEDDF234E204400916DCB /* Defaults in Frameworks */,
-				42DFEDE2234E209400916DCB /* Preferences in Frameworks */,
 				423945A422289DA80018B53A /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,18 +223,17 @@
 				429543E021F27387007EBAF3 /* Bookmark.swift */,
 				421FDA0921F513EB004BDB68 /* Defaults.swift */,
 				420AFFBF236B8D6F00413745 /* ExampleFiles.swift */,
-				429543EE21F50D4F007EBAF3 /* GeneralPreferencesViewController.swift */,
-				429543F221F51225007EBAF3 /* GeneralPreferencesViewController.xib */,
-				42690B5A2216019100DF8AB3 /* SprinklesCertificate.swift */,
-				425A177A21EFC86600C57D44 /* Main.storyboard */,
+				42ABC9682400A0E2009CA2CE /* Main.storyboard */,
 				42ADBA382229664000F39D4C /* Meta */,
-				42FA61B12353449E006A1029 /* Onboarding.swift */,
 				42FA61AE23528A1E006A1029 /* Onboarding.xib */,
+				42FA61B12353449E006A1029 /* OnboardingController.swift */,
 				420AFFBD236B852000413745 /* OpenPanel.swift */,
+				42FBC4EA23EEA9E0004C710E /* PreferencesController.swift */,
 				425A17EB21F1C1AF00C57D44 /* Server.swift */,
+				42690B5A2216019100DF8AB3 /* SprinklesCertificate.swift */,
 				423D94EC224C1DED0079CEFE /* SSL */,
 				42ADBA36222965F600F39D4C /* Static */,
-				425A17F721F1F6BF00C57D44 /* StatusLightView.swift */,
+				42ABC96A240265FB009CA2CE /* StatusItem.swift */,
 				425A17CD21F0875300C57D44 /* Store.swift */,
 				425A17CF21F08BED00C57D44 /* Taste.swift */,
 			);
@@ -300,6 +297,7 @@
 				42690B632216D0A300DF8AB3 /* favicon.ico */,
 				42690B622216D0A300DF8AB3 /* favicon.png */,
 				42690B602216CCC400DF8AB3 /* index.html */,
+				42ABC96E24026A70009CA2CE /* logo.png */,
 			);
 			path = Static;
 			sourceTree = "<group>";
@@ -338,7 +336,6 @@
 			name = Sprinkles;
 			packageProductDependencies = (
 				42DFEDDE234E204400916DCB /* Defaults */,
-				42DFEDE1234E209400916DCB /* Preferences */,
 				42DFEDE4234E217C00916DCB /* Regex */,
 			);
 			productName = Sprinkles;
@@ -458,7 +455,6 @@
 			mainGroup = 425A176A21EFC86500C57D44;
 			packageReferences = (
 				42DFEDDD234E204400916DCB /* XCRemoteSwiftPackageReference "Defaults" */,
-				42DFEDE0234E209400916DCB /* XCRemoteSwiftPackageReference "Preferences" */,
 				42DFEDE3234E217C00916DCB /* XCRemoteSwiftPackageReference "Regex" */,
 			);
 			productRefGroup = 425A177421EFC86500C57D44 /* Products */;
@@ -481,12 +477,12 @@
 				423D94FA224C1DED0079CEFE /* sprinkles.csr.conf in Resources */,
 				42690B612216CCC400DF8AB3 /* index.html in Resources */,
 				423D9500224C2CC00079CEFE /* rootCA.csr.conf in Resources */,
-				429543F321F51225007EBAF3 /* GeneralPreferencesViewController.xib in Resources */,
 				42690B642216D0A300DF8AB3 /* favicon.png in Resources */,
 				423D94F6224C1DED0079CEFE /* gen_cert.sh in Resources */,
+				42ABC9692400A0E3009CA2CE /* Main.storyboard in Resources */,
 				425A177721EFC86600C57D44 /* Sprinkles.entitlements in Resources */,
 				425A178021EFC86700C57D44 /* Assets.xcassets in Resources */,
-				425A177C21EFC86600C57D44 /* Main.storyboard in Resources */,
+				42ABC96F24026A70009CA2CE /* logo.png in Resources */,
 				423D94FE224C1DED0079CEFE /* v3.ext in Resources */,
 				42FA61AF23528A1E006A1029 /* Onboarding.xib in Resources */,
 				42690B652216D0A300DF8AB3 /* favicon.ico in Resources */,
@@ -600,16 +596,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				421FDA0A21F513EB004BDB68 /* Defaults.swift in Sources */,
-				429543EF21F50D4F007EBAF3 /* GeneralPreferencesViewController.swift in Sources */,
-				425A17F821F1F6BF00C57D44 /* StatusLightView.swift in Sources */,
 				425A177921EFC86600C57D44 /* AppDelegate.swift in Sources */,
 				42690B5B2216019100DF8AB3 /* SprinklesCertificate.swift in Sources */,
 				425A17D021F08BED00C57D44 /* Taste.swift in Sources */,
 				425A17EC21F1C1AF00C57D44 /* Server.swift in Sources */,
 				420AFFBE236B852000413745 /* OpenPanel.swift in Sources */,
+				42ABC96B240265FB009CA2CE /* StatusItem.swift in Sources */,
 				420AFFC0236B8D6F00413745 /* ExampleFiles.swift in Sources */,
+				42FBC4EB23EEA9E0004C710E /* PreferencesController.swift in Sources */,
 				429543E121F27387007EBAF3 /* Bookmark.swift in Sources */,
-				42FA61B22353449E006A1029 /* Onboarding.swift in Sources */,
+				42FA61B22353449E006A1029 /* OnboardingController.swift in Sources */,
 				425A17CE21F0875300C57D44 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -657,17 +653,6 @@
 			targetProxy = 425A179E21EFC86700C57D44 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		425A177A21EFC86600C57D44 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				425A177B21EFC86600C57D44 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		425A17B121EFC86700C57D44 /* Debug */ = {
@@ -1033,14 +1018,6 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		42DFEDE0234E209400916DCB /* XCRemoteSwiftPackageReference "Preferences" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:sindresorhus/Preferences.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.0;
-			};
-		};
 		42DFEDE3234E217C00916DCB /* XCRemoteSwiftPackageReference "Regex" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:crossroadlabs/Regex.git";
@@ -1056,11 +1033,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 42DFEDDD234E204400916DCB /* XCRemoteSwiftPackageReference "Defaults" */;
 			productName = Defaults;
-		};
-		42DFEDE1234E209400916DCB /* Preferences */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 42DFEDE0234E209400916DCB /* XCRemoteSwiftPackageReference "Preferences" */;
-			productName = Preferences;
 		};
 		42DFEDE4234E217C00916DCB /* Regex */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -11,15 +11,6 @@
         }
       },
       {
-        "package": "Preferences",
-        "repositoryURL": "git@github.com:sindresorhus/Preferences.git",
-        "state": {
-          "branch": null,
-          "revision": "8f6cd283730c0fac942fa75f0159ad6e94374ed6",
-          "version": "0.4.1"
-        }
-      },
-      {
         "package": "Regex",
         "repositoryURL": "git@github.com:crossroadlabs/Regex.git",
         "state": {

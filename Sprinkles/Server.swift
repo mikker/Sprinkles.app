@@ -40,8 +40,9 @@ class Server: NSObject {
 
         server.mount("/", fileAtPath: Bundle.main.path(forResource: "index", ofType: "html")!)
 
-        server.get("/favicon.ico") { (_, res, _) in res.send(favicon("ico")) }
-        server.get("/favicon.png") { (_, res, _) in res.send(favicon("png")) }
+        server.get("/favicon.ico") { (_, res, _) in res.send(bundleImage("favicon", ext: "ico")) }
+        server.get("/favicon.png") { (_, res, _) in res.send(bundleImage("favicon", ext: "png")) }
+        server.get("/logo.png") { (_, res, _) in res.send(bundleImage("logo", ext: "png")) }
 
         server.get("/[a-zA-Z0-9-\\.]+") { (req, res, _) in
             res.setAllHTTPHeaderFields([
@@ -118,8 +119,8 @@ extension Server: CRServerDelegate {
     }
 }
 
-func favicon(_ ext: String) -> Data {
-    let url = Bundle.main.url(forResource: "favicon", withExtension: ext)!
+func bundleImage(_ name: String, ext: String) -> Data {
+    let url = Bundle.main.url(forResource: name, withExtension: ext)!
 
     if cache[url] != nil {
         return cache[url]!

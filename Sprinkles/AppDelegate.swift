@@ -7,47 +7,33 @@
 //
 
 import Cocoa
-import Preferences
 import Defaults
 import SafariServices
 import Sentry
 import Sparkle
 
-extension PreferencePane.Identifier {
-    static let general = Identifier("general")
-}
-
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    let statusItem = StatusItem()
     var unsubscribe: UnsubscribeFn?
-    var statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
+    var preferences: NSWindow?
   
     @IBOutlet var onboarding: OnboardingController!
 
-    lazy var preferences: [PreferencePane] = [
-        GeneralPreferencesViewController()
-    ]
-
-    lazy var preferencesWindowController = PreferencesWindowController(
-        preferencePanes: preferences,
-        style: .segmentedControl,
-        animated: true,
-        hidesToolbarForSingleItem: true
-    )
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        initSentry()
+        preferences = NSApplication.shared.windows.last!
         
-        if let menubarButton = statusItem.button {
-            menubarButton.image = NSImage(named: NSImage.Name("ToolbarItemIcon"))
-        }
+        statusItem.handleOnboarding = { self.showOnboarding() }
+        statusItem.handlePreferences = { self.showPreferences() }
+        statusItem.enable()
+        
+        if (!Defaults[.enableDockIcon]) { NSApp.setActivationPolicy(.accessory) }
 
-        buildMenubarMenu()
-
+        if (Defaults[.enableDiagnostics]) { initSentry() }
+        
         unsubscribe = store.subscribe { state in
             if state.hasCert && Defaults[.hasOnboarded] {
                 Server.instance.start(3133)
-                NSApp.setActivationPolicy(.accessory)
             }
         }
         
@@ -59,6 +45,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         Server.instance.stop()
         unsubscribe?()
+    }
+    
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        preferences!.makeKeyAndOrderFront(sender)
+        return true
     }
 
     private func initSentry() {
@@ -76,30 +67,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Client.shared?.send(event: event, completion: nil)
     }
 
-    private func buildMenubarMenu() {
-        let menu = NSMenu()
-
-        menu.addItem(withTitle: "Preferences…", action: #selector(showPreferences), keyEquivalent: ",")
-        let alternate = NSMenuItem(title: "Onboarding…", action: #selector(showOnboarding), keyEquivalent: ",")
-        alternate.isAlternate = true
-        alternate.keyEquivalentModifierMask = .option
-        menu.addItem(alternate)
-        
-        menu.addItem(withTitle: "Open directory…", action: #selector(openDirectory), keyEquivalent: "o")
-        
-        menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "Quit Sprinkles", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
-
-        statusItem.menu = menu
-    }
-
-    @objc private func showPreferences() {
-        preferencesWindowController.show()
+    private func showPreferences() {
+        preferences!.makeKeyAndOrderFront(nil)
     }
     
-    @objc private func showOnboarding() {
+    private func showOnboarding() {
         Defaults[.hasOnboarded] = false
-        NSApp.setActivationPolicy(.regular)
         self.onboarding.showWindow(nil)
     }
     

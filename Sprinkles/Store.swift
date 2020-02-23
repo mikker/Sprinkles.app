@@ -1,4 +1,5 @@
 import Foundation
+import Defaults
 
 public enum Action {
     case setDirectory(URL)
