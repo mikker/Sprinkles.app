@@ -139,17 +139,21 @@ class OnboardingStep3View: NSView {
     }
     
     @IBAction func didPressFirefox(_ sender: Any) {
-        NSWorkspace.shared.openFile("https://Sprinkles.app/firefox", withApplication: "Firefox")
+        NSWorkspace.shared.openFile("https://sprinkles.website/firefox", withApplication: "Firefox")
     }
     
     @IBAction func didPressChrome(_ sender: Any) {
-        NSWorkspace.shared.openFile("https://Sprinkles.app/chrome", withApplication: "Google Chrome")
+        NSWorkspace.shared.openFile("https://sprinkles.website/chrome", withApplication: "Google Chrome")
     }
     
     @IBAction func didPressDone(_ sender: Any) {
         controller.close()
         Defaults[.hasOnboarded] = true
         store.dispatch(.setIsOnboarding(false))
+        
+        if let delegate = NSApplication.shared.delegate as? AppDelegate {
+            delegate.preferences!.makeKeyAndOrderFront(nil)
+        }
     }
     
     @IBAction func launchAtLoginPressed(_ sender: Any?) {

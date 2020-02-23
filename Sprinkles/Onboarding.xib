@@ -20,30 +20,31 @@
         <window title="Setting up Sprinkles" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="Mfr-h5-bc1">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="427" y="270" width="450" height="600"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" wantsLayer="YES" id="fZc-5R-Xb1">
                 <rect key="frame" x="0.0" y="0.0" width="450" height="600"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <box fixedFrame="YES" boxType="custom" borderType="none" cornerRadius="1" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Epj-fO-65c">
+                    <box boxType="custom" borderType="none" cornerRadius="1" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Epj-fO-65c">
                         <rect key="frame" x="0.0" y="400" width="450" height="200"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <view key="contentView" ambiguous="YES" id="rWB-Pp-bMk">
+                        <view key="contentView" id="rWB-Pp-bMk">
                             <rect key="frame" x="0.0" y="0.0" width="450" height="200"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wFU-HI-x7T">
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wFU-HI-x7T">
                                     <rect key="frame" x="43" y="120" width="161" height="19"/>
-                                    <autoresizingMask key="autoresizingMask"/>
                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Setting up Sprinkles" id="gLf-J2-xHP">
                                         <font key="font" metaFont="systemBold" size="16"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ARP-IE-BxD">
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ARP-IE-BxD">
                                     <rect key="frame" x="43" y="40" width="364" height="72"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="360" id="QKM-OG-R5y"/>
+                                        <constraint firstAttribute="height" constant="72" id="bkb-k3-Lu1"/>
+                                    </constraints>
                                     <textFieldCell key="cell" alignment="left" id="qpR-yy-f5j">
                                         <font key="font" metaFont="menu" size="14"/>
                                         <string key="title">Sprinkles runs a tiny webserver on your computer, serving the JavaScript and CSS files you provide it. To get it running we need to set up a few things.</string>
@@ -52,41 +53,49 @@
                                     </textFieldCell>
                                 </textField>
                             </subviews>
+                            <constraints>
+                                <constraint firstItem="ARP-IE-BxD" firstAttribute="leading" secondItem="wFU-HI-x7T" secondAttribute="leading" id="9sb-s9-2wE"/>
+                                <constraint firstItem="ARP-IE-BxD" firstAttribute="top" secondItem="wFU-HI-x7T" secondAttribute="bottom" constant="8" id="ApQ-J0-uk5"/>
+                                <constraint firstItem="wFU-HI-x7T" firstAttribute="top" secondItem="rWB-Pp-bMk" secondAttribute="top" constant="61" id="feb-o5-eOE"/>
+                                <constraint firstItem="wFU-HI-x7T" firstAttribute="leading" secondItem="rWB-Pp-bMk" secondAttribute="leading" constant="45" id="wNu-da-xjk"/>
+                            </constraints>
                         </view>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="pXf-sD-o2a"/>
+                        </constraints>
                         <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </box>
-                    <box fixedFrame="YES" boxType="custom" borderType="none" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="JeL-PT-DpD">
+                    <box boxType="custom" borderType="none" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="JeL-PT-DpD">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <view key="contentView" ambiguous="YES" id="pOy-wE-jVO">
+                        <view key="contentView" id="pOy-wE-jVO">
                             <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <customView identifier="step-01" ambiguous="YES" id="g7y-be-tf7" customClass="OnboardingStep1View" customModule="Sprinkles" customModuleProvider="target">
+                                <customView identifier="step-01" id="g7y-be-tf7" customClass="OnboardingStep1View" customModule="Sprinkles" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <subviews>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2kO-kj-bW7">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2kO-kj-bW7">
                                             <rect key="frame" x="45" y="335" width="52" height="19"/>
-                                            <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Step 1" id="Uel-7k-maP">
                                                 <font key="font" metaFont="systemBold" size="16"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iOe-iP-2Ds">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iOe-iP-2Ds">
                                             <rect key="frame" x="45" y="315" width="264" height="19"/>
-                                            <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Pick your Sprinkles scripts directory" id="zsM-1y-aVr">
                                                 <font key="font" metaFont="label" size="16"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h2n-i7-uKW">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h2n-i7-uKW">
                                             <rect key="frame" x="45" y="259" width="360" height="48"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="356" id="SLK-V4-PHE"/>
+                                            </constraints>
                                             <textFieldCell key="cell" id="Fkq-96-rld">
                                                 <font key="font" metaFont="system"/>
                                                 <string key="title">You decide where you keep your .js and .css files. Picking the directory gives Sprinkles permission to reads its contents per Apple's sandbox rules.</string>
@@ -94,17 +103,15 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <pathControl verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fcu-tt-Yn2">
-                                            <rect key="frame" x="45" y="183" width="360" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fcu-tt-Yn2">
+                                            <rect key="frame" x="47" y="187" width="358" height="22"/>
                                             <pathCell key="cell" selectable="YES" editable="YES" alignment="left" id="lpp-hC-8bR">
                                                 <font key="font" metaFont="system"/>
                                                 <url key="url" string="file:///"/>
                                             </pathCell>
                                         </pathControl>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zbU-k2-67f">
-                                            <rect key="frame" x="41" y="144" width="124" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zbU-k2-67f">
+                                            <rect key="frame" x="41" y="151" width="124" height="32"/>
                                             <buttonCell key="cell" type="push" title="Pick directory" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aGy-So-aDz">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -113,9 +120,8 @@
                                                 <action selector="didPressPick:" target="g7y-be-tf7" id="W4g-3S-Ner"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTu-0a-F6i">
-                                            <rect key="frame" x="312" y="32" width="99" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BTu-0a-F6i">
+                                            <rect key="frame" x="337" y="13" width="99" height="32"/>
                                             <buttonCell key="cell" type="push" title="Next step" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FlP-vo-qjx">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -125,6 +131,21 @@
                                             </connections>
                                         </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="zbU-k2-67f" firstAttribute="top" secondItem="Fcu-tt-Yn2" secondAttribute="bottom" constant="8" id="DK0-Gb-mzn"/>
+                                        <constraint firstItem="h2n-i7-uKW" firstAttribute="leading" secondItem="iOe-iP-2Ds" secondAttribute="leading" id="MJA-fy-32V"/>
+                                        <constraint firstAttribute="trailing" secondItem="BTu-0a-F6i" secondAttribute="trailing" constant="20" symbolic="YES" id="MXU-Qv-cOH"/>
+                                        <constraint firstItem="h2n-i7-uKW" firstAttribute="top" secondItem="iOe-iP-2Ds" secondAttribute="bottom" constant="8" id="T1k-RE-tZb"/>
+                                        <constraint firstItem="Fcu-tt-Yn2" firstAttribute="top" secondItem="h2n-i7-uKW" secondAttribute="bottom" constant="50" id="Y9w-Tg-gpC"/>
+                                        <constraint firstAttribute="bottom" secondItem="BTu-0a-F6i" secondAttribute="bottom" constant="20" symbolic="YES" id="b3c-d4-Yte"/>
+                                        <constraint firstItem="2kO-kj-bW7" firstAttribute="leading" secondItem="g7y-be-tf7" secondAttribute="leading" constant="47" id="c1t-e3-set"/>
+                                        <constraint firstItem="zbU-k2-67f" firstAttribute="leading" secondItem="Fcu-tt-Yn2" secondAttribute="leading" id="czm-gX-nYH"/>
+                                        <constraint firstItem="Fcu-tt-Yn2" firstAttribute="leading" secondItem="h2n-i7-uKW" secondAttribute="leading" id="gSh-wO-zgd"/>
+                                        <constraint firstAttribute="trailing" secondItem="Fcu-tt-Yn2" secondAttribute="trailing" constant="45" id="nuJ-FH-Ewb"/>
+                                        <constraint firstItem="iOe-iP-2Ds" firstAttribute="top" secondItem="2kO-kj-bW7" secondAttribute="bottom" constant="1" id="pS2-m3-ido"/>
+                                        <constraint firstItem="iOe-iP-2Ds" firstAttribute="leading" secondItem="2kO-kj-bW7" secondAttribute="leading" id="rkm-Ky-v74"/>
+                                        <constraint firstItem="2kO-kj-bW7" firstAttribute="top" secondItem="g7y-be-tf7" secondAttribute="top" constant="46" id="skP-Gd-uhE"/>
+                                    </constraints>
                                     <connections>
                                         <outlet property="controller" destination="-2" id="IKv-gf-fsz"/>
                                         <outlet property="directoryPathControl" destination="Fcu-tt-Yn2" id="3bB-Gx-Qhp"/>
@@ -136,6 +157,15 @@
                         </view>
                     </box>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="JeL-PT-DpD" firstAttribute="top" secondItem="Epj-fO-65c" secondAttribute="bottom" id="Ip4-W7-4T1"/>
+                    <constraint firstItem="Epj-fO-65c" firstAttribute="top" secondItem="fZc-5R-Xb1" secondAttribute="top" id="bMv-t6-ILT"/>
+                    <constraint firstAttribute="trailing" secondItem="Epj-fO-65c" secondAttribute="trailing" id="c5P-xi-XCs"/>
+                    <constraint firstAttribute="trailing" secondItem="JeL-PT-DpD" secondAttribute="trailing" id="ed0-Kj-VjP"/>
+                    <constraint firstItem="JeL-PT-DpD" firstAttribute="leading" secondItem="fZc-5R-Xb1" secondAttribute="leading" id="egS-JU-0mb"/>
+                    <constraint firstItem="Epj-fO-65c" firstAttribute="leading" secondItem="fZc-5R-Xb1" secondAttribute="leading" id="ot7-vd-DP1"/>
+                    <constraint firstAttribute="bottom" secondItem="JeL-PT-DpD" secondAttribute="bottom" id="yEP-hn-4VM"/>
+                </constraints>
             </view>
             <point key="canvasLocation" x="684" y="149"/>
         </window>
@@ -143,27 +173,24 @@
             <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0dS-dO-idU">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0dS-dO-idU">
                     <rect key="frame" x="45" y="335" width="54" height="19"/>
-                    <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Step 2" id="H4C-Jn-FNG">
                         <font key="font" metaFont="systemBold" size="16"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MdO-IE-qfj">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MdO-IE-qfj">
                     <rect key="frame" x="45" y="315" width="279" height="19"/>
-                    <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Generate and trust unique certificates" id="7yi-d6-G4J">
                         <font key="font" metaFont="label" size="16"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bPR-hf-JhW">
-                    <rect key="frame" x="312" y="32" width="99" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bPR-hf-JhW">
+                    <rect key="frame" x="337" y="13" width="99" height="32"/>
                     <buttonCell key="cell" type="push" title="Next step" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MfS-Ex-AtT">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -172,9 +199,11 @@
                         <action selector="didPressNext:" target="zHn-oz-BJc" id="eQ4-dp-iwu"/>
                     </connections>
                 </button>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZ2-F6-4bP">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LZ2-F6-4bP">
                     <rect key="frame" x="45" y="195" width="360" height="112"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="356" id="hGQ-z3-F97"/>
+                    </constraints>
                     <textFieldCell key="cell" id="0DA-Og-IDA">
                         <font key="font" metaFont="system"/>
                         <string key="title">To keep your browser's lock icon green and prevent tampering, Sprinkles generates a unique set of website certificates for you.
@@ -184,9 +213,8 @@ You will be asked your password. This is necessary to mark the freshly generated
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnE-9e-60f">
-                    <rect key="frame" x="41" y="159" width="226" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cnE-9e-60f">
+                    <rect key="frame" x="41" y="147" width="226" height="32"/>
                     <buttonCell key="cell" type="push" title="Generate and trust certificates" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LeJ-52-Bc6">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -195,9 +223,12 @@ You will be asked your password. This is necessary to mark the freshly generated
                         <action selector="didPressGenerate:" target="zHn-oz-BJc" id="EgA-q8-nfM"/>
                     </connections>
                 </button>
-                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AeX-gf-Pb0">
-                    <rect key="frame" x="258" y="165" width="38" height="20"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AeX-gf-Pb0">
+                    <rect key="frame" x="267" y="156" width="28" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="JxG-rR-Q7X"/>
+                        <constraint firstAttribute="width" constant="24" id="poo-f9-Nkz"/>
+                    </constraints>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="✅" id="SPH-al-87n">
                         <font key="font" metaFont="menu" size="14"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -205,6 +236,20 @@ You will be asked your password. This is necessary to mark the freshly generated
                     </textFieldCell>
                 </textField>
             </subviews>
+            <constraints>
+                <constraint firstItem="0dS-dO-idU" firstAttribute="top" secondItem="zHn-oz-BJc" secondAttribute="top" constant="46" id="23L-QE-Zaz"/>
+                <constraint firstItem="MdO-IE-qfj" firstAttribute="leading" secondItem="0dS-dO-idU" secondAttribute="leading" id="6VY-XB-lba"/>
+                <constraint firstItem="LZ2-F6-4bP" firstAttribute="leading" secondItem="MdO-IE-qfj" secondAttribute="leading" id="6qZ-Sc-Gqi"/>
+                <constraint firstItem="cnE-9e-60f" firstAttribute="centerY" secondItem="AeX-gf-Pb0" secondAttribute="centerY" id="8Yi-3c-9ea"/>
+                <constraint firstItem="LZ2-F6-4bP" firstAttribute="top" secondItem="MdO-IE-qfj" secondAttribute="bottom" constant="8" id="In8-Y3-bij"/>
+                <constraint firstItem="cnE-9e-60f" firstAttribute="top" secondItem="LZ2-F6-4bP" secondAttribute="bottom" constant="20" id="KEp-si-Y4h"/>
+                <constraint firstItem="cnE-9e-60f" firstAttribute="leading" secondItem="LZ2-F6-4bP" secondAttribute="leading" id="MJc-1m-kiR"/>
+                <constraint firstAttribute="trailing" secondItem="bPR-hf-JhW" secondAttribute="trailing" constant="20" symbolic="YES" id="NLU-ty-Oht"/>
+                <constraint firstItem="MdO-IE-qfj" firstAttribute="top" secondItem="0dS-dO-idU" secondAttribute="bottom" constant="1" id="dZR-uu-VaC"/>
+                <constraint firstAttribute="bottom" secondItem="bPR-hf-JhW" secondAttribute="bottom" constant="20" symbolic="YES" id="iQE-gQ-Acm"/>
+                <constraint firstItem="0dS-dO-idU" firstAttribute="leading" secondItem="zHn-oz-BJc" secondAttribute="leading" constant="47" id="jGi-mM-KVu"/>
+                <constraint firstItem="AeX-gf-Pb0" firstAttribute="leading" secondItem="cnE-9e-60f" secondAttribute="trailing" constant="8" symbolic="YES" id="o2K-BP-oAg"/>
+            </constraints>
             <connections>
                 <outlet property="checkmark" destination="AeX-gf-Pb0" id="Iyr-hS-px1"/>
                 <outlet property="controller" destination="-2" id="l3m-Qr-Nwu"/>
@@ -217,28 +262,25 @@ You will be asked your password. This is necessary to mark the freshly generated
             <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eQL-aB-hhn">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eQL-aB-hhn">
                     <rect key="frame" x="45" y="335" width="55" height="19"/>
-                    <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Step 3" id="ThV-5x-86f">
                         <font key="font" metaFont="systemBold" size="16"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Itr-g4-E0o">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Itr-g4-E0o">
                     <rect key="frame" x="45" y="315" width="272" height="19"/>
-                    <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Install or activate browser extensions" id="1bc-l4-hkX">
                         <font key="font" metaFont="label" size="16"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U28-Lz-l7z">
-                    <rect key="frame" x="337" y="32" width="72" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SMo-bQ-nco">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U28-Lz-l7z">
+                    <rect key="frame" x="360" y="13" width="76" height="32"/>
+                    <buttonCell key="cell" type="push" title="Finish" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SMo-bQ-nco">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -246,19 +288,20 @@ You will be asked your password. This is necessary to mark the freshly generated
                         <action selector="didPressDone:" target="7Pa-qY-U6y" id="7fy-x4-TbT"/>
                     </connections>
                 </button>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bAM-T9-mhu">
-                    <rect key="frame" x="45" y="270" width="360" height="37"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bAM-T9-mhu">
+                    <rect key="frame" x="45" y="275" width="360" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="356" id="LbK-D0-mFn"/>
+                    </constraints>
                     <textFieldCell key="cell" title="Sprinkles uses browser extensions to inject your scripts into the webpages that you visit." id="sLy-F0-p03">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UE4-Ss-UJq">
-                    <rect key="frame" x="42" y="222" width="197" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Open Safari Extensions" bezelStyle="rounded" image="NSTouchBarOpenInBrowserTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nZC-O8-LDP">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UE4-Ss-UJq">
+                    <rect key="frame" x="41" y="217" width="203" height="32"/>
+                    <buttonCell key="cell" type="push" title="Open Safari Extensions" bezelStyle="rounded" image="Safari" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nZC-O8-LDP">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -266,10 +309,9 @@ You will be asked your password. This is necessary to mark the freshly generated
                         <action selector="didPressSafari:" target="7Pa-qY-U6y" id="IAx-QN-A8h"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O7U-AH-WP8">
-                    <rect key="frame" x="41" y="189" width="244" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Install Mozilla Firefox extension" bezelStyle="rounded" image="NSTouchBarOpenInBrowserTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4dC-O5-7HP">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="O7U-AH-WP8">
+                    <rect key="frame" x="41" y="184" width="250" height="32"/>
+                    <buttonCell key="cell" type="push" title="Install Mozilla Firefox extension" bezelStyle="rounded" image="Firefox" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4dC-O5-7HP">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -277,10 +319,9 @@ You will be asked your password. This is necessary to mark the freshly generated
                         <action selector="didPressFirefox:" target="7Pa-qY-U6y" id="7H2-OB-bYc"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1c8-cV-8ON">
-                    <rect key="frame" x="41" y="156" width="252" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Install Google Chrome extension" bezelStyle="rounded" image="NSTouchBarOpenInBrowserTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OnO-jb-KCc">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1c8-cV-8ON">
+                    <rect key="frame" x="41" y="151" width="258" height="32"/>
+                    <buttonCell key="cell" type="push" title="Install Google Chrome extension" bezelStyle="rounded" image="Chrome" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OnO-jb-KCc">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -288,10 +329,9 @@ You will be asked your password. This is necessary to mark the freshly generated
                         <action selector="didPressChrome:" target="7Pa-qY-U6y" id="1c3-2s-NIr"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vat-kH-NEe">
-                    <rect key="frame" x="46" y="41" width="233" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="check" title="Start Sprinkles when system starts" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="d8V-rL-1ch">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vat-kH-NEe">
+                    <rect key="frame" x="194" y="22" width="160" height="18"/>
+                    <buttonCell key="cell" type="check" title="Start Sprinkles at login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="d8V-rL-1ch">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -300,6 +340,24 @@ You will be asked your password. This is necessary to mark the freshly generated
                     </connections>
                 </button>
             </subviews>
+            <constraints>
+                <constraint firstItem="vat-kH-NEe" firstAttribute="firstBaseline" secondItem="U28-Lz-l7z" secondAttribute="firstBaseline" id="9XS-Mk-tRm"/>
+                <constraint firstItem="bAM-T9-mhu" firstAttribute="top" secondItem="Itr-g4-E0o" secondAttribute="bottom" constant="8" id="LKY-3u-cZX"/>
+                <constraint firstItem="UE4-Ss-UJq" firstAttribute="top" secondItem="bAM-T9-mhu" secondAttribute="bottom" constant="30" id="M1h-wm-DLF"/>
+                <constraint firstItem="U28-Lz-l7z" firstAttribute="leading" secondItem="vat-kH-NEe" secondAttribute="trailing" constant="14" id="Quo-io-Gkz"/>
+                <constraint firstItem="eQL-aB-hhn" firstAttribute="top" secondItem="7Pa-qY-U6y" secondAttribute="top" constant="46" id="TYA-k1-AzJ"/>
+                <constraint firstItem="Itr-g4-E0o" firstAttribute="top" secondItem="eQL-aB-hhn" secondAttribute="bottom" constant="1" id="Tca-m3-OH9"/>
+                <constraint firstItem="O7U-AH-WP8" firstAttribute="top" secondItem="UE4-Ss-UJq" secondAttribute="bottom" constant="12" symbolic="YES" id="Tkd-96-BvK"/>
+                <constraint firstAttribute="bottom" secondItem="U28-Lz-l7z" secondAttribute="bottom" constant="20" symbolic="YES" id="Ufc-T5-gwh"/>
+                <constraint firstItem="O7U-AH-WP8" firstAttribute="leading" secondItem="UE4-Ss-UJq" secondAttribute="leading" id="Vl0-HM-NbK"/>
+                <constraint firstItem="1c8-cV-8ON" firstAttribute="top" secondItem="O7U-AH-WP8" secondAttribute="bottom" constant="12" symbolic="YES" id="X1j-42-Z9h"/>
+                <constraint firstItem="bAM-T9-mhu" firstAttribute="leading" secondItem="Itr-g4-E0o" secondAttribute="leading" id="bFF-od-GYx"/>
+                <constraint firstItem="UE4-Ss-UJq" firstAttribute="leading" secondItem="bAM-T9-mhu" secondAttribute="leading" id="fPx-MQ-tLJ"/>
+                <constraint firstItem="eQL-aB-hhn" firstAttribute="leading" secondItem="7Pa-qY-U6y" secondAttribute="leading" constant="47" id="m0n-BN-2zQ"/>
+                <constraint firstItem="1c8-cV-8ON" firstAttribute="leading" secondItem="O7U-AH-WP8" secondAttribute="leading" id="ntG-x7-09U"/>
+                <constraint firstItem="Itr-g4-E0o" firstAttribute="leading" secondItem="eQL-aB-hhn" secondAttribute="leading" id="rCx-gV-uMu"/>
+                <constraint firstAttribute="trailing" secondItem="U28-Lz-l7z" secondAttribute="trailing" constant="20" symbolic="YES" id="xG1-S6-Meb"/>
+            </constraints>
             <connections>
                 <outlet property="chromeButton" destination="1c8-cV-8ON" id="Plk-vF-IW3"/>
                 <outlet property="controller" destination="-2" id="BUF-CB-7Ae"/>
@@ -312,6 +370,8 @@ You will be asked your password. This is necessary to mark the freshly generated
         </customView>
     </objects>
     <resources>
-        <image name="NSTouchBarOpenInBrowserTemplate" width="18" height="30"/>
+        <image name="Chrome" width="48" height="48"/>
+        <image name="Firefox" width="48" height="48"/>
+        <image name="Safari" width="48" height="48"/>
     </resources>
 </document>

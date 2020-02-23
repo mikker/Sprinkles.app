@@ -23,11 +23,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         preferences = NSApplication.shared.windows.last!
         
-        statusItem.handleOnboarding = { self.showOnboarding() }
+        statusItem.handleOnboarding = {
+            self.showOnboarding()
+            NSApp.activate(ignoringOtherApps: true)
+        }
         statusItem.handlePreferences = { self.showPreferences() }
         statusItem.enable()
         
-        if (!Defaults[.enableDockIcon]) { NSApp.setActivationPolicy(.accessory) }
+        if (Defaults[.enableDockIcon]) { NSApp.setActivationPolicy(.regular) }
 
         if (Defaults[.enableDiagnostics]) { initSentry() }
         
@@ -39,6 +42,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         if !Defaults[.hasOnboarded] {
             self.onboarding.showWindow(nil)
+            self.preferences!.close()
         }
     }
 

@@ -13,6 +13,6 @@ extension Defaults.Keys {
     static let userId = Key<String>("userId", default: UUID().uuidString)
     static let hasOnboarded = Key<Bool>("hasOnboarded", default: false)
     
-    static let enableDockIcon = Key<Bool>("enableDockIcon", default: true)
+    static let enableDockIcon = Key<Bool>("enableDockIcon", default: false)
     static let enableDiagnostics = Key<Bool>("enableDiagnostics", default: false)
 }
