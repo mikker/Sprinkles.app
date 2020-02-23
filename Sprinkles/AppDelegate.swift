@@ -45,8 +45,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         unsubscribe?()
     }
     
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        showPreferences()
+        return true
+    }
+
     private func showPreferences() {
         preferences!.makeKeyAndOrderFront(nil)
+        NSApp.activate(ignoringOtherApps: true)
     }
     
     private func showOnboarding() {
