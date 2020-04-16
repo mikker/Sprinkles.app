@@ -8,56 +8,51 @@
 
 import Cocoa
 import Defaults
+import Preferences
+
+extension PreferencePane.Identifier {
+  static let general = Identifier("general")
+}
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    let statusItem = StatusItem()
-    var unsubscribe: UnsubscribeFn?
-    var preferences: NSWindow?
-  
-    @IBOutlet var onboarding: OnboardingController!
+  @IBOutlet var onboarding: OnboardingController!
 
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        if (Defaults[.enableDiagnostics]) { Diagnostics.enable() }
-        Diagnostics.send("[app] Boot")
-        
-        preferences = NSApplication.shared.windows.last!
+  lazy var preferences = PreferencesWindowController(
+    preferencePanes: [GeneralPreferencesController()], style: .segmentedControl)
 
-        statusItem.handleOnboarding = { self.showOnboarding() }
-        statusItem.handlePreferences = { self.showPreferences() }
-        statusItem.enable()
-        
-        if (Defaults[.enableDockIcon]) { NSApp.setActivationPolicy(.regular) }
-
-        unsubscribe = store.subscribe { state in
-            if state.hasCert && Defaults[.hasOnboarded] {
-                Server.instance.start(3133)
-            }
-        }
-        
-        if !Defaults[.hasOnboarded] {
-            showOnboarding()
-        }
+  func applicationDidFinishLaunching(_ aNotification: Notification) {
+    _ = Defaults.observe(.enableDiagnostics) { (state) in
+      guard state.newValue else { return }
+      Diagnostics.enable()
     }
 
-    func applicationWillTerminate(_ aNotification: Notification) {
-        Server.instance.stop()
-        unsubscribe?()
-    }
-    
-    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
-        showPreferences()
-        return true
+    _ = store.subscribe { state in
+      if state.hasCert && Defaults[.hasOnboarded] {
+        Server.instance.start(3133)
+      }
     }
 
-    private func showPreferences() {
-        preferences!.makeKeyAndOrderFront(nil)
-        NSApp.activate(ignoringOtherApps: true)
+    if Defaults[.showPreferencesOnLaunch] {
+      showPreferences()
     }
-    
-    private func showOnboarding() {
-        Defaults[.hasOnboarded] = false
-        self.onboarding.showWindow(nil)
-        NSApp.activate(ignoringOtherApps: true)
+
+    if !Defaults[.hasOnboarded] {
+      showOnboarding()
     }
+  }
+
+  func applicationWillTerminate(_ aNotification: Notification) {
+    Server.instance.stop()
+  }
+
+  func showPreferences() {
+    preferences.show()
+  }
+
+  func showOnboarding() {
+    Defaults[.hasOnboarded] = false
+    self.onboarding.showWindow(nil)
+    NSApp.activate(ignoringOtherApps: true)
+  }
 }

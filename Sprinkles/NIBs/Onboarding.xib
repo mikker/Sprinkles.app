@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,7 +20,7 @@
         <window title="Setting up Sprinkles" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="Mfr-h5-bc1">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="427" y="270" width="450" height="600"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1536" height="937"/>
             <view key="contentView" wantsLayer="YES" id="fZc-5R-Xb1">
                 <rect key="frame" x="0.0" y="0.0" width="450" height="600"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -278,13 +278,13 @@ You will be asked your password. This is necessary to mark the freshly generated
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U28-Lz-l7z">
-                    <rect key="frame" x="360" y="13" width="76" height="32"/>
-                    <buttonCell key="cell" type="push" title="Finish" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SMo-bQ-nco">
+                    <rect key="frame" x="361" y="13" width="75" height="32"/>
+                    <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SMo-bQ-nco">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="donePressed:" target="7Pa-qY-U6y" id="7fy-x4-TbT"/>
+                        <action selector="closePressed:" target="7Pa-qY-U6y" id="7fy-x4-TbT"/>
                     </connections>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bAM-T9-mhu">
@@ -328,22 +328,10 @@ You will be asked your password. This is necessary to mark the freshly generated
                         <action selector="googleChromePressed:" target="7Pa-qY-U6y" id="1c3-2s-NIr"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vat-kH-NEe">
-                    <rect key="frame" x="194" y="22" width="160" height="18"/>
-                    <buttonCell key="cell" type="check" title="Start Sprinkles at login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="d8V-rL-1ch">
-                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="launchAtLoginPressed:" target="7Pa-qY-U6y" id="vID-cT-AMu"/>
-                    </connections>
-                </button>
             </subviews>
             <constraints>
-                <constraint firstItem="vat-kH-NEe" firstAttribute="firstBaseline" secondItem="U28-Lz-l7z" secondAttribute="firstBaseline" id="9XS-Mk-tRm"/>
                 <constraint firstItem="bAM-T9-mhu" firstAttribute="top" secondItem="Itr-g4-E0o" secondAttribute="bottom" constant="8" id="LKY-3u-cZX"/>
                 <constraint firstItem="UE4-Ss-UJq" firstAttribute="top" secondItem="bAM-T9-mhu" secondAttribute="bottom" constant="30" id="M1h-wm-DLF"/>
-                <constraint firstItem="U28-Lz-l7z" firstAttribute="leading" secondItem="vat-kH-NEe" secondAttribute="trailing" constant="14" id="Quo-io-Gkz"/>
                 <constraint firstItem="eQL-aB-hhn" firstAttribute="top" secondItem="7Pa-qY-U6y" secondAttribute="top" constant="46" id="TYA-k1-AzJ"/>
                 <constraint firstItem="Itr-g4-E0o" firstAttribute="top" secondItem="eQL-aB-hhn" secondAttribute="bottom" constant="1" id="Tca-m3-OH9"/>
                 <constraint firstItem="O7U-AH-WP8" firstAttribute="top" secondItem="UE4-Ss-UJq" secondAttribute="bottom" constant="12" symbolic="YES" id="Tkd-96-BvK"/>
@@ -362,7 +350,6 @@ You will be asked your password. This is necessary to mark the freshly generated
                 <outlet property="controller" destination="-2" id="BUF-CB-7Ae"/>
                 <outlet property="doneButton" destination="U28-Lz-l7z" id="PaP-Eh-DPd"/>
                 <outlet property="firefoxButton" destination="O7U-AH-WP8" id="Zmc-CN-v4s"/>
-                <outlet property="launchAtLoginCheckbox" destination="vat-kH-NEe" id="jVh-hv-Z8b"/>
                 <outlet property="safariButton" destination="UE4-Ss-UJq" id="90Z-ye-VhX"/>
             </connections>
             <point key="canvasLocation" x="1195" y="507"/>

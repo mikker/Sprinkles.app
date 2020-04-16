@@ -8,54 +8,54 @@
 
 import Cocoa
 
-class StatusItem {
-    var statusItem: NSStatusItem?
-    
-    var handlePreferences: (() -> Void)?
-    var handleOnboarding: (() -> Void)?
+class StatusItem: NSObject {
+  var statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
 
-    func enable() {
-        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-        
-        guard let item = statusItem else { print("No status item"); return }
-        
-        if let menubarButton = item.button {
-            menubarButton.image = NSImage(named: NSImage.Name("ToolbarItemIcon"))
-        }
+  override func awakeFromNib() {
+    statusItem.button?.image = NSImage(named: NSImage.Name("ToolbarItemIcon"))
+    statusItem.menu = buildMenu()
+  }
 
-        let menu = NSMenu()
+  private func buildMenu() -> NSMenu {
+    let menu = NSMenu()
 
-        let preferencesItem = NSMenuItem(title: "Preferences…", action: #selector(showPreferences), keyEquivalent: ",")
-        preferencesItem.target = self
-        menu.addItem(preferencesItem)
-        
-        let onboardingItem = NSMenuItem(title: "Onboarding…", action: #selector(showOnboarding), keyEquivalent: ",")
-        onboardingItem.target = self
-        onboardingItem.isAlternate = true
-        onboardingItem.keyEquivalentModifierMask = .option
-        menu.addItem(onboardingItem)
-        
-        let directoryItem = NSMenuItem(title: "Open directory…", action: #selector(openDirectory), keyEquivalent: "o")
-        directoryItem.target = self
-        menu.addItem(directoryItem)
-        
-        menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "Quit Sprinkles", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+    let preferencesItem = NSMenuItem(
+      title: "Preferences…", action: #selector(showPreferences), keyEquivalent: ",")
+    preferencesItem.target = self
+    menu.addItem(preferencesItem)
 
-        item.menu = menu
-    }
-    
-    @objc func openDirectory() {
-        NSWorkspace.shared.open(store.state.directory)
-    }
-    
-    @objc func showPreferences() {
-        guard let cb = handlePreferences else { return }
-        cb()
-    }
-    
-    @objc func showOnboarding() {
-        guard let cb = handleOnboarding else { return }
-        cb()
-    }
+    let onboardingItem = NSMenuItem(
+      title: "Onboarding…", action: #selector(showOnboarding), keyEquivalent: ",")
+    onboardingItem.target = self
+    onboardingItem.isAlternate = true
+    onboardingItem.keyEquivalentModifierMask = .option
+    menu.addItem(onboardingItem)
+
+    let directoryItem = NSMenuItem(
+      title: "Open directory…", action: #selector(openDirectory), keyEquivalent: "o")
+    directoryItem.target = self
+    menu.addItem(directoryItem)
+
+    menu.addItem(NSMenuItem.separator())
+    menu.addItem(
+      NSMenuItem(
+        title: "Quit Sprinkles", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
+    )
+
+    return menu
+  }
+
+  @objc func openDirectory() {
+    NSWorkspace.shared.open(store.state.directory)
+  }
+
+  @objc func showPreferences() {
+    guard let delegate = NSApplication.shared.delegate as? AppDelegate else { return }
+    delegate.showPreferences()
+  }
+
+  @objc func showOnboarding() {
+    guard let delegate = NSApplication.shared.delegate as? AppDelegate else { return }
+    delegate.showOnboarding()
+  }
 }

@@ -1,14 +1,14 @@
 import XCTest
 
 class SprinklesUITests: XCTestCase {
-    override func setUp() {
-        continueAfterFailure = false
-        XCUIApplication().launch()
-    }
+  override func setUp() {
+    continueAfterFailure = false
+    XCUIApplication().launch()
+  }
 
-    override func tearDown() {
-    }
+  override func tearDown() {
+  }
 
-    func testExample() {
-    }
+  func testExample() {
+  }
 }
