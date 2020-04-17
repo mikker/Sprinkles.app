@@ -19,6 +19,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     in window: SFSafariWindow,
     validationHandler: @escaping ((Bool, String) -> Void)
   ) {
+    print("asdf")
     validationHandler(true, "")
   }
 }
