@@ -20,6 +20,8 @@ class GeneralPreferencesController: NSViewController, PreferencePane {
 
   @IBOutlet var statusLight: NSButton!
   @IBOutlet var directoryPathControl: NSPathControl!
+  @IBOutlet var pickLocationButton: NSButton!
+  @IBOutlet var revealButton: NSButton!
   @IBOutlet var showPreferencesOnLaunchCheckbox: NSButton!
   @IBOutlet var launchAtLoginCheckbox: NSButton!
   @IBOutlet var diagnosticsCheckbox: NSButton!
@@ -37,7 +39,7 @@ class GeneralPreferencesController: NSViewController, PreferencePane {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    self.preferredContentSize = NSSize(width: 480, height: 453)
+    self.preferredContentSize = NSSize(width: 480, height: 462)
 
     unsubscribe = store.subscribe { state in
       self.directoryPathControl.url = state.directory
@@ -69,6 +71,10 @@ class GeneralPreferencesController: NSViewController, PreferencePane {
       Bookmark.url = url
       store.dispatch(.setDirectory(url))
     }
+  }
+
+  @IBAction func revealButtonPressed(_ sender: Any?) {
+    NSWorkspace.shared.open(store.state.directory)
   }
 
   @IBAction func showPreferencesOnLaunchPressed(_ sender: Any?) {
