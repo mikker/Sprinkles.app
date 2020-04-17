@@ -90,7 +90,7 @@ class GeneralPreferencesController: NSViewController, PreferencePane {
   }
 
   @IBAction func supportPressed(_ sender: Any?) {
-    NSWorkspace.shared.open(URL(string: "https://sprinkles.website/")!)
+    NSWorkspace.shared.open(URL(string: "https://getsprinkles.app/")!)
   }
 
   @IBAction func safariPressed(_ sender: Any?) {
@@ -99,11 +99,11 @@ class GeneralPreferencesController: NSViewController, PreferencePane {
   }
 
   @IBAction func firefoxPressed(_ sender: Any?) {
-    NSWorkspace.shared.openFile("https://sprinkles.website/firefox", withApplication: "Firefox")
+    NSWorkspace.shared.openFile("https://getsprinkles.app/firefox", withApplication: "Firefox")
   }
 
   @IBAction func chromePressed(_ sender: Any?) {
     NSWorkspace.shared.openFile(
-      "https://sprinkles.website/chrome", withApplication: "Google Chrome")
+      "https://getsprinkles.app/chrome", withApplication: "Google Chrome")
   }
 }

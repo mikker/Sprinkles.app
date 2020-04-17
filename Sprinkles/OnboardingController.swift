@@ -146,12 +146,12 @@ class OnboardingStep3View: NSView {
   }
 
   @IBAction func firefoxPressed(_ sender: Any) {
-    NSWorkspace.shared.openFile("https://sprinkles.website/firefox", withApplication: "Firefox")
+    NSWorkspace.shared.openFile("https://getsprinkles.app/firefox", withApplication: "Firefox")
   }
 
   @IBAction func googleChromePressed(_ sender: Any) {
     NSWorkspace.shared.openFile(
-      "https://sprinkles.website/chrome", withApplication: "Google Chrome")
+      "https://getsprinkles.app/chrome", withApplication: "Google Chrome")
   }
 
   @IBAction func closePressed(_ sender: Any) {
