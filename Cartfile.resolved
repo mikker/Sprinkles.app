@@ -1,3 +1,2 @@
-github "getsentry/sentry-cocoa" "4.5.0"
-github "sindresorhus/LaunchAtLogin" "v3.0.0"
+github "sindresorhus/LaunchAtLogin" "v3.0.1"
 github "thecatalinstan/Criollo" "0.5.5"

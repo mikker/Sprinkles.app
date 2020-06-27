@@ -10,26 +10,26 @@ import Defaults
 import Foundation
 import Sentry
 
+let dsn = "https://b0298bed5c364de2862c0760a881112b@sentry.io/1404238"
+
 class Diagnostics {
+  static var enabled = false
+
   static func enable() {
-    do {
-      Client.shared = try Client(dsn: "https://b0298bed5c364de2862c0760a881112b@sentry.io/1404238")
-      try Client.shared?.startCrashHandler()
-
-      Client.shared?.user = User(userId: Defaults[.userId])
-    } catch let error {
-      print("\(error)")
+    SentrySDK.start { options in
+      options.dsn = dsn
+      options.debug = true
     }
-
+    enabled = true
+    SentrySDK.setUser(User(userId: Defaults[.userId]))
     send("[diagnostics] Enable")
   }
 
-  static func send(_ message: String, level: SentrySeverity = .info) {
-    guard let cli = Client.shared else { return }
+  static func send(_ message: String, level: SentryLevel = .info) {
+    if !enabled { return }
 
-    let event = Event(level: level)
-    event.message = message
-
-    cli.send(event: event, completion: nil)
+    let scope = Scope()
+    scope.setLevel(level)
+    SentrySDK.capture(message: message, scope: scope)
   }
 }

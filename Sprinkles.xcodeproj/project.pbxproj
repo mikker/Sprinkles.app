@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		42012E072227315B001F5F4F /* Sentry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42012E0422273159001F5F4F /* Sentry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		420AFFBE236B852000413745 /* OpenPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420AFFBD236B852000413745 /* OpenPanel.swift */; };
 		420AFFC0236B8D6F00413745 /* ExampleFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420AFFBF236B8D6F00413745 /* ExampleFiles.swift */; };
 		421FDA0A21F513EB004BDB68 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FDA0921F513EB004BDB68 /* Defaults.swift */; };
@@ -17,7 +16,6 @@
 		423D94FA224C1DED0079CEFE /* sprinkles.csr.conf in Resources */ = {isa = PBXBuildFile; fileRef = 423D94F1224C1DED0079CEFE /* sprinkles.csr.conf */; };
 		423D94FE224C1DED0079CEFE /* v3.ext in Resources */ = {isa = PBXBuildFile; fileRef = 423D94F5224C1DED0079CEFE /* v3.ext */; };
 		423D9500224C2CC00079CEFE /* rootCA.csr.conf in Resources */ = {isa = PBXBuildFile; fileRef = 423D94FF224C2B440079CEFE /* rootCA.csr.conf */; };
-		425A177721EFC86600C57D44 /* Sprinkles.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 425A177621EFC86600C57D44 /* Sprinkles.entitlements */; };
 		425A177921EFC86600C57D44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A177821EFC86600C57D44 /* AppDelegate.swift */; };
 		425A178021EFC86700C57D44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 425A177F21EFC86700C57D44 /* Assets.xcassets */; };
 		425A178B21EFC86700C57D44 /* SprinklesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A178A21EFC86700C57D44 /* SprinklesTests.swift */; };
@@ -36,6 +34,7 @@
 		42690B652216D0A300DF8AB3 /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 42690B632216D0A300DF8AB3 /* favicon.ico */; };
 		428B9DBB23753753005D307F /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 428B9DBA23753753005D307F /* ToolbarItemIcon.pdf */; };
 		429543E121F27387007EBAF3 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429543E021F27387007EBAF3 /* Bookmark.swift */; };
+		429BC55724A7DE3000297D8F /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 429BC55624A7DE3000297D8F /* Sentry */; };
 		42ABC9692400A0E3009CA2CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42ABC9682400A0E2009CA2CE /* Main.storyboard */; };
 		42ABC96B240265FB009CA2CE /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABC96A240265FB009CA2CE /* StatusItem.swift */; };
 		42ABC96F24026A70009CA2CE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ABC96E24026A70009CA2CE /* logo.png */; };
@@ -92,7 +91,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				425A17E121F138F000C57D44 /* Criollo.framework in Embed Frameworks */,
-				42012E072227315B001F5F4F /* Sentry.framework in Embed Frameworks */,
 				42E5023A2217501E009A6253 /* LaunchAtLogin.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -101,7 +99,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		42012E0422273159001F5F4F /* Sentry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sentry.framework; path = Carthage/Build/Mac/Sentry.framework; sourceTree = "<group>"; };
 		420AFFBD236B852000413745 /* OpenPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPanel.swift; sourceTree = "<group>"; };
 		420AFFBF236B8D6F00413745 /* ExampleFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleFiles.swift; sourceTree = "<group>"; };
 		421FDA0921F513EB004BDB68 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
@@ -153,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				429BC55724A7DE3000297D8F /* Sentry in Frameworks */,
 				42DFEDE5234E217C00916DCB /* Regex in Frameworks */,
 				422CA07D244503BA0029BDD6 /* Preferences in Frameworks */,
 				42DFEDDF234E204400916DCB /* Defaults in Frameworks */,
@@ -266,7 +264,6 @@
 			isa = PBXGroup;
 			children = (
 				423945A322289DA80018B53A /* Security.framework */,
-				42012E0422273159001F5F4F /* Sentry.framework */,
 				42E5023722175015009A6253 /* LaunchAtLogin.framework */,
 				425A17DE21F138E200C57D44 /* Criollo.framework */,
 				425A17A121EFC86700C57D44 /* Cocoa.framework */,
@@ -343,6 +340,7 @@
 				42DFEDDE234E204400916DCB /* Defaults */,
 				42DFEDE4234E217C00916DCB /* Regex */,
 				422CA07C244503BA0029BDD6 /* Preferences */,
+				429BC55624A7DE3000297D8F /* Sentry */,
 			);
 			productName = Sprinkles;
 			productReference = 425A177321EFC86500C57D44 /* Sprinkles.app */;
@@ -408,7 +406,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Brainbow;
 				TargetAttributes = {
 					425A177221EFC86500C57D44 = {
@@ -463,6 +461,7 @@
 				42DFEDDD234E204400916DCB /* XCRemoteSwiftPackageReference "Defaults" */,
 				42DFEDE3234E217C00916DCB /* XCRemoteSwiftPackageReference "Regex" */,
 				422CA07B244503BA0029BDD6 /* XCRemoteSwiftPackageReference "Preferences" */,
+				429BC55524A7DE3000297D8F /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 			);
 			productRefGroup = 425A177421EFC86500C57D44 /* Products */;
 			projectDirPath = "";
@@ -488,7 +487,6 @@
 				42690B642216D0A300DF8AB3 /* favicon.png in Resources */,
 				423D94F6224C1DED0079CEFE /* gen_cert.sh in Resources */,
 				42ABC9692400A0E3009CA2CE /* Main.storyboard in Resources */,
-				425A177721EFC86600C57D44 /* Sprinkles.entitlements in Resources */,
 				425A178021EFC86700C57D44 /* Assets.xcassets in Resources */,
 				42ABC96F24026A70009CA2CE /* logo.png in Resources */,
 				423D94FE224C1DED0079CEFE /* v3.ext in Resources */,
@@ -689,6 +687,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -750,6 +749,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1026,6 +1026,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		429BC55524A7DE3000297D8F /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		42DFEDDD234E204400916DCB /* XCRemoteSwiftPackageReference "Defaults" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:sindresorhus/Defaults.git";
@@ -1049,6 +1057,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 422CA07B244503BA0029BDD6 /* XCRemoteSwiftPackageReference "Preferences" */;
 			productName = Preferences;
+		};
+		429BC55624A7DE3000297D8F /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 429BC55524A7DE3000297D8F /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
 		};
 		42DFEDDE234E204400916DCB /* Defaults */ = {
 			isa = XCSwiftPackageProductDependency;
