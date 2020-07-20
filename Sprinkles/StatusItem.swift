@@ -46,7 +46,11 @@ class StatusItem: NSObject {
   }
 
   @objc func openDirectory() {
-    NSWorkspace.shared.open(store.state.directory)
+    if let directory = store.state.directory {
+      NSWorkspace.shared.open(directory)
+    } else {
+      showPreferences()
+    }
   }
 
   @objc func showPreferences() {

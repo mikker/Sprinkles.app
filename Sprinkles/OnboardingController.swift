@@ -67,6 +67,8 @@ class OnboardingStep1View: NSView {
     self.window?.makeFirstResponder(chooseLocationButton)
 
     unsubscribe = store.subscribe { state in
+      self.nextButton.isEnabled = state.directory != nil
+      guard state.directory != nil else { return }
       self.directoryPathControl.url = state.directory
     }
   }
@@ -85,7 +87,8 @@ class OnboardingStep1View: NSView {
   }
 
   @IBAction func didPressNext(_ sender: Any) {
-    ExampleFiles.copyTo(directoryAtPath: store.state.directory.path)
+    guard let dir = store.state.directory else { return }
+    ExampleFiles.copyTo(directoryAtPath: dir.path)
     controller.goToPage(.page2)
   }
 }

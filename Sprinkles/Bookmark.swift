@@ -9,23 +9,22 @@
 import Cocoa
 
 public class Bookmark {
-  static let defaultScriptsDirectoryPath = NSHomeDirectory() + "/Scripts"
-
   typealias Permissions = [URL: Data]
 
-  public static var url: URL {
+  public static var url: URL? {
     get { return instance.url }
     set(url) { instance.url = url }
   }
 
   private static let instance = Bookmark()
 
-  private var url: URL {
+  private var url: URL? {
     get {
       readFromDisk()
     }
 
-    set(url) {
+    set(maybeUrl) {
+      guard let url = maybeUrl else { return removeBookmark() }
       saveToDisk(url)
     }
   }
@@ -35,13 +34,13 @@ public class Bookmark {
     return url.appendingPathComponent("Bookmark.dict")
   }
 
-  private func hasBookmark() -> Bool {
+  private func bookmarkExists() -> Bool {
     return FileManager.default.fileExists(atPath: fileURL().path)
   }
 
-  private func readFromDisk() -> URL {
-    guard hasBookmark() else { return ensureDefaultDir() }
-    guard let dir = readBookmark() else { return ensureDefaultDir() }
+  private func readFromDisk() -> URL? {
+    guard bookmarkExists() else { return nil }
+    guard let dir = readBookmark() else { return nil }
     return dir
   }
 
@@ -55,7 +54,7 @@ public class Bookmark {
         let permissions =
           try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(fileData) as? Permissions
       else { return nil }
-      guard let (_, data) = permissions.first else { return ensureDefaultDir() }
+      guard let (_, data) = permissions.first else { return nil }
       restored =
         try NSURL.init(
           resolvingBookmarkData: data,
@@ -71,23 +70,6 @@ public class Bookmark {
     guard restored?.startAccessingSecurityScopedResource() ?? false else { return nil }
 
     return restored
-  }
-
-  private func ensureDefaultDir() -> URL {
-    let url = URL(fileURLWithPath: Bookmark.defaultScriptsDirectoryPath)
-
-    if FileManager.default.fileExists(atPath: url.path) { return url }
-
-    do {
-      try FileManager.default.createDirectory(
-        at: url, withIntermediateDirectories: true, attributes: nil)
-    } catch {
-      fatalError(error.localizedDescription)
-    }
-
-    self.url = url
-
-    return url
   }
 
   private func saveToDisk(_ url: URL) {
@@ -112,5 +94,12 @@ public class Bookmark {
     } catch {
       fatalError(error.localizedDescription)
     }
+  }
+
+  private func removeBookmark() {
+    guard bookmarkExists() else { return }
+    do {
+      try FileManager.default.removeItem(at: fileURL())
+    } catch {}
   }
 }

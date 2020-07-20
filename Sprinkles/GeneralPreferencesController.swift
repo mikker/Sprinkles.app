@@ -43,6 +43,7 @@ class GeneralPreferencesController: NSViewController, PreferencePane {
 
     unsubscribe = store.subscribe { state in
       self.directoryPathControl.url = state.directory
+      self.revealButton.isEnabled = state.directory != nil
 
       switch state.serverState {
       case .booting:
@@ -74,7 +75,8 @@ class GeneralPreferencesController: NSViewController, PreferencePane {
   }
 
   @IBAction func revealButtonPressed(_ sender: Any?) {
-    NSWorkspace.shared.open(store.state.directory)
+    guard let dir = store.state.directory else { return }
+    NSWorkspace.shared.open(dir)
   }
 
   @IBAction func showPreferencesOnLaunchPressed(_ sender: Any?) {

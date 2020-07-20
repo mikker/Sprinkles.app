@@ -28,7 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     _ = store.subscribe { state in
-      if state.hasCert && Defaults[.hasOnboarded] {
+      if state.hasCert && state.directory != nil {
         Server.instance.start(3133)
       }
     }
