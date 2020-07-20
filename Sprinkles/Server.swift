@@ -22,7 +22,7 @@ class Server: NSObject {
 
     server.isSecure = true
     server.certificatePath = SprinklesCertificate.certPath
-    server.certificateKeyPath = SprinklesCertificate.keyPath
+    server.privateKeyPath = SprinklesCertificate.keyPath
 
     server.delegate = self
 
