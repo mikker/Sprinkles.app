@@ -19,11 +19,6 @@
 		425A177921EFC86600C57D44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A177821EFC86600C57D44 /* AppDelegate.swift */; };
 		425A178021EFC86700C57D44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 425A177F21EFC86700C57D44 /* Assets.xcassets */; };
 		425A178B21EFC86700C57D44 /* SprinklesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A178A21EFC86700C57D44 /* SprinklesTests.swift */; };
-		425A179621EFC86700C57D44 /* SprinklesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A179521EFC86700C57D44 /* SprinklesUITests.swift */; };
-		425A179D21EFC86700C57D44 /* Sprinkles.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 425A179C21EFC86700C57D44 /* Sprinkles.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		425A17A221EFC86700C57D44 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425A17A121EFC86700C57D44 /* Cocoa.framework */; };
-		425A17A521EFC86700C57D44 /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A17A421EFC86700C57D44 /* SafariExtensionHandler.swift */; };
-		425A17AD21EFC86700C57D44 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 425A17AC21EFC86700C57D44 /* script.js */; };
 		425A17CE21F0875300C57D44 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A17CD21F0875300C57D44 /* Store.swift */; };
 		425A17D021F08BED00C57D44 /* Taste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A17CF21F08BED00C57D44 /* Taste.swift */; };
 		425A17EC21F1C1AF00C57D44 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A17EB21F1C1AF00C57D44 /* Server.swift */; };
@@ -31,12 +26,19 @@
 		42690B612216CCC400DF8AB3 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 42690B602216CCC400DF8AB3 /* index.html */; };
 		42690B642216D0A300DF8AB3 /* favicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42690B622216D0A300DF8AB3 /* favicon.png */; };
 		42690B652216D0A300DF8AB3 /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 42690B632216D0A300DF8AB3 /* favicon.ico */; };
-		428B9DBB23753753005D307F /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 428B9DBA23753753005D307F /* ToolbarItemIcon.pdf */; };
+		42755C3824D89B1500B146A8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425A17A121EFC86700C57D44 /* Cocoa.framework */; };
+		42755C3B24D89B1500B146A8 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42755C3A24D89B1500B146A8 /* SafariWebExtensionHandler.swift */; };
+		42755C4024D89B1500B146A8 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 42755C3F24D89B1500B146A8 /* images */; };
+		42755C4224D89B1500B146A8 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 42755C4124D89B1500B146A8 /* manifest.json */; };
+		42755C5124D89B1500B146A8 /* Sprinkles Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 42755C3724D89B1500B146A8 /* Sprinkles Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		42755C5624D89C4B00B146A8 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 42755C5524D89C4B00B146A8 /* script.js */; };
+		42755C6024D8A47B00B146A8 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42755C5F24D8A47B00B146A8 /* CocoaAsyncSocket.framework */; };
+		42755C6124D8A47B00B146A8 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42755C5F24D8A47B00B146A8 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		42755C6324D8B18700B146A8 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 42755C6224D8B18700B146A8 /* popup.html */; };
+		42755C6524D8B8C900B146A8 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 42755C6424D8B8C900B146A8 /* background.js */; };
 		429543E121F27387007EBAF3 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429543E021F27387007EBAF3 /* Bookmark.swift */; };
 		4297A0CA24C62BF400AEEED9 /* Criollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4297A0C924C62BF400AEEED9 /* Criollo.framework */; };
 		4297A0CB24C62BF400AEEED9 /* Criollo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4297A0C924C62BF400AEEED9 /* Criollo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4297A0CF24C62EB200AEEED9 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4297A0CC24C62E9B00AEEED9 /* CocoaAsyncSocket.framework */; };
-		4297A0D024C62EB200AEEED9 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4297A0CC24C62E9B00AEEED9 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		429BC55724A7DE3000297D8F /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 429BC55624A7DE3000297D8F /* Sentry */; };
 		42ABC9692400A0E3009CA2CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42ABC9682400A0E2009CA2CE /* Main.storyboard */; };
 		42ABC96B240265FB009CA2CE /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABC96A240265FB009CA2CE /* StatusItem.swift */; };
@@ -66,11 +68,11 @@
 			remoteGlobalIDString = 425A177221EFC86500C57D44;
 			remoteInfo = Sprinkles;
 		};
-		425A179E21EFC86700C57D44 /* PBXContainerItemProxy */ = {
+		42755C4F24D89B1500B146A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 425A176B21EFC86500C57D44 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 425A179B21EFC86700C57D44;
+			remoteGlobalIDString = 42755C3624D89B1500B146A8;
 			remoteInfo = "Sprinkles Extension";
 		};
 /* End PBXContainerItemProxy section */
@@ -82,7 +84,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				425A179D21EFC86700C57D44 /* Sprinkles.appex in Embed App Extensions */,
+				42755C5124D89B1500B146A8 /* Sprinkles Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,7 +95,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4297A0D024C62EB200AEEED9 /* CocoaAsyncSocket.framework in Embed Frameworks */,
+				42755C6124D8A47B00B146A8 /* CocoaAsyncSocket.framework in Embed Frameworks */,
 				42E5023A2217501E009A6253 /* LaunchAtLogin.framework in Embed Frameworks */,
 				4297A0CB24C62BF400AEEED9 /* Criollo.framework in Embed Frameworks */,
 			);
@@ -120,14 +122,7 @@
 		425A178A21EFC86700C57D44 /* SprinklesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprinklesTests.swift; sourceTree = "<group>"; };
 		425A178C21EFC86700C57D44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		425A179121EFC86700C57D44 /* SprinklesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SprinklesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		425A179521EFC86700C57D44 /* SprinklesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprinklesUITests.swift; sourceTree = "<group>"; };
-		425A179721EFC86700C57D44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		425A179C21EFC86700C57D44 /* Sprinkles.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Sprinkles.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		425A17A121EFC86700C57D44 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		425A17A421EFC86700C57D44 /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
-		425A17AB21EFC86700C57D44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		425A17AC21EFC86700C57D44 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
-		425A17B021EFC86700C57D44 /* Sprinkles_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sprinkles_Extension.entitlements; sourceTree = "<group>"; };
 		425A17CD21F0875300C57D44 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		425A17CF21F08BED00C57D44 /* Taste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taste.swift; sourceTree = "<group>"; };
 		425A17EB21F1C1AF00C57D44 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
@@ -135,7 +130,16 @@
 		42690B602216CCC400DF8AB3 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		42690B622216D0A300DF8AB3 /* favicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favicon.png; sourceTree = "<group>"; };
 		42690B632216D0A300DF8AB3 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
-		428B9DBA23753753005D307F /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		42755C3724D89B1500B146A8 /* Sprinkles Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Sprinkles Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42755C3A24D89B1500B146A8 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		42755C3F24D89B1500B146A8 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		42755C4124D89B1500B146A8 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		42755C4D24D89B1500B146A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42755C4E24D89B1500B146A8 /* Sprinkles_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sprinkles_Extension.entitlements; sourceTree = "<group>"; };
+		42755C5524D89C4B00B146A8 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		42755C5F24D8A47B00B146A8 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/Criollo.framework/Versions/A/Frameworks/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		42755C6224D8B18700B146A8 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
+		42755C6424D8B8C900B146A8 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
 		429543E021F27387007EBAF3 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		4297A0C924C62BF400AEEED9 /* Criollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Criollo.framework; path = Carthage/Build/Mac/Criollo.framework; sourceTree = "<group>"; };
 		4297A0CC24C62E9B00AEEED9 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
@@ -155,7 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4297A0CF24C62EB200AEEED9 /* CocoaAsyncSocket.framework in Frameworks */,
+				42755C6024D8A47B00B146A8 /* CocoaAsyncSocket.framework in Frameworks */,
 				429BC55724A7DE3000297D8F /* Sentry in Frameworks */,
 				42DFEDE5234E217C00916DCB /* Regex in Frameworks */,
 				422CA07D244503BA0029BDD6 /* Preferences in Frameworks */,
@@ -179,11 +183,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		425A179921EFC86700C57D44 /* Frameworks */ = {
+		42755C3424D89B1500B146A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				425A17A221EFC86700C57D44 /* Cocoa.framework in Frameworks */,
+				42755C3824D89B1500B146A8 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,8 +210,7 @@
 			children = (
 				425A177521EFC86500C57D44 /* Sprinkles */,
 				425A178921EFC86700C57D44 /* SprinklesTests */,
-				425A179421EFC86700C57D44 /* SprinklesUITests */,
-				425A17A321EFC86700C57D44 /* Sprinkles Extension */,
+				42755C3924D89B1500B146A8 /* Sprinkles Extension */,
 				425A17A021EFC86700C57D44 /* Frameworks */,
 				425A177421EFC86500C57D44 /* Products */,
 			);
@@ -219,7 +222,7 @@
 				425A177321EFC86500C57D44 /* Sprinkles.app */,
 				425A178621EFC86700C57D44 /* SprinklesTests.xctest */,
 				425A179121EFC86700C57D44 /* SprinklesUITests.xctest */,
-				425A179C21EFC86700C57D44 /* Sprinkles.appex */,
+				42755C3724D89B1500B146A8 /* Sprinkles Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -258,19 +261,11 @@
 			path = SprinklesTests;
 			sourceTree = "<group>";
 		};
-		425A179421EFC86700C57D44 /* SprinklesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				425A179521EFC86700C57D44 /* SprinklesUITests.swift */,
-				425A179721EFC86700C57D44 /* Info.plist */,
-			);
-			path = SprinklesUITests;
-			sourceTree = "<group>";
-		};
 		425A17A021EFC86700C57D44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				4297A0CC24C62E9B00AEEED9 /* CocoaAsyncSocket.framework */,
+				42755C5F24D8A47B00B146A8 /* CocoaAsyncSocket.framework */,
 				4297A0C924C62BF400AEEED9 /* Criollo.framework */,
 				423945A322289DA80018B53A /* Security.framework */,
 				42E5023722175015009A6253 /* LaunchAtLogin.framework */,
@@ -279,16 +274,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		425A17A321EFC86700C57D44 /* Sprinkles Extension */ = {
+		42755C3924D89B1500B146A8 /* Sprinkles Extension */ = {
 			isa = PBXGroup;
 			children = (
-				425A17A421EFC86700C57D44 /* SafariExtensionHandler.swift */,
-				428B9DBA23753753005D307F /* ToolbarItemIcon.pdf */,
-				425A17AB21EFC86700C57D44 /* Info.plist */,
-				425A17AC21EFC86700C57D44 /* script.js */,
-				425A17B021EFC86700C57D44 /* Sprinkles_Extension.entitlements */,
+				42755C3A24D89B1500B146A8 /* SafariWebExtensionHandler.swift */,
+				42755C4D24D89B1500B146A8 /* Info.plist */,
+				42755C4E24D89B1500B146A8 /* Sprinkles_Extension.entitlements */,
+				42755C3C24D89B1500B146A8 /* Resources */,
 			);
 			path = "Sprinkles Extension";
+			sourceTree = "<group>";
+		};
+		42755C3C24D89B1500B146A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				42755C3F24D89B1500B146A8 /* images */,
+				42755C4124D89B1500B146A8 /* manifest.json */,
+				42755C5524D89C4B00B146A8 /* script.js */,
+				42755C6224D8B18700B146A8 /* popup.html */,
+				42755C6424D8B8C900B146A8 /* background.js */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		42ADBA36222965F600F39D4C /* Static */ = {
@@ -341,7 +347,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				425A179F21EFC86700C57D44 /* PBXTargetDependency */,
+				42755C5024D89B1500B146A8 /* PBXTargetDependency */,
 			);
 			name = Sprinkles;
 			packageProductDependencies = (
@@ -390,13 +396,13 @@
 			productReference = 425A179121EFC86700C57D44 /* SprinklesUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		425A179B21EFC86700C57D44 /* Sprinkles Extension */ = {
+		42755C3624D89B1500B146A8 /* Sprinkles Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 425A17B321EFC86700C57D44 /* Build configuration list for PBXNativeTarget "Sprinkles Extension" */;
+			buildConfigurationList = 42755C5224D89B1500B146A8 /* Build configuration list for PBXNativeTarget "Sprinkles Extension" */;
 			buildPhases = (
-				425A179821EFC86700C57D44 /* Sources */,
-				425A179921EFC86700C57D44 /* Frameworks */,
-				425A179A21EFC86700C57D44 /* Resources */,
+				42755C3324D89B1500B146A8 /* Sources */,
+				42755C3424D89B1500B146A8 /* Frameworks */,
+				42755C3524D89B1500B146A8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -404,7 +410,7 @@
 			);
 			name = "Sprinkles Extension";
 			productName = "Sprinkles Extension";
-			productReference = 425A179C21EFC86700C57D44 /* Sprinkles.appex */;
+			productReference = 42755C3724D89B1500B146A8 /* Sprinkles Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -413,7 +419,7 @@
 		425A176B21EFC86500C57D44 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Brainbow;
 				TargetAttributes = {
@@ -442,17 +448,8 @@
 						LastSwiftMigration = 1020;
 						TestTargetID = 425A177221EFC86500C57D44;
 					};
-					425A179B21EFC86700C57D44 = {
-						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1020;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.Mac = {
-								enabled = 0;
-							};
-							com.apple.HardenedRuntime = {
-								enabled = 1;
-							};
-						};
+					42755C3624D89B1500B146A8 = {
+						CreatedOnToolsVersion = 12.0;
 					};
 				};
 			};
@@ -478,7 +475,7 @@
 				425A177221EFC86500C57D44 /* Sprinkles */,
 				425A178521EFC86700C57D44 /* SprinklesTests */,
 				425A179021EFC86700C57D44 /* SprinklesUITests */,
-				425A179B21EFC86700C57D44 /* Sprinkles Extension */,
+				42755C3624D89B1500B146A8 /* Sprinkles Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -517,12 +514,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		425A179A21EFC86700C57D44 /* Resources */ = {
+		42755C3524D89B1500B146A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				428B9DBB23753753005D307F /* ToolbarItemIcon.pdf in Resources */,
-				425A17AD21EFC86700C57D44 /* script.js in Resources */,
+				42755C4024D89B1500B146A8 /* images in Resources */,
+				42755C6324D8B18700B146A8 /* popup.html in Resources */,
+				42755C5624D89C4B00B146A8 /* script.js in Resources */,
+				42755C4224D89B1500B146A8 /* manifest.json in Resources */,
+				42755C6524D8B8C900B146A8 /* background.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,15 +636,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				425A179621EFC86700C57D44 /* SprinklesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		425A179821EFC86700C57D44 /* Sources */ = {
+		42755C3324D89B1500B146A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				425A17A521EFC86700C57D44 /* SafariExtensionHandler.swift in Sources */,
+				42755C3B24D89B1500B146A8 /* SafariWebExtensionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,10 +660,10 @@
 			target = 425A177221EFC86500C57D44 /* Sprinkles */;
 			targetProxy = 425A179221EFC86700C57D44 /* PBXContainerItemProxy */;
 		};
-		425A179F21EFC86700C57D44 /* PBXTargetDependency */ = {
+		42755C5024D89B1500B146A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 425A179B21EFC86700C57D44 /* Sprinkles Extension */;
-			targetProxy = 425A179E21EFC86700C57D44 /* PBXContainerItemProxy */;
+			target = 42755C3624D89B1500B146A8 /* Sprinkles Extension */;
+			targetProxy = 42755C4F24D89B1500B146A8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -786,54 +785,6 @@
 			};
 			name = Release;
 		};
-		425A17B421EFC86700C57D44 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Sprinkles Extension/Sprinkles_Extension.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DDB8SQMXS9;
-				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Sprinkles Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.Sprinkles.extension;
-				PRODUCT_MODULE_NAME = Sprinkles_Extension;
-				PRODUCT_NAME = Sprinkles;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		425A17B521EFC86700C57D44 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Sprinkles Extension/Sprinkles_Extension.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DDB8SQMXS9;
-				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Sprinkles Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.Sprinkles.extension;
-				PRODUCT_MODULE_NAME = Sprinkles_Extension;
-				PRODUCT_NAME = Sprinkles;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 		425A17B821EFC86700C57D44 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -850,6 +801,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac/Criollo.framework/Versions/A/Frameworks",
 				);
 				INFOPLIST_FILE = Sprinkles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -879,6 +831,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac/Criollo.framework/Versions/A/Frameworks",
 				);
 				INFOPLIST_FILE = Sprinkles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -975,6 +928,50 @@
 			};
 			name = Release;
 		};
+		42755C5324D89B1500B146A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Sprinkles Extension/Sprinkles_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DDB8SQMXS9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Sprinkles Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brnbw.Sprinkles.Sprinkles-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		42755C5424D89B1500B146A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Sprinkles Extension/Sprinkles_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DDB8SQMXS9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Sprinkles Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brnbw.Sprinkles.Sprinkles-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -983,15 +980,6 @@
 			buildConfigurations = (
 				425A17B121EFC86700C57D44 /* Debug */,
 				425A17B221EFC86700C57D44 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		425A17B321EFC86700C57D44 /* Build configuration list for PBXNativeTarget "Sprinkles Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				425A17B421EFC86700C57D44 /* Debug */,
-				425A17B521EFC86700C57D44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1019,6 +1007,15 @@
 			buildConfigurations = (
 				425A17BE21EFC86700C57D44 /* Debug */,
 				425A17BF21EFC86700C57D44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42755C5224D89B1500B146A8 /* Build configuration list for PBXNativeTarget "Sprinkles Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42755C5324D89B1500B146A8 /* Debug */,
+				42755C5424D89B1500B146A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

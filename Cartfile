@@ -1,3 +1,2 @@
-github "robbiehanson/CocoaAsyncSocket"
-github "thecatalinstan/Criollo"
+github "mikker/Criollo" "long-long-size"
 github "sindresorhus/LaunchAtLogin"

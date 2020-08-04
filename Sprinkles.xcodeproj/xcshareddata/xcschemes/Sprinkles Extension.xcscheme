@@ -15,8 +15,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "425A179B21EFC86700C57D44"
-               BuildableName = "Sprinkles.appex"
+               BlueprintIdentifier = "42755C3624D89B1500B146A8"
+               BuildableName = "Sprinkles Extension.appex"
                BlueprintName = "Sprinkles Extension"
                ReferencedContainer = "container:Sprinkles.xcodeproj">
             </BuildableReference>
