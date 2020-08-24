@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		420AFFBE236B852000413745 /* OpenPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420AFFBD236B852000413745 /* OpenPanel.swift */; };
 		420AFFC0236B8D6F00413745 /* ExampleFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420AFFBF236B8D6F00413745 /* ExampleFiles.swift */; };
+		421D203924F40C2000893D0E /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421D203824F40C2000893D0E /* CocoaAsyncSocket.framework */; };
+		421D203A24F40C2000893D0E /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 421D203824F40C2000893D0E /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		421FDA0A21F513EB004BDB68 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FDA0921F513EB004BDB68 /* Defaults.swift */; };
 		422CA07D244503BA0029BDD6 /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = 422CA07C244503BA0029BDD6 /* Preferences */; };
 		423945A422289DA80018B53A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423945A322289DA80018B53A /* Security.framework */; };
@@ -32,14 +34,12 @@
 		42755C4224D89B1500B146A8 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 42755C4124D89B1500B146A8 /* manifest.json */; };
 		42755C5124D89B1500B146A8 /* Sprinkles Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 42755C3724D89B1500B146A8 /* Sprinkles Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		42755C5624D89C4B00B146A8 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 42755C5524D89C4B00B146A8 /* script.js */; };
-		42755C6024D8A47B00B146A8 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42755C5F24D8A47B00B146A8 /* CocoaAsyncSocket.framework */; };
-		42755C6124D8A47B00B146A8 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42755C5F24D8A47B00B146A8 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42755C6324D8B18700B146A8 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 42755C6224D8B18700B146A8 /* popup.html */; };
 		42755C6524D8B8C900B146A8 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 42755C6424D8B8C900B146A8 /* background.js */; };
 		429543E121F27387007EBAF3 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429543E021F27387007EBAF3 /* Bookmark.swift */; };
-		4297A0CA24C62BF400AEEED9 /* Criollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4297A0C924C62BF400AEEED9 /* Criollo.framework */; };
-		4297A0CB24C62BF400AEEED9 /* Criollo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4297A0C924C62BF400AEEED9 /* Criollo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		429BC55724A7DE3000297D8F /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 429BC55624A7DE3000297D8F /* Sentry */; };
+		42A4788D24F40BC1003F15C7 /* Criollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A4788C24F40BC1003F15C7 /* Criollo.framework */; };
+		42A4788E24F40BC1003F15C7 /* Criollo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42A4788C24F40BC1003F15C7 /* Criollo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42ABC9692400A0E3009CA2CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42ABC9682400A0E2009CA2CE /* Main.storyboard */; };
 		42ABC96B240265FB009CA2CE /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABC96A240265FB009CA2CE /* StatusItem.swift */; };
 		42ABC96F24026A70009CA2CE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ABC96E24026A70009CA2CE /* logo.png */; };
@@ -95,9 +95,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				42755C6124D8A47B00B146A8 /* CocoaAsyncSocket.framework in Embed Frameworks */,
+				421D203A24F40C2000893D0E /* CocoaAsyncSocket.framework in Embed Frameworks */,
 				42E5023A2217501E009A6253 /* LaunchAtLogin.framework in Embed Frameworks */,
-				4297A0CB24C62BF400AEEED9 /* Criollo.framework in Embed Frameworks */,
+				42A4788E24F40BC1003F15C7 /* Criollo.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +107,7 @@
 /* Begin PBXFileReference section */
 		420AFFBD236B852000413745 /* OpenPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPanel.swift; sourceTree = "<group>"; };
 		420AFFBF236B8D6F00413745 /* ExampleFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleFiles.swift; sourceTree = "<group>"; };
+		421D203824F40C2000893D0E /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/Criollo.framework/Versions/A/Frameworks/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 		421FDA0921F513EB004BDB68 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		423945A322289DA80018B53A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		423D94ED224C1DED0079CEFE /* gen_cert.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = gen_cert.sh; sourceTree = "<group>"; };
@@ -137,12 +138,10 @@
 		42755C4D24D89B1500B146A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42755C4E24D89B1500B146A8 /* Sprinkles_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sprinkles_Extension.entitlements; sourceTree = "<group>"; };
 		42755C5524D89C4B00B146A8 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
-		42755C5F24D8A47B00B146A8 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/Criollo.framework/Versions/A/Frameworks/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 		42755C6224D8B18700B146A8 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
 		42755C6424D8B8C900B146A8 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
 		429543E021F27387007EBAF3 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
-		4297A0C924C62BF400AEEED9 /* Criollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Criollo.framework; path = Carthage/Build/Mac/Criollo.framework; sourceTree = "<group>"; };
-		4297A0CC24C62E9B00AEEED9 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		42A4788C24F40BC1003F15C7 /* Criollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Criollo.framework; path = Carthage/Build/Mac/Criollo.framework; sourceTree = "<group>"; };
 		42ABC9682400A0E2009CA2CE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		42ABC96A240265FB009CA2CE /* StatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItem.swift; sourceTree = "<group>"; };
 		42ABC96E24026A70009CA2CE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -159,11 +158,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42755C6024D8A47B00B146A8 /* CocoaAsyncSocket.framework in Frameworks */,
 				429BC55724A7DE3000297D8F /* Sentry in Frameworks */,
+				421D203924F40C2000893D0E /* CocoaAsyncSocket.framework in Frameworks */,
+				42A4788D24F40BC1003F15C7 /* Criollo.framework in Frameworks */,
 				42DFEDE5234E217C00916DCB /* Regex in Frameworks */,
 				422CA07D244503BA0029BDD6 /* Preferences in Frameworks */,
-				4297A0CA24C62BF400AEEED9 /* Criollo.framework in Frameworks */,
 				42DFEDDF234E204400916DCB /* Defaults in Frameworks */,
 				423945A422289DA80018B53A /* Security.framework in Frameworks */,
 			);
@@ -264,9 +263,8 @@
 		425A17A021EFC86700C57D44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4297A0CC24C62E9B00AEEED9 /* CocoaAsyncSocket.framework */,
-				42755C5F24D8A47B00B146A8 /* CocoaAsyncSocket.framework */,
-				4297A0C924C62BF400AEEED9 /* Criollo.framework */,
+				421D203824F40C2000893D0E /* CocoaAsyncSocket.framework */,
+				42A4788C24F40BC1003F15C7 /* Criollo.framework */,
 				423945A322289DA80018B53A /* Security.framework */,
 				42E5023722175015009A6253 /* LaunchAtLogin.framework */,
 				425A17A121EFC86700C57D44 /* Cocoa.framework */,
@@ -460,6 +458,7 @@
 			knownRegions = (
 				en,
 				Base,
+				English,
 			);
 			mainGroup = 425A176A21EFC86500C57D44;
 			packageReferences = (
@@ -802,11 +801,16 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac/Criollo.framework/Versions/A/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Criollo/Libraries/OpenSSL",
 				);
 				INFOPLIST_FILE = Sprinkles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Criollo/Libraries/OpenSSL/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.Sprinkles;
@@ -832,11 +836,16 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac/Criollo.framework/Versions/A/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Criollo/Libraries/OpenSSL",
 				);
 				INFOPLIST_FILE = Sprinkles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Criollo/Libraries/OpenSSL/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.Sprinkles;
