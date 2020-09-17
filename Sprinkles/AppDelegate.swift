@@ -10,8 +10,8 @@ import Cocoa
 import Defaults
 import Preferences
 
-extension PreferencePane.Identifier {
-  static let general = Identifier("general")
+extension Preferences.PaneIdentifier {
+  static let general = Self("general")
 }
 
 @NSApplicationMain

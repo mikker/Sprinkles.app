@@ -13,7 +13,7 @@ import Preferences
 import SafariServices
 
 class GeneralPreferencesController: NSViewController, PreferencePane {
-  var preferencePaneIdentifier = PreferencePane.Identifier.general
+  var preferencePaneIdentifier = Preferences.PaneIdentifier.general
   var preferencePaneTitle = "General"
 
   override var nibName: NSNib.Name? { "General" }

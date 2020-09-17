@@ -598,7 +598,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bin/format\n";
+			shellScript = "# bin/format\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1037,7 +1037,7 @@
 			repositoryURL = "https://github.com/sindresorhus/Preferences.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 2.0.0;
 			};
 		};
 		429BC55524A7DE3000297D8F /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
@@ -1053,7 +1053,7 @@
 			repositoryURL = "git@github.com:sindresorhus/Defaults.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
+				minimumVersion = 4.0.0;
 			};
 		};
 		42DFEDE3234E217C00916DCB /* XCRemoteSwiftPackageReference "Regex" */ = {
