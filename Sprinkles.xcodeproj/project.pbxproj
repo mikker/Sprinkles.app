@@ -12,7 +12,7 @@
 		421D203924F40C2000893D0E /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421D203824F40C2000893D0E /* CocoaAsyncSocket.framework */; };
 		421D203A24F40C2000893D0E /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 421D203824F40C2000893D0E /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		421FDA0A21F513EB004BDB68 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FDA0921F513EB004BDB68 /* Defaults.swift */; };
-		422CA07D244503BA0029BDD6 /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = 422CA07C244503BA0029BDD6 /* Preferences */; };
+		42358DC1253A387600440458 /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = 42358DC0253A387600440458 /* Preferences */; };
 		423945A422289DA80018B53A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423945A322289DA80018B53A /* Security.framework */; };
 		423D94F6224C1DED0079CEFE /* gen_cert.sh in Resources */ = {isa = PBXBuildFile; fileRef = 423D94ED224C1DED0079CEFE /* gen_cert.sh */; };
 		423D94FA224C1DED0079CEFE /* sprinkles.csr.conf in Resources */ = {isa = PBXBuildFile; fileRef = 423D94F1224C1DED0079CEFE /* sprinkles.csr.conf */; };
@@ -44,10 +44,10 @@
 		42ABC96B240265FB009CA2CE /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABC96A240265FB009CA2CE /* StatusItem.swift */; };
 		42ABC96F24026A70009CA2CE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ABC96E24026A70009CA2CE /* logo.png */; };
 		42BC395A244450890082F7EB /* General.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42BC3959244450890082F7EB /* General.xib */; };
+		42C05EB72513F7E400220AD0 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 42C05EB62513F7E400220AD0 /* LaunchAtLogin */; };
 		42D0053C240336E7002565FE /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0053B240336E7002565FE /* Diagnostics.swift */; };
 		42DFEDDF234E204400916DCB /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 42DFEDDE234E204400916DCB /* Defaults */; };
 		42DFEDE5234E217C00916DCB /* Regex in Frameworks */ = {isa = PBXBuildFile; productRef = 42DFEDE4234E217C00916DCB /* Regex */; };
-		42E5023A2217501E009A6253 /* LaunchAtLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42E5023722175015009A6253 /* LaunchAtLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42FA61AF23528A1E006A1029 /* Onboarding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42FA61AE23528A1E006A1029 /* Onboarding.xib */; };
 		42FA61B22353449E006A1029 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FA61B12353449E006A1029 /* OnboardingController.swift */; };
 		42FBC4EB23EEA9E0004C710E /* GeneralPreferencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FBC4EA23EEA9E0004C710E /* GeneralPreferencesController.swift */; };
@@ -96,7 +96,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				421D203A24F40C2000893D0E /* CocoaAsyncSocket.framework in Embed Frameworks */,
-				42E5023A2217501E009A6253 /* LaunchAtLogin.framework in Embed Frameworks */,
 				42A4788E24F40BC1003F15C7 /* Criollo.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -147,7 +146,6 @@
 		42ABC96E24026A70009CA2CE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		42BC3959244450890082F7EB /* General.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = General.xib; sourceTree = "<group>"; };
 		42D0053B240336E7002565FE /* Diagnostics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagnostics.swift; sourceTree = "<group>"; };
-		42E5023722175015009A6253 /* LaunchAtLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LaunchAtLogin.framework; path = Carthage/Build/Mac/LaunchAtLogin.framework; sourceTree = "<group>"; };
 		42FA61AE23528A1E006A1029 /* Onboarding.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Onboarding.xib; sourceTree = "<group>"; };
 		42FA61B12353449E006A1029 /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
 		42FBC4EA23EEA9E0004C710E /* GeneralPreferencesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesController.swift; sourceTree = "<group>"; };
@@ -162,8 +160,9 @@
 				421D203924F40C2000893D0E /* CocoaAsyncSocket.framework in Frameworks */,
 				42A4788D24F40BC1003F15C7 /* Criollo.framework in Frameworks */,
 				42DFEDE5234E217C00916DCB /* Regex in Frameworks */,
-				422CA07D244503BA0029BDD6 /* Preferences in Frameworks */,
 				42DFEDDF234E204400916DCB /* Defaults in Frameworks */,
+				42358DC1253A387600440458 /* Preferences in Frameworks */,
+				42C05EB72513F7E400220AD0 /* LaunchAtLogin in Frameworks */,
 				423945A422289DA80018B53A /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +265,6 @@
 				421D203824F40C2000893D0E /* CocoaAsyncSocket.framework */,
 				42A4788C24F40BC1003F15C7 /* Criollo.framework */,
 				423945A322289DA80018B53A /* Security.framework */,
-				42E5023722175015009A6253 /* LaunchAtLogin.framework */,
 				425A17A121EFC86700C57D44 /* Cocoa.framework */,
 			);
 			name = Frameworks;
@@ -332,6 +330,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 425A17B721EFC86700C57D44 /* Build configuration list for PBXNativeTarget "Sprinkles" */;
 			buildPhases = (
+				42C05EC42513F8EB00220AD0 /* Pre-sign CoreAsync */,
 				42E5023622174721009A6253 /* Swift Format */,
 				425A176F21EFC86500C57D44 /* Sources */,
 				425A177021EFC86500C57D44 /* Frameworks */,
@@ -339,7 +338,6 @@
 				425A17B621EFC86700C57D44 /* Embed App Extensions */,
 				428B7C4721F1FAE80065EE2B /* Carthage: Copy frameworks */,
 				425A17D521F0CCD000C57D44 /* Embed Frameworks */,
-				429543DF21F26864007EBAF3 /* LaunchAtLogin: Copy helper */,
 				42012E0822273222001F5F4F /* Upload DSYM to Sentry */,
 			);
 			buildRules = (
@@ -351,8 +349,9 @@
 			packageProductDependencies = (
 				42DFEDDE234E204400916DCB /* Defaults */,
 				42DFEDE4234E217C00916DCB /* Regex */,
-				422CA07C244503BA0029BDD6 /* Preferences */,
 				429BC55624A7DE3000297D8F /* Sentry */,
+				42C05EB62513F7E400220AD0 /* LaunchAtLogin */,
+				42358DC0253A387600440458 /* Preferences */,
 			);
 			productName = Sprinkles;
 			productReference = 425A177321EFC86500C57D44 /* Sprinkles.app */;
@@ -418,7 +417,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = Brainbow;
 				TargetAttributes = {
 					425A177221EFC86500C57D44 = {
@@ -458,14 +457,14 @@
 			knownRegions = (
 				en,
 				Base,
-				English,
 			);
 			mainGroup = 425A176A21EFC86500C57D44;
 			packageReferences = (
 				42DFEDDD234E204400916DCB /* XCRemoteSwiftPackageReference "Defaults" */,
 				42DFEDE3234E217C00916DCB /* XCRemoteSwiftPackageReference "Regex" */,
-				422CA07B244503BA0029BDD6 /* XCRemoteSwiftPackageReference "Preferences" */,
 				429BC55524A7DE3000297D8F /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+				42C05EB52513F7E400220AD0 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
+				42358DBF253A387600440458 /* XCRemoteSwiftPackageReference "Preferences" */,
 			);
 			productRefGroup = 425A177421EFC86500C57D44 /* Products */;
 			projectDirPath = "";
@@ -564,7 +563,7 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
-		429543DF21F26864007EBAF3 /* LaunchAtLogin: Copy helper */ = {
+		42C05EC42513F8EB00220AD0 /* Pre-sign CoreAsync */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -573,14 +572,14 @@
 			);
 			inputPaths = (
 			);
-			name = "LaunchAtLogin: Copy helper";
+			name = "Pre-sign CoreAsync";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PROJECT_DIR}/Carthage/Build/Mac/LaunchAtLogin.framework/Resources/copy-helper.sh\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncodesign --force --sign 59E8CA9BBEC3607F213979CD6AD568E1BB349F0A -o runtime Carthage/Build/Mac/Criollo.framework/Versions/A/Frameworks/CocoaAsyncSocket.framework\n";
 		};
 		42E5023622174721009A6253 /* Swift Format */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -671,6 +670,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -733,6 +733,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1032,12 +1033,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		422CA07B244503BA0029BDD6 /* XCRemoteSwiftPackageReference "Preferences" */ = {
+		42358DBF253A387600440458 /* XCRemoteSwiftPackageReference "Preferences" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sindresorhus/Preferences.git";
+			repositoryURL = "file:///Users/mikker/dev/vendor/Preferences";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				branch = bigsur;
+				kind = branch;
 			};
 		};
 		429BC55524A7DE3000297D8F /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
@@ -1045,7 +1046,15 @@
 			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				minimumVersion = 6.0.0;
+			};
+		};
+		42C05EB52513F7E400220AD0 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
 			};
 		};
 		42DFEDDD234E204400916DCB /* XCRemoteSwiftPackageReference "Defaults" */ = {
@@ -1067,15 +1076,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		422CA07C244503BA0029BDD6 /* Preferences */ = {
+		42358DC0253A387600440458 /* Preferences */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 422CA07B244503BA0029BDD6 /* XCRemoteSwiftPackageReference "Preferences" */;
+			package = 42358DBF253A387600440458 /* XCRemoteSwiftPackageReference "Preferences" */;
 			productName = Preferences;
 		};
 		429BC55624A7DE3000297D8F /* Sentry */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 429BC55524A7DE3000297D8F /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
 			productName = Sentry;
+		};
+		42C05EB62513F7E400220AD0 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42C05EB52513F7E400220AD0 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			productName = LaunchAtLogin;
 		};
 		42DFEDDE234E204400916DCB /* Defaults */ = {
 			isa = XCSwiftPackageProductDependency;
