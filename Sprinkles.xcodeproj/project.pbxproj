@@ -12,8 +12,6 @@
 		421D203924F40C2000893D0E /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421D203824F40C2000893D0E /* CocoaAsyncSocket.framework */; };
 		421D203A24F40C2000893D0E /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 421D203824F40C2000893D0E /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		421FDA0A21F513EB004BDB68 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FDA0921F513EB004BDB68 /* Defaults.swift */; };
-		42358DC1253A387600440458 /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = 42358DC0253A387600440458 /* Preferences */; };
-		423945A422289DA80018B53A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423945A322289DA80018B53A /* Security.framework */; };
 		423D94F6224C1DED0079CEFE /* gen_cert.sh in Resources */ = {isa = PBXBuildFile; fileRef = 423D94ED224C1DED0079CEFE /* gen_cert.sh */; };
 		423D94FA224C1DED0079CEFE /* sprinkles.csr.conf in Resources */ = {isa = PBXBuildFile; fileRef = 423D94F1224C1DED0079CEFE /* sprinkles.csr.conf */; };
 		423D94FE224C1DED0079CEFE /* v3.ext in Resources */ = {isa = PBXBuildFile; fileRef = 423D94F5224C1DED0079CEFE /* v3.ext */; };
@@ -24,11 +22,11 @@
 		425A17CE21F0875300C57D44 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A17CD21F0875300C57D44 /* Store.swift */; };
 		425A17D021F08BED00C57D44 /* Taste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A17CF21F08BED00C57D44 /* Taste.swift */; };
 		425A17EC21F1C1AF00C57D44 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A17EB21F1C1AF00C57D44 /* Server.swift */; };
+		425D6BD9255D8686004F72EE /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = 425D6BD8255D8686004F72EE /* Preferences */; };
 		42690B5B2216019100DF8AB3 /* SprinklesCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42690B5A2216019100DF8AB3 /* SprinklesCertificate.swift */; };
 		42690B612216CCC400DF8AB3 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 42690B602216CCC400DF8AB3 /* index.html */; };
 		42690B642216D0A300DF8AB3 /* favicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42690B622216D0A300DF8AB3 /* favicon.png */; };
 		42690B652216D0A300DF8AB3 /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 42690B632216D0A300DF8AB3 /* favicon.ico */; };
-		42755C3824D89B1500B146A8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425A17A121EFC86700C57D44 /* Cocoa.framework */; };
 		42755C3B24D89B1500B146A8 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42755C3A24D89B1500B146A8 /* SafariWebExtensionHandler.swift */; };
 		42755C4024D89B1500B146A8 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 42755C3F24D89B1500B146A8 /* images */; };
 		42755C4224D89B1500B146A8 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 42755C4124D89B1500B146A8 /* manifest.json */; };
@@ -108,7 +106,6 @@
 		420AFFBF236B8D6F00413745 /* ExampleFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleFiles.swift; sourceTree = "<group>"; };
 		421D203824F40C2000893D0E /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/Criollo.framework/Versions/A/Frameworks/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 		421FDA0921F513EB004BDB68 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
-		423945A322289DA80018B53A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		423D94ED224C1DED0079CEFE /* gen_cert.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = gen_cert.sh; sourceTree = "<group>"; };
 		423D94F1224C1DED0079CEFE /* sprinkles.csr.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sprinkles.csr.conf; sourceTree = "<group>"; };
 		423D94F5224C1DED0079CEFE /* v3.ext */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = v3.ext; sourceTree = "<group>"; };
@@ -122,10 +119,10 @@
 		425A178A21EFC86700C57D44 /* SprinklesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprinklesTests.swift; sourceTree = "<group>"; };
 		425A178C21EFC86700C57D44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		425A179121EFC86700C57D44 /* SprinklesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SprinklesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		425A17A121EFC86700C57D44 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		425A17CD21F0875300C57D44 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		425A17CF21F08BED00C57D44 /* Taste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taste.swift; sourceTree = "<group>"; };
 		425A17EB21F1C1AF00C57D44 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		425D6BE9255DD222004F72EE /* manifest copy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "manifest copy.json"; sourceTree = "<group>"; };
 		42690B5A2216019100DF8AB3 /* SprinklesCertificate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprinklesCertificate.swift; sourceTree = "<group>"; };
 		42690B602216CCC400DF8AB3 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		42690B622216D0A300DF8AB3 /* favicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favicon.png; sourceTree = "<group>"; };
@@ -161,9 +158,8 @@
 				42A4788D24F40BC1003F15C7 /* Criollo.framework in Frameworks */,
 				42DFEDE5234E217C00916DCB /* Regex in Frameworks */,
 				42DFEDDF234E204400916DCB /* Defaults in Frameworks */,
-				42358DC1253A387600440458 /* Preferences in Frameworks */,
+				425D6BD9255D8686004F72EE /* Preferences in Frameworks */,
 				42C05EB72513F7E400220AD0 /* LaunchAtLogin in Frameworks */,
-				423945A422289DA80018B53A /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +181,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42755C3824D89B1500B146A8 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,8 +259,6 @@
 			children = (
 				421D203824F40C2000893D0E /* CocoaAsyncSocket.framework */,
 				42A4788C24F40BC1003F15C7 /* Criollo.framework */,
-				423945A322289DA80018B53A /* Security.framework */,
-				425A17A121EFC86700C57D44 /* Cocoa.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -286,6 +279,7 @@
 			children = (
 				42755C3F24D89B1500B146A8 /* images */,
 				42755C4124D89B1500B146A8 /* manifest.json */,
+				425D6BE9255DD222004F72EE /* manifest copy.json */,
 				42755C5524D89C4B00B146A8 /* script.js */,
 				42755C6224D8B18700B146A8 /* popup.html */,
 				42755C6424D8B8C900B146A8 /* background.js */,
@@ -351,7 +345,7 @@
 				42DFEDE4234E217C00916DCB /* Regex */,
 				429BC55624A7DE3000297D8F /* Sentry */,
 				42C05EB62513F7E400220AD0 /* LaunchAtLogin */,
-				42358DC0253A387600440458 /* Preferences */,
+				425D6BD8255D8686004F72EE /* Preferences */,
 			);
 			productName = Sprinkles;
 			productReference = 425A177321EFC86500C57D44 /* Sprinkles.app */;
@@ -464,7 +458,7 @@
 				42DFEDE3234E217C00916DCB /* XCRemoteSwiftPackageReference "Regex" */,
 				429BC55524A7DE3000297D8F /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 				42C05EB52513F7E400220AD0 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
-				42358DBF253A387600440458 /* XCRemoteSwiftPackageReference "Preferences" */,
+				425D6BD7255D8686004F72EE /* XCRemoteSwiftPackageReference "Preferences" */,
 			);
 			productRefGroup = 425A177421EFC86500C57D44 /* Products */;
 			projectDirPath = "";
@@ -705,6 +699,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -768,6 +763,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1033,12 +1029,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		42358DBF253A387600440458 /* XCRemoteSwiftPackageReference "Preferences" */ = {
+		425D6BD7255D8686004F72EE /* XCRemoteSwiftPackageReference "Preferences" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "file:///Users/mikker/dev/vendor/Preferences";
+			repositoryURL = "https://github.com/sindresorhus/Preferences";
 			requirement = {
-				branch = bigsur;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
 			};
 		};
 		429BC55524A7DE3000297D8F /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
@@ -1076,9 +1072,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		42358DC0253A387600440458 /* Preferences */ = {
+		425D6BD8255D8686004F72EE /* Preferences */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 42358DBF253A387600440458 /* XCRemoteSwiftPackageReference "Preferences" */;
+			package = 425D6BD7255D8686004F72EE /* XCRemoteSwiftPackageReference "Preferences" */;
 			productName = Preferences;
 		};
 		429BC55624A7DE3000297D8F /* Sentry */ = {

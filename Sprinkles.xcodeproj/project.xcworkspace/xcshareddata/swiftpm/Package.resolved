@@ -21,11 +21,11 @@
       },
       {
         "package": "Preferences",
-        "repositoryURL": "/Users/mikker/dev/vendor/Preferences",
+        "repositoryURL": "https://github.com/sindresorhus/Preferences",
         "state": {
-          "branch": "bigsur",
-          "revision": "462d352479eb84aa35a6813facd1988177bbb4ae",
-          "version": null
+          "branch": null,
+          "revision": "ad69881dc060cd590d3edfb84c7cc444d87e280a",
+          "version": "2.1.0"
         }
       },
       {
