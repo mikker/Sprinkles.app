@@ -122,7 +122,6 @@
 		425A17CD21F0875300C57D44 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		425A17CF21F08BED00C57D44 /* Taste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taste.swift; sourceTree = "<group>"; };
 		425A17EB21F1C1AF00C57D44 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
-		425D6BE9255DD222004F72EE /* manifest copy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "manifest copy.json"; sourceTree = "<group>"; };
 		42690B5A2216019100DF8AB3 /* SprinklesCertificate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprinklesCertificate.swift; sourceTree = "<group>"; };
 		42690B602216CCC400DF8AB3 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		42690B622216D0A300DF8AB3 /* favicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favicon.png; sourceTree = "<group>"; };
@@ -279,7 +278,6 @@
 			children = (
 				42755C3F24D89B1500B146A8 /* images */,
 				42755C4124D89B1500B146A8 /* manifest.json */,
-				425D6BE9255DD222004F72EE /* manifest copy.json */,
 				42755C5524D89C4B00B146A8 /* script.js */,
 				42755C6224D8B18700B146A8 /* popup.html */,
 				42755C6424D8B8C900B146A8 /* background.js */,
@@ -331,6 +329,7 @@
 				425A177121EFC86500C57D44 /* Resources */,
 				425A17B621EFC86700C57D44 /* Embed App Extensions */,
 				428B7C4721F1FAE80065EE2B /* Carthage: Copy frameworks */,
+				428DA6AC255DF4F7005E01F7 /* Run Script */,
 				425A17D521F0CCD000C57D44 /* Embed Frameworks */,
 				42012E0822273222001F5F4F /* Upload DSYM to Sentry */,
 			);
@@ -556,6 +555,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		428DA6AC255DF4F7005E01F7 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh\"\n";
 		};
 		42C05EC42513F8EB00220AD0 /* Pre-sign CoreAsync */ = {
 			isa = PBXShellScriptBuildPhase;

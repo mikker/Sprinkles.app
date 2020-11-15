@@ -5,13 +5,16 @@
   "description": "The Sprinkles bread and butter",
   "version": "1.0",
 
+  "icons": {
+    "48": "images/icon-48.png",
+    "96": "images/icon-96.png",
+    "512": "images/icon-512.png"
+  },
+
   "browser_action": {
-    "browser_style": true,
     "default_icon": {
       "16": "images/toolbar-icon-16.png",
-      "19": "images/toolbar-icon-19.png",
-      "32": "images/toolbar-icon-32.png",
-      "38": "images/toolbar-icon-38.png"
+      "32": "images/toolbar-icon-32.png"
     },
     "default_popup": "popup.html"
   },
