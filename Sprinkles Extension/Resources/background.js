@@ -30,7 +30,7 @@ function setBadge(text, sender) {
     tabId: sender.tab.id,
     windowId: sender.tab.windowId,
   };
-  
+
   browser.browserAction.setBadgeText(args);
 
   return null;

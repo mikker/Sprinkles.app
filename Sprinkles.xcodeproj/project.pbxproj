@@ -49,6 +49,7 @@
 		42FA61AF23528A1E006A1029 /* Onboarding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42FA61AE23528A1E006A1029 /* Onboarding.xib */; };
 		42FA61B22353449E006A1029 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FA61B12353449E006A1029 /* OnboardingController.swift */; };
 		42FBC4EB23EEA9E0004C710E /* GeneralPreferencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FBC4EA23EEA9E0004C710E /* GeneralPreferencesController.swift */; };
+		42FF0BE82563E84F000BF2EA /* browser-polyfill.js in Resources */ = {isa = PBXBuildFile; fileRef = 42FF0BE72563E84F000BF2EA /* browser-polyfill.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +146,7 @@
 		42FA61AE23528A1E006A1029 /* Onboarding.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Onboarding.xib; sourceTree = "<group>"; };
 		42FA61B12353449E006A1029 /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
 		42FBC4EA23EEA9E0004C710E /* GeneralPreferencesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesController.swift; sourceTree = "<group>"; };
+		42FF0BE72563E84F000BF2EA /* browser-polyfill.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "browser-polyfill.js"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,11 +202,11 @@
 		425A176A21EFC86500C57D44 = {
 			isa = PBXGroup;
 			children = (
-				425A177521EFC86500C57D44 /* Sprinkles */,
-				425A178921EFC86700C57D44 /* SprinklesTests */,
-				42755C3924D89B1500B146A8 /* Sprinkles Extension */,
 				425A17A021EFC86700C57D44 /* Frameworks */,
 				425A177421EFC86500C57D44 /* Products */,
+				425A177521EFC86500C57D44 /* Sprinkles */,
+				42755C3924D89B1500B146A8 /* Sprinkles Extension */,
+				425A178921EFC86700C57D44 /* SprinklesTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -265,9 +267,9 @@
 		42755C3924D89B1500B146A8 /* Sprinkles Extension */ = {
 			isa = PBXGroup;
 			children = (
-				42755C3A24D89B1500B146A8 /* SafariWebExtensionHandler.swift */,
-				42755C4D24D89B1500B146A8 /* Info.plist */,
 				42755C4E24D89B1500B146A8 /* Sprinkles_Extension.entitlements */,
+				42755C4D24D89B1500B146A8 /* Info.plist */,
+				42755C3A24D89B1500B146A8 /* SafariWebExtensionHandler.swift */,
 				42755C3C24D89B1500B146A8 /* Resources */,
 			);
 			path = "Sprinkles Extension";
@@ -276,6 +278,7 @@
 		42755C3C24D89B1500B146A8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				42FF0BE72563E84F000BF2EA /* browser-polyfill.js */,
 				42755C3F24D89B1500B146A8 /* images */,
 				42755C4124D89B1500B146A8 /* manifest.json */,
 				42755C5524D89C4B00B146A8 /* script.js */,
@@ -513,6 +516,7 @@
 				42755C6324D8B18700B146A8 /* popup.html in Resources */,
 				42755C5624D89C4B00B146A8 /* script.js in Resources */,
 				42755C4224D89B1500B146A8 /* manifest.json in Resources */,
+				42FF0BE82563E84F000BF2EA /* browser-polyfill.js in Resources */,
 				42755C6524D8B8C900B146A8 /* background.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
