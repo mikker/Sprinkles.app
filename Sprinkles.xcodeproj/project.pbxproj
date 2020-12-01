@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		420AFFBE236B852000413745 /* OpenPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420AFFBD236B852000413745 /* OpenPanel.swift */; };
 		420AFFC0236B8D6F00413745 /* ExampleFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420AFFBF236B8D6F00413745 /* ExampleFiles.swift */; };
-		421D203924F40C2000893D0E /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421D203824F40C2000893D0E /* CocoaAsyncSocket.framework */; };
-		421D203A24F40C2000893D0E /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 421D203824F40C2000893D0E /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		421FDA0A21F513EB004BDB68 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FDA0921F513EB004BDB68 /* Defaults.swift */; };
 		423D94F6224C1DED0079CEFE /* gen_cert.sh in Resources */ = {isa = PBXBuildFile; fileRef = 423D94ED224C1DED0079CEFE /* gen_cert.sh */; };
 		423D94FA224C1DED0079CEFE /* sprinkles.csr.conf in Resources */ = {isa = PBXBuildFile; fileRef = 423D94F1224C1DED0079CEFE /* sprinkles.csr.conf */; };
@@ -36,14 +34,14 @@
 		42755C6524D8B8C900B146A8 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 42755C6424D8B8C900B146A8 /* background.js */; };
 		429543E121F27387007EBAF3 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429543E021F27387007EBAF3 /* Bookmark.swift */; };
 		429BC55724A7DE3000297D8F /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 429BC55624A7DE3000297D8F /* Sentry */; };
-		42A4788D24F40BC1003F15C7 /* Criollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A4788C24F40BC1003F15C7 /* Criollo.framework */; };
-		42A4788E24F40BC1003F15C7 /* Criollo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42A4788C24F40BC1003F15C7 /* Criollo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42ABC9692400A0E3009CA2CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42ABC9682400A0E2009CA2CE /* Main.storyboard */; };
 		42ABC96B240265FB009CA2CE /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABC96A240265FB009CA2CE /* StatusItem.swift */; };
 		42ABC96F24026A70009CA2CE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ABC96E24026A70009CA2CE /* logo.png */; };
 		42BC395A244450890082F7EB /* General.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42BC3959244450890082F7EB /* General.xib */; };
 		42C05EB72513F7E400220AD0 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 42C05EB62513F7E400220AD0 /* LaunchAtLogin */; };
 		42D0053C240336E7002565FE /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0053B240336E7002565FE /* Diagnostics.swift */; };
+		42D9523C2575A9C700CBF4A4 /* HttpSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 42D9523B2575A9C700CBF4A4 /* HttpSwift */; };
+		42D952422575ABC500CBF4A4 /* Telegraph in Frameworks */ = {isa = PBXBuildFile; productRef = 42D952412575ABC500CBF4A4 /* Telegraph */; };
 		42DFEDDF234E204400916DCB /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 42DFEDDE234E204400916DCB /* Defaults */; };
 		42DFEDE5234E217C00916DCB /* Regex in Frameworks */ = {isa = PBXBuildFile; productRef = 42DFEDE4234E217C00916DCB /* Regex */; };
 		42FA61AF23528A1E006A1029 /* Onboarding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42FA61AE23528A1E006A1029 /* Onboarding.xib */; };
@@ -94,8 +92,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				421D203A24F40C2000893D0E /* CocoaAsyncSocket.framework in Embed Frameworks */,
-				42A4788E24F40BC1003F15C7 /* Criollo.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,7 +101,6 @@
 /* Begin PBXFileReference section */
 		420AFFBD236B852000413745 /* OpenPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPanel.swift; sourceTree = "<group>"; };
 		420AFFBF236B8D6F00413745 /* ExampleFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleFiles.swift; sourceTree = "<group>"; };
-		421D203824F40C2000893D0E /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/Criollo.framework/Versions/A/Frameworks/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 		421FDA0921F513EB004BDB68 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		423D94ED224C1DED0079CEFE /* gen_cert.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = gen_cert.sh; sourceTree = "<group>"; };
 		423D94F1224C1DED0079CEFE /* sprinkles.csr.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sprinkles.csr.conf; sourceTree = "<group>"; };
@@ -137,7 +132,6 @@
 		42755C6224D8B18700B146A8 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
 		42755C6424D8B8C900B146A8 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
 		429543E021F27387007EBAF3 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
-		42A4788C24F40BC1003F15C7 /* Criollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Criollo.framework; path = Carthage/Build/Mac/Criollo.framework; sourceTree = "<group>"; };
 		42ABC9682400A0E2009CA2CE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		42ABC96A240265FB009CA2CE /* StatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItem.swift; sourceTree = "<group>"; };
 		42ABC96E24026A70009CA2CE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -155,11 +149,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				429BC55724A7DE3000297D8F /* Sentry in Frameworks */,
-				421D203924F40C2000893D0E /* CocoaAsyncSocket.framework in Frameworks */,
-				42A4788D24F40BC1003F15C7 /* Criollo.framework in Frameworks */,
 				42DFEDE5234E217C00916DCB /* Regex in Frameworks */,
 				42DFEDDF234E204400916DCB /* Defaults in Frameworks */,
 				425D6BD9255D8686004F72EE /* Preferences in Frameworks */,
+				42D952422575ABC500CBF4A4 /* Telegraph in Frameworks */,
+				42D9523C2575A9C700CBF4A4 /* HttpSwift in Frameworks */,
 				42C05EB72513F7E400220AD0 /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,8 +252,6 @@
 		425A17A021EFC86700C57D44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				421D203824F40C2000893D0E /* CocoaAsyncSocket.framework */,
-				42A4788C24F40BC1003F15C7 /* Criollo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -325,14 +317,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 425A17B721EFC86700C57D44 /* Build configuration list for PBXNativeTarget "Sprinkles" */;
 			buildPhases = (
-				42C05EC42513F8EB00220AD0 /* Pre-sign CoreAsync */,
-				42E5023622174721009A6253 /* Swift Format */,
 				425A176F21EFC86500C57D44 /* Sources */,
 				425A177021EFC86500C57D44 /* Frameworks */,
 				425A177121EFC86500C57D44 /* Resources */,
 				425A17B621EFC86700C57D44 /* Embed App Extensions */,
-				428B7C4721F1FAE80065EE2B /* Carthage: Copy frameworks */,
-				428DA6AC255DF4F7005E01F7 /* Run Script */,
+				428DA6AC255DF4F7005E01F7 /* Add LaunchAtLogin helper */,
 				425A17D521F0CCD000C57D44 /* Embed Frameworks */,
 				42012E0822273222001F5F4F /* Upload DSYM to Sentry */,
 			);
@@ -348,6 +337,8 @@
 				429BC55624A7DE3000297D8F /* Sentry */,
 				42C05EB62513F7E400220AD0 /* LaunchAtLogin */,
 				425D6BD8255D8686004F72EE /* Preferences */,
+				42D9523B2575A9C700CBF4A4 /* HttpSwift */,
+				42D952412575ABC500CBF4A4 /* Telegraph */,
 			);
 			productName = Sprinkles;
 			productReference = 425A177321EFC86500C57D44 /* Sprinkles.app */;
@@ -461,6 +452,8 @@
 				429BC55524A7DE3000297D8F /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 				42C05EB52513F7E400220AD0 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
 				425D6BD7255D8686004F72EE /* XCRemoteSwiftPackageReference "Preferences" */,
+				42D9523A2575A9C700CBF4A4 /* XCRemoteSwiftPackageReference "Http.swift" */,
+				42D952402575ABC500CBF4A4 /* XCRemoteSwiftPackageReference "Telegraph" */,
 			);
 			productRefGroup = 425A177421EFC86500C57D44 /* Products */;
 			projectDirPath = "";
@@ -542,7 +535,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ \"${CONFIGURATION}\" != \"Release\" ]; then\n    exit 0\nfi\n\nif which sentry-cli >/dev/null; then\n    export SENTRY_ORG=brainbow\n    export SENTRY_PROJECT=sprinklesapp\n    export SENTRY_AUTH_TOKEN=\"27b17a4769dc45f7bf42df5b08a1c1a98442d83e133143c996e9dcf8903e9e29\"\n    ERROR=$(sentry-cli upload-dif \"$DWARF_DSYM_FOLDER_PATH\" 2>&1 >/dev/null)\n    if [ ! $? -eq 0 ]; then\n        echo \"warning: sentry-cli - $ERROR\"\n    fi\nelse\n    echo \"warning: sentry-cli not installed, download from https://github.com/getsentry/sentry-cli/releases\"\nfi\n";
 		};
-		428B7C4721F1FAE80065EE2B /* Carthage: Copy frameworks */ = {
+		428DA6AC255DF4F7005E01F7 /* Add LaunchAtLogin helper */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -551,25 +544,7 @@
 			);
 			inputPaths = (
 			);
-			name = "Carthage: Copy frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		428DA6AC255DF4F7005E01F7 /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script";
+			name = "Add LaunchAtLogin helper";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -577,42 +552,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh\"\n";
-		};
-		42C05EC42513F8EB00220AD0 /* Pre-sign CoreAsync */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Pre-sign CoreAsync";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncodesign --force --sign 59E8CA9BBEC3607F213979CD6AD568E1BB349F0A -o runtime Carthage/Build/Mac/Criollo.framework/Versions/A/Frameworks/CocoaAsyncSocket.framework\n";
-		};
-		42E5023622174721009A6253 /* Swift Format */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Swift Format";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# bin/format\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -720,7 +659,6 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -784,7 +722,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -814,21 +751,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				ENABLE_HARDENED_RUNTIME = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac/Criollo.framework/Versions/A/Frameworks",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Criollo/Libraries/OpenSSL",
-				);
 				INFOPLIST_FILE = Sprinkles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Criollo/Libraries/OpenSSL/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.Sprinkles;
@@ -849,21 +775,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				ENABLE_HARDENED_RUNTIME = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac/Criollo.framework/Versions/A/Frameworks",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Criollo/Libraries/OpenSSL",
-				);
 				INFOPLIST_FILE = Sprinkles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Criollo/Libraries/OpenSSL/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.Sprinkles;
@@ -1074,6 +989,22 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		42D9523A2575A9C700CBF4A4 /* XCRemoteSwiftPackageReference "Http.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BiAtoms/Http.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.1;
+			};
+		};
+		42D952402575ABC500CBF4A4 /* XCRemoteSwiftPackageReference "Telegraph" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Building42/Telegraph.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.28.0;
+			};
+		};
 		42DFEDDD234E204400916DCB /* XCRemoteSwiftPackageReference "Defaults" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:sindresorhus/Defaults.git";
@@ -1107,6 +1038,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 42C05EB52513F7E400220AD0 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
 			productName = LaunchAtLogin;
+		};
+		42D9523B2575A9C700CBF4A4 /* HttpSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42D9523A2575A9C700CBF4A4 /* XCRemoteSwiftPackageReference "Http.swift" */;
+			productName = HttpSwift;
+		};
+		42D952412575ABC500CBF4A4 /* Telegraph */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42D952402575ABC500CBF4A4 /* XCRemoteSwiftPackageReference "Telegraph" */;
+			productName = Telegraph;
 		};
 		42DFEDDE234E204400916DCB /* Defaults */ = {
 			isa = XCSwiftPackageProductDependency;

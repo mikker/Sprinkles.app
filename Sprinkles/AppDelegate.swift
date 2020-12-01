@@ -22,6 +22,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     preferencePanes: [GeneralPreferencesController()], style: .segmentedControl)
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
+    if Defaults[.userId] == nil {
+      Defaults[.userId] = UUID().uuidString
+    }
+
     _ = Defaults.observe(.enableDiagnostics) { (state) in
       guard state.newValue else { return }
       Diagnostics.enable()

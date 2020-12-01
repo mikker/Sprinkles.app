@@ -21,7 +21,7 @@ class Diagnostics {
       options.debug = true
     }
     enabled = true
-    SentrySDK.setUser(User(userId: Defaults[.userId]))
+    SentrySDK.setUser(User(userId: Defaults[.userId]!))
     send("[diagnostics] Enable")
   }
 

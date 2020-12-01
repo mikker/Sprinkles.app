@@ -2,12 +2,39 @@
   "object": {
     "pins": [
       {
+        "package": "CocoaAsyncSocket",
+        "repositoryURL": "https://github.com/robbiehanson/CocoaAsyncSocket.git",
+        "state": {
+          "branch": null,
+          "revision": "0e00c967a010fc43ce528bd633d032f17158d393",
+          "version": "7.6.4"
+        }
+      },
+      {
         "package": "Defaults",
         "repositoryURL": "git@github.com:sindresorhus/Defaults.git",
         "state": {
           "branch": null,
           "revision": "d98119fee49c893fae553103a8659ffe003b6cfe",
           "version": "4.1.0"
+        }
+      },
+      {
+        "package": "HttpSwift",
+        "repositoryURL": "https://github.com/BiAtoms/Http.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "2e0cd4c94ffc1aec04dc355feca92b32b827dd74",
+          "version": "2.2.1"
+        }
+      },
+      {
+        "package": "HTTPParserC",
+        "repositoryURL": "https://github.com/Building42/HTTPParserC.git",
+        "state": {
+          "branch": null,
+          "revision": "6fa23997359a65eccfc06808ab85f2e121a84290",
+          "version": "2.9.2"
         }
       },
       {
@@ -38,12 +65,39 @@
         }
       },
       {
+        "package": "RequestSwift",
+        "repositoryURL": "https://github.com/BiAtoms/Request.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "47cea3de9cb961f77c659a27894d32454b42e25f",
+          "version": "2.3.0"
+        }
+      },
+      {
         "package": "Sentry",
         "repositoryURL": "https://github.com/getsentry/sentry-cocoa.git",
         "state": {
           "branch": null,
           "revision": "b5ac6e41913d26ef8637ceadf9c15bf8c4bf062c",
           "version": "6.0.6"
+        }
+      },
+      {
+        "package": "SocketSwift",
+        "repositoryURL": "https://github.com/BiAtoms/Socket.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "36911c13adfe12859ed43dcba878052b1897fcd3",
+          "version": "2.4.0"
+        }
+      },
+      {
+        "package": "Telegraph",
+        "repositoryURL": "https://github.com/Building42/Telegraph.git",
+        "state": {
+          "branch": null,
+          "revision": "9c3d479a46624e4a8d5267898324b4716a42ba3e",
+          "version": "0.28.0"
         }
       }
     ]

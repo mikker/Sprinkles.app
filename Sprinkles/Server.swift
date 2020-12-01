@@ -1,6 +1,7 @@
-import Criollo
+import Defaults
 import Foundation
 import Regex
+import Telegraph
 
 public enum ServerState {
   case stopped
@@ -8,64 +9,74 @@ public enum ServerState {
   case running
 }
 
-class Server: NSObject {
+class Server {
   static var instance = Server()
-
-  let server = CRHTTPServer()
+  
+  let headers: HTTPHeaders = [.accessControlAllowOrigin: "*", .contentType: "text/javascript; charset=utf-8"]
+  var server: Telegraph.Server?
 
   var state: ServerState = .stopped {
     didSet { store.dispatch(.serverStateChanged(state)) }
   }
 
-  override init() {
-    super.init()
-
-    server.isSecure = true
-    server.certificatePath = SprinklesCertificate.certPath
-    server.privateKeyPath = SprinklesCertificate.keyPath
-
-    server.delegate = self
-
-    server.mount("/", fileAtPath: Bundle.main.path(forResource: "index", ofType: "html")!)
-
-    server.get("/favicon.ico") { (_, res, _) in res.send(bundleImage("favicon", ext: "ico")) }
-    server.get("/favicon.png") { (_, res, _) in res.send(bundleImage("favicon", ext: "png")) }
-    server.get("/logo.png") { (_, res, _) in res.send(bundleImage("logo", ext: "png")) }
-
-    server.get("/[a-zA-Z0-9-\\.]+") { (req, res, _) in
-      self.handleScriptsReq(req, res)
-    }
-  }
-
-  public func start(_ port: UInt = 3133) {
+  public func start(_ port: Int = 3133) {
     if state != .stopped { return }
 
     state = .booting
 
-    var error: NSError?
+    guard let caCert = Certificate(derURL: URL(fileURLWithPath: SprinklesCertificate.caPath)) else {
+      print("no ca cert")
+      stop()
+      return
+    }
 
-    server.startListening(&error, portNumber: port)
+    guard
+      let identity = CertificateIdentity(
+        p12URL: URL(fileURLWithPath: SprinklesCertificate.p12Path), passphrase: Defaults[.userId]!)
+    else {
+      print("no p12 cert")
+      stop()
+      return
+    }
 
-    if error != nil {
+    let server = Telegraph.Server(identity: identity, caCertificates: [caCert])
+
+    server.route(.GET, "/s/*", handleScriptsReq)
+    server.serveBundle(.main, "/")
+
+    do {
+      try server.start(port: port)
+    } catch {
+      print(error)
+      Diagnostics.send("[server]: error -- \(String(describing: error))")
+      stop()
+    }
+
+    state = .running
+    self.server = server
+  }
+
+  public func stop() {
+    server?.stop()
+  }
+
+  func serverDidStop(_ server: Server, error: Error?) {
+    state = .stopped
+
+    if let error = error {
+      print(error)
       Diagnostics.send("[server]: error -- \(String(describing: error))")
     }
   }
 
-  public func stop() {
-    self.server.stopListening()
-  }
-
-  private func handleScriptsReq(_ req: CRRequest, _ res: CRResponse) {
-    res.setAllHTTPHeaderFields([
-      "Access-Control-Allow-Origin": "*",
-      "Content-Type": "text/javascript; charset=utf-8",
-    ])
-
-    guard let domain = "/(.*)\\.js".r?.findFirst(in: req.url.path)?.group(at: 1)
-    else { return res.send("console.log('Failed parsing domain')") }
+  private func handleScriptsReq(request: HTTPRequest) -> HTTPResponse {
+    guard let domain = "/s\\/(.*)\\.js".r?.findFirst(in: request.uri.path)?.group(at: 1)
+    else {
+      return HTTPResponse(.unprocessableEntity, content: "console.log('Failed parsing domain')")
+    }
 
     guard let directory = store.state.directory else {
-      return res.send("console.log('No scripts directory set')")
+      return HTTPResponse(.internalServerError, content: "console.log('No scripts directory set')")
     }
 
     let globalJsURL = directory.appendingPathComponent("global.js")
@@ -76,64 +87,32 @@ class Server: NSObject {
     var javascript = [globalJsURL, jsURL].reduce(
       "",
       { (result, url) in
-        return result.appending(";\n\(self.tryReading(url))")
+        return result.appending(";\n\(tryReading(url))")
       })
     let css = [globalCssURL, cssURL].reduce(
       "",
       { (result, url) in
-        return result.appending("\n\(self.tryReading(url))")
+        return result.appending("\n\(tryReading(url))")
       })
 
     if css != "" {
       javascript.append(injectStyleElement(css))
     }
 
-    res.send(javascript)
+    return HTTPResponse(HTTPStatus.ok, headers: headers, content: javascript)
   }
+}
 
-  private func tryReading(_ url: URL) -> String {
-    if FileManager.default.fileExists(atPath: url.path) {
-      do {
-        return try String(contentsOf: url)
-      } catch {
-        print(error)
-      }
+private func tryReading(_ url: URL) -> String {
+  if FileManager.default.fileExists(atPath: url.path) {
+    do {
+      return try String(contentsOf: url)
+    } catch {
+      print(error)
     }
-
-    return ""
-  }
-}
-
-extension Server: CRServerDelegate {
-  func serverDidStartListening(_ server: CRServer) {
-    Server.instance.state = .running
-    Diagnostics.send("[server]: Running")
   }
 
-  func serverDidStopListening(_ server: CRServer) {
-    Server.instance.state = .stopped
-    Diagnostics.send("[server]: Stopped")
-  }
-}
-
-var bundeImageCache: [URL: Data] = [:]
-
-func bundleImage(_ name: String, ext: String) -> Data {
-  let url = Bundle.main.url(forResource: name, withExtension: ext)!
-
-  if bundeImageCache[url] != nil {
-    return bundeImageCache[url]!
-  }
-
-  do {
-    let data = try Data(contentsOf: url)
-    bundeImageCache[url] = data
-    return (data)
-  } catch {
-    print(error)
-    bundeImageCache[url] = Data(capacity: 0)
-    return bundeImageCache[url]!
-  }
+  return ""
 }
 
 func injectStyleElement(_ css: String) -> String {
