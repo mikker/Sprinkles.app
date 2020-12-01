@@ -45,7 +45,7 @@ function apply(script) {
 
 const filename = location.hostname.replace(/^www\./, "") + ".js";
 
-fetch("https://localhost:3133/" + filename)
+fetch("https://localhost:3133/s/" + filename)
   .then((resp) => resp.text())
   .then(apply)
   .catch((error) => {
