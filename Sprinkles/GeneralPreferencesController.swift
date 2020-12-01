@@ -39,7 +39,7 @@ class GeneralPreferencesController: NSViewController, PreferencePane {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    self.preferredContentSize = NSSize(width: 480, height: 462)
+    self.preferredContentSize = NSSize(width: 480, height: 500)
 
     unsubscribe = store.subscribe { state in
       self.directoryPathControl.url = state.directory
@@ -107,5 +107,11 @@ class GeneralPreferencesController: NSViewController, PreferencePane {
   @IBAction func chromePressed(_ sender: Any?) {
     NSWorkspace.shared.openFile(
       "https://getsprinkles.app/chrome", withApplication: "Google Chrome")
+  }
+
+  @IBAction func resetCertsPressed(_ sender: Any?) {
+    SprinklesCertificate.destroy()
+    Defaults[.hasOnboarded] = false
+    NSApp.relaunch()
   }
 }

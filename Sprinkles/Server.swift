@@ -11,8 +11,10 @@ public enum ServerState {
 
 class Server {
   static var instance = Server()
-  
-  let headers: HTTPHeaders = [.accessControlAllowOrigin: "*", .contentType: "text/javascript; charset=utf-8"]
+
+  let headers: HTTPHeaders = [
+    .accessControlAllowOrigin: "*", .contentType: "text/javascript; charset=utf-8",
+  ]
   var server: Telegraph.Server?
 
   var state: ServerState = .stopped {

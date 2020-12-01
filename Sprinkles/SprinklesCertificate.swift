@@ -49,10 +49,10 @@ class SprinklesCertificate {
   }
 
   static func acceptCert() {
-    let data = NSData(contentsOf: URL(fileURLWithPath: caPath))!
     var err: OSStatus = noErr
 
-    let rootCert = SecCertificateCreateWithData(nil, data)!
+    guard let rootCert = rootCert() else { return }
+
     let dict = NSDictionary.init(
       objects: [kSecClassCertificate, rootCert],
       forKeys: [kSecClass as! NSCopying, kSecValueRef as! NSCopying])
@@ -66,10 +66,21 @@ class SprinklesCertificate {
   }
 
   static func destroy() {
+    if let rootCert = rootCert() {
+      var status: OSStatus = noErr
+      status = SecTrustSettingsSetTrustSettings(rootCert, SecTrustSettingsDomain.user, nil)
+      print(SecCopyErrorMessageString(status, nil)!)
+    }
+
     do {
       try FileManager.default.removeItem(at: URL(fileURLWithPath: dir))
     } catch {
       print(error)
     }
+  }
+
+  private static func rootCert() -> SecCertificate? {
+    let data = NSData(contentsOf: URL(fileURLWithPath: caPath))!
+    return SecCertificateCreateWithData(nil, data)
   }
 }
