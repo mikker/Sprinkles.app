@@ -20,15 +20,6 @@
         }
       },
       {
-        "package": "HttpSwift",
-        "repositoryURL": "https://github.com/BiAtoms/Http.swift.git",
-        "state": {
-          "branch": null,
-          "revision": "2e0cd4c94ffc1aec04dc355feca92b32b827dd74",
-          "version": "2.2.1"
-        }
-      },
-      {
         "package": "HTTPParserC",
         "repositoryURL": "https://github.com/Building42/HTTPParserC.git",
         "state": {
@@ -65,30 +56,12 @@
         }
       },
       {
-        "package": "RequestSwift",
-        "repositoryURL": "https://github.com/BiAtoms/Request.swift.git",
-        "state": {
-          "branch": null,
-          "revision": "47cea3de9cb961f77c659a27894d32454b42e25f",
-          "version": "2.3.0"
-        }
-      },
-      {
         "package": "Sentry",
         "repositoryURL": "https://github.com/getsentry/sentry-cocoa.git",
         "state": {
           "branch": null,
           "revision": "d27b7331c867421b0de697c0b8ad9eb99a3acd46",
           "version": "6.0.10"
-        }
-      },
-      {
-        "package": "SocketSwift",
-        "repositoryURL": "https://github.com/BiAtoms/Socket.swift.git",
-        "state": {
-          "branch": null,
-          "revision": "36911c13adfe12859ed43dcba878052b1897fcd3",
-          "version": "2.4.0"
         }
       },
       {

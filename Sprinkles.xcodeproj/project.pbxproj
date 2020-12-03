@@ -40,7 +40,6 @@
 		42BC395A244450890082F7EB /* General.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42BC3959244450890082F7EB /* General.xib */; };
 		42C05EB72513F7E400220AD0 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 42C05EB62513F7E400220AD0 /* LaunchAtLogin */; };
 		42D0053C240336E7002565FE /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0053B240336E7002565FE /* Diagnostics.swift */; };
-		42D9523C2575A9C700CBF4A4 /* HttpSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 42D9523B2575A9C700CBF4A4 /* HttpSwift */; };
 		42D952422575ABC500CBF4A4 /* Telegraph in Frameworks */ = {isa = PBXBuildFile; productRef = 42D952412575ABC500CBF4A4 /* Telegraph */; };
 		42DFEDDF234E204400916DCB /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 42DFEDDE234E204400916DCB /* Defaults */; };
 		42DFEDE5234E217C00916DCB /* Regex in Frameworks */ = {isa = PBXBuildFile; productRef = 42DFEDE4234E217C00916DCB /* Regex */; };
@@ -153,7 +152,6 @@
 				42DFEDDF234E204400916DCB /* Defaults in Frameworks */,
 				425D6BD9255D8686004F72EE /* Preferences in Frameworks */,
 				42D952422575ABC500CBF4A4 /* Telegraph in Frameworks */,
-				42D9523C2575A9C700CBF4A4 /* HttpSwift in Frameworks */,
 				42C05EB72513F7E400220AD0 /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,7 +335,6 @@
 				429BC55624A7DE3000297D8F /* Sentry */,
 				42C05EB62513F7E400220AD0 /* LaunchAtLogin */,
 				425D6BD8255D8686004F72EE /* Preferences */,
-				42D9523B2575A9C700CBF4A4 /* HttpSwift */,
 				42D952412575ABC500CBF4A4 /* Telegraph */,
 			);
 			productName = Sprinkles;
@@ -452,7 +449,6 @@
 				429BC55524A7DE3000297D8F /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 				42C05EB52513F7E400220AD0 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
 				425D6BD7255D8686004F72EE /* XCRemoteSwiftPackageReference "Preferences" */,
-				42D9523A2575A9C700CBF4A4 /* XCRemoteSwiftPackageReference "Http.swift" */,
 				42D952402575ABC500CBF4A4 /* XCRemoteSwiftPackageReference "Telegraph" */,
 			);
 			productRefGroup = 425A177421EFC86500C57D44 /* Products */;
@@ -989,14 +985,6 @@
 				minimumVersion = 4.0.0;
 			};
 		};
-		42D9523A2575A9C700CBF4A4 /* XCRemoteSwiftPackageReference "Http.swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/BiAtoms/Http.swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.1;
-			};
-		};
 		42D952402575ABC500CBF4A4 /* XCRemoteSwiftPackageReference "Telegraph" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Building42/Telegraph.git";
@@ -1038,11 +1026,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 42C05EB52513F7E400220AD0 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
 			productName = LaunchAtLogin;
-		};
-		42D9523B2575A9C700CBF4A4 /* HttpSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 42D9523A2575A9C700CBF4A4 /* XCRemoteSwiftPackageReference "Http.swift" */;
-			productName = HttpSwift;
 		};
 		42D952412575ABC500CBF4A4 /* Telegraph */ = {
 			isa = XCSwiftPackageProductDependency;
