@@ -32,6 +32,7 @@
 		42755C5624D89C4B00B146A8 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 42755C5524D89C4B00B146A8 /* script.js */; };
 		42755C6324D8B18700B146A8 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 42755C6224D8B18700B146A8 /* popup.html */; };
 		42755C6524D8B8C900B146A8 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 42755C6424D8B8C900B146A8 /* background.js */; };
+		4280928A258AA95100735974 /* ExtensionLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42809289258AA95100735974 /* ExtensionLinks.swift */; };
 		429543E121F27387007EBAF3 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429543E021F27387007EBAF3 /* Bookmark.swift */; };
 		42ABC9692400A0E3009CA2CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42ABC9682400A0E2009CA2CE /* Main.storyboard */; };
 		42ABC96B240265FB009CA2CE /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABC96A240265FB009CA2CE /* StatusItem.swift */; };
@@ -128,6 +129,7 @@
 		42755C5524D89C4B00B146A8 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		42755C6224D8B18700B146A8 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
 		42755C6424D8B8C900B146A8 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		42809289258AA95100735974 /* ExtensionLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionLinks.swift; sourceTree = "<group>"; };
 		429543E021F27387007EBAF3 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		42ABC9682400A0E2009CA2CE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		42ABC96A240265FB009CA2CE /* StatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItem.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				429543E021F27387007EBAF3 /* Bookmark.swift */,
 				421FDA0921F513EB004BDB68 /* Defaults.swift */,
 				420AFFBF236B8D6F00413745 /* ExampleFiles.swift */,
+				42809289258AA95100735974 /* ExtensionLinks.swift */,
 				42FBC4EA23EEA9E0004C710E /* GeneralPreferencesController.swift */,
 				42FA61B12353449E006A1029 /* OnboardingController.swift */,
 				420AFFBD236B852000413745 /* OpenPanel.swift */,
@@ -551,6 +554,7 @@
 			files = (
 				421FDA0A21F513EB004BDB68 /* Defaults.swift in Sources */,
 				425A177921EFC86600C57D44 /* AppDelegate.swift in Sources */,
+				4280928A258AA95100735974 /* ExtensionLinks.swift in Sources */,
 				42690B5B2216019100DF8AB3 /* SprinklesCertificate.swift in Sources */,
 				425A17D021F08BED00C57D44 /* Taste.swift in Sources */,
 				425A17EC21F1C1AF00C57D44 /* Server.swift in Sources */,

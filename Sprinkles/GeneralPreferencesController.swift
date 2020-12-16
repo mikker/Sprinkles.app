@@ -88,17 +88,15 @@ class GeneralPreferencesController: NSViewController, PreferencePane {
   }
 
   @IBAction func safariPressed(_ sender: Any?) {
-    SFSafariApplication.showPreferencesForExtension(
-      withIdentifier: "com.brnbw.Sprinkles.extension", completionHandler: nil)
+    ExtensionLinks.safari()
   }
 
   @IBAction func firefoxPressed(_ sender: Any?) {
-    NSWorkspace.shared.openFile("https://getsprinkles.app/firefox", withApplication: "Firefox")
+    ExtensionLinks.firefox()
   }
 
   @IBAction func chromePressed(_ sender: Any?) {
-    NSWorkspace.shared.openFile(
-      "https://getsprinkles.app/chrome", withApplication: "Google Chrome")
+    ExtensionLinks.chrome()
   }
 
   @IBAction func resetCertsPressed(_ sender: Any?) {

@@ -143,18 +143,15 @@ class OnboardingStep3View: NSView {
   @IBOutlet weak var launchAtLoginCheckbox: NSButton!
 
   @IBAction func safariPressed(_ sender: Any) {
-    let identifier = "com.brnbw.Sprinkles.extension"
-    SFSafariApplication.showPreferencesForExtension(
-      withIdentifier: identifier, completionHandler: nil)
+    ExtensionLinks.safari()
   }
 
   @IBAction func firefoxPressed(_ sender: Any) {
-    NSWorkspace.shared.openFile("https://getsprinkles.app/firefox", withApplication: "Firefox")
+    ExtensionLinks.firefox()
   }
 
   @IBAction func googleChromePressed(_ sender: Any) {
-    NSWorkspace.shared.openFile(
-      "https://getsprinkles.app/chrome", withApplication: "Google Chrome")
+    ExtensionLinks.chrome()
   }
 
   @IBAction func closePressed(_ sender: Any) {
