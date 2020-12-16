@@ -14,5 +14,4 @@ extension Defaults.Keys {
   static let hasOnboarded = Key<Bool>("hasOnboarded", default: false)
 
   static let showPreferencesOnLaunch = Key<Bool>("showPreferencesOnLaunch", default: true)
-  static let enableDiagnostics = Key<Bool>("enableDiagnostics", default: false)
 }

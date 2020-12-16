@@ -50,7 +50,6 @@ class Server {
       try server.start(port: port)
     } catch {
       print(error)
-      Diagnostics.send("[server]: error -- \(String(describing: error))")
       stop()
     }
 
@@ -67,7 +66,6 @@ class Server {
 
     if let error = error {
       print(error)
-      Diagnostics.send("[server]: error -- \(String(describing: error))")
     }
   }
 

@@ -26,11 +26,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       Defaults[.userId] = UUID().uuidString
     }
 
-    _ = Defaults.observe(.enableDiagnostics) { (state) in
-      guard state.newValue else { return }
-      Diagnostics.enable()
-    }
-
     _ = store.subscribe { state in
       if state.hasCert && state.directory != nil {
         Server.instance.start(3133)

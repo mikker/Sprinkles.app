@@ -56,15 +56,6 @@
         }
       },
       {
-        "package": "Sentry",
-        "repositoryURL": "https://github.com/getsentry/sentry-cocoa.git",
-        "state": {
-          "branch": null,
-          "revision": "9828e2815a5addc5cb490a26472868496e9633d9",
-          "version": "6.0.12"
-        }
-      },
-      {
         "package": "Telegraph",
         "repositoryURL": "https://github.com/Building42/Telegraph.git",
         "state": {

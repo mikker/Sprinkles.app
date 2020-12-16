@@ -39,7 +39,7 @@ class GeneralPreferencesController: NSViewController, PreferencePane {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    self.preferredContentSize = NSSize(width: 480, height: 500)
+    self.preferredContentSize = NSSize(width: 480, height: 403)
 
     unsubscribe = store.subscribe { state in
       self.directoryPathControl.url = state.directory
@@ -57,10 +57,6 @@ class GeneralPreferencesController: NSViewController, PreferencePane {
         self.statusLight.title = "Running on localhost:3133"
       }
     }
-
-    _ = Defaults.observe(.enableDiagnostics) { (change) in
-      self.diagnosticsCheckbox.state = change.newValue ? .on : .off
-    }.tieToLifetime(of: self)
 
     launchAtLoginCheckbox.state = LaunchAtLogin.isEnabled ? .on : .off
   }
@@ -85,10 +81,6 @@ class GeneralPreferencesController: NSViewController, PreferencePane {
 
   @IBAction func launchAtStartupPressed(_ sender: Any?) {
     LaunchAtLogin.isEnabled = launchAtLoginCheckbox.state == .on
-  }
-
-  @IBAction func diagnosticsCheckboxPressed(_ sender: Any?) {
-    Defaults[.enableDiagnostics] = diagnosticsCheckbox.state == .on
   }
 
   @IBAction func supportPressed(_ sender: Any?) {

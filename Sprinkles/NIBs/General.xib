@@ -9,7 +9,6 @@
         <customObject id="-2" userLabel="File's Owner" customClass="GeneralPreferencesController" customModule="Sprinkles" customModuleProvider="target">
             <connections>
                 <outlet property="chromeButton" destination="owZ-vd-m3x" id="DFf-bt-1LM"/>
-                <outlet property="diagnosticsCheckbox" destination="aw4-GM-arw" id="tmv-e9-KRP"/>
                 <outlet property="directoryPathControl" destination="LuN-Of-df2" id="C1R-x1-y8V"/>
                 <outlet property="firefoxButton" destination="IJb-Yo-Uds" id="PQI-1D-4FD"/>
                 <outlet property="launchAtLoginCheckbox" destination="dqL-pZ-DqB" id="8aF-VB-I3G"/>
@@ -24,11 +23,11 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="avZ-so-Lsx">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="500"/>
+            <rect key="frame" x="0.0" y="0.0" width="480" height="403"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <gridView xPlacement="center" yPlacement="top" rowAlignment="none" columnSpacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="3gh-55-140">
-                    <rect key="frame" x="20" y="26" width="440" height="459"/>
+                    <rect key="frame" x="20" y="26" width="440" height="362"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="ico-Gf-2bW"/>
                     </constraints>
@@ -44,7 +43,6 @@
                         <gridRow id="F9v-50-2Ic"/>
                         <gridRow id="iRH-3P-9Pc"/>
                         <gridRow id="pWh-hR-3I8"/>
-                        <gridRow id="CzJ-Tf-HfV"/>
                         <gridRow id="GzN-yr-how"/>
                         <gridRow topPadding="12" id="tcJ-ng-lvY"/>
                     </rows>
@@ -55,7 +53,7 @@
                     <gridCells>
                         <gridCell row="pYC-iD-R0M" column="NO5-of-sb0" id="UPN-ma-7ci">
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZGV-Xg-rSb">
-                                <rect key="frame" x="47" y="443" width="85" height="16"/>
+                                <rect key="frame" x="47" y="346" width="85" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Server status" id="hKl-PB-LKp">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -65,7 +63,7 @@
                         </gridCell>
                         <gridCell row="pYC-iD-R0M" column="uPx-20-9xx" id="L79-CT-GZx">
                             <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SxI-c5-0NI">
-                                <rect key="frame" x="144" y="443" width="61" height="16"/>
+                                <rect key="frame" x="144" y="346" width="61" height="16"/>
                                 <buttonCell key="cell" type="bevel" title="Button" bezelStyle="rounded" image="NSStatusUnavailable" imagePosition="leading" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyDown" inset="2" id="1hS-pa-4yf">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -74,13 +72,13 @@
                         </gridCell>
                         <gridCell row="Pji-6q-Ygl" column="NO5-of-sb0" headOfMergedCell="DAX-YI-hti" xPlacement="fill" id="DAX-YI-hti">
                             <box key="contentView" verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="llo-Yz-qaX">
-                                <rect key="frame" x="0.0" y="422" width="440" height="5"/>
+                                <rect key="frame" x="0.0" y="325" width="440" height="5"/>
                             </box>
                         </gridCell>
                         <gridCell row="Pji-6q-Ygl" column="uPx-20-9xx" headOfMergedCell="DAX-YI-hti" id="uNr-m6-lHN"/>
                         <gridCell row="bE9-d5-oCP" column="NO5-of-sb0" id="poh-5S-ZPm">
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0aN-vh-i0G">
-                                <rect key="frame" x="27" y="390" width="105" height="16"/>
+                                <rect key="frame" x="27" y="293" width="105" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Scripts directory" id="1eu-6g-Oim">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -90,7 +88,7 @@
                         </gridCell>
                         <gridCell row="bE9-d5-oCP" column="uPx-20-9xx" id="C7J-oC-O4Y">
                             <pathControl key="contentView" verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LuN-Of-df2">
-                                <rect key="frame" x="144" y="386" width="200" height="20"/>
+                                <rect key="frame" x="144" y="289" width="200" height="20"/>
                                 <pathCell key="cell" controlSize="small" selectable="YES" editable="YES" alignment="left" id="dGu-rf-ZmU">
                                     <font key="font" metaFont="controlContent" size="11"/>
                                     <url key="url" string="file://localhost/Applications/"/>
@@ -100,7 +98,7 @@
                         <gridCell row="KM8-uD-Pam" column="NO5-of-sb0" id="kZE-f3-5tf"/>
                         <gridCell row="KM8-uD-Pam" column="uPx-20-9xx" id="ndn-xJ-qwZ">
                             <stackView key="contentView" distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ccr-p2-7kU">
-                                <rect key="frame" x="144" y="360" width="253" height="20"/>
+                                <rect key="frame" x="144" y="263" width="253" height="20"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rPm-AZ-hZf">
                                         <rect key="frame" x="-7" y="-7" width="143" height="32"/>
@@ -136,7 +134,7 @@
                         <gridCell row="iZI-g9-HUE" column="NO5-of-sb0" id="jvL-DT-29y"/>
                         <gridCell row="iZI-g9-HUE" column="uPx-20-9xx" id="rJh-IX-XeF">
                             <textField key="contentView" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="nZ6-Dc-cQ8">
-                                <rect key="frame" x="142" y="309" width="300" height="45"/>
+                                <rect key="frame" x="142" y="212" width="300" height="45"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="left" id="vbT-CB-CkK">
                                     <font key="font" metaFont="cellTitle"/>
                                     <string key="title">This is where Sprinkles will look for scripts and styles. It can be any directory on your computer – I keep mine in my dotfiles.</string>
@@ -147,13 +145,13 @@
                         </gridCell>
                         <gridCell row="ZdY-h6-gHm" column="NO5-of-sb0" headOfMergedCell="tsF-vh-oc0" xPlacement="fill" id="tsF-vh-oc0">
                             <box key="contentView" verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="uPU-PV-SLl">
-                                <rect key="frame" x="0.0" y="288" width="440" height="5"/>
+                                <rect key="frame" x="0.0" y="191" width="440" height="5"/>
                             </box>
                         </gridCell>
                         <gridCell row="ZdY-h6-gHm" column="uPx-20-9xx" headOfMergedCell="tsF-vh-oc0" id="Ghu-g5-oFc"/>
                         <gridCell row="Fki-IN-P30" column="NO5-of-sb0" yPlacement="center" id="Gdp-li-t6l">
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UdT-iX-TkQ">
-                                <rect key="frame" x="10" y="239" width="122" height="16"/>
+                                <rect key="frame" x="10" y="142" width="122" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Browser extensions" id="O5a-qu-3DR">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -163,7 +161,7 @@
                         </gridCell>
                         <gridCell row="Fki-IN-P30" column="uPx-20-9xx" id="1pu-vK-hNO">
                             <stackView key="contentView" distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HI1-DL-6G5">
-                                <rect key="frame" x="144" y="222" width="166" height="50"/>
+                                <rect key="frame" x="144" y="125" width="166" height="50"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dhA-G8-yFI">
                                         <rect key="frame" x="0.0" y="-1" width="50" height="52"/>
@@ -222,7 +220,7 @@
                         </gridCell>
                         <gridCell row="JEm-BZ-9nM" column="NO5-of-sb0" headOfMergedCell="LFw-JE-fvy" xPlacement="fill" id="LFw-JE-fvy">
                             <box key="contentView" verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="omQ-Gu-Xsv">
-                                <rect key="frame" x="0.0" y="201" width="440" height="5"/>
+                                <rect key="frame" x="0.0" y="104" width="440" height="5"/>
                             </box>
                         </gridCell>
                         <gridCell row="JEm-BZ-9nM" column="uPx-20-9xx" headOfMergedCell="LFw-JE-fvy" id="BRM-oY-OR0"/>
@@ -231,7 +229,7 @@
                         <gridCell row="iRH-3P-9Pc" column="NO5-of-sb0" id="I3g-rQ-1eI"/>
                         <gridCell row="iRH-3P-9Pc" column="uPx-20-9xx" id="O64-RZ-RlH">
                             <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="03P-pZ-yM9">
-                                <rect key="frame" x="142" y="162" width="197" height="18"/>
+                                <rect key="frame" x="142" y="65" width="197" height="18"/>
                                 <buttonCell key="cell" type="check" title="Show this window on launch" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="rPV-eg-mT8">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -244,7 +242,7 @@
                         <gridCell row="pWh-hR-3I8" column="NO5-of-sb0" id="HUA-R2-3ND"/>
                         <gridCell row="pWh-hR-3I8" column="uPx-20-9xx" id="zKA-5Q-W0C">
                             <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dqL-pZ-DqB">
-                                <rect key="frame" x="142" y="140" width="178" height="18"/>
+                                <rect key="frame" x="142" y="43" width="178" height="18"/>
                                 <buttonCell key="cell" type="check" title="Launch Sprinkles at login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="8K6-zo-Y4J">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -254,54 +252,8 @@
                                 </connections>
                             </button>
                         </gridCell>
-                        <gridCell row="CzJ-Tf-HfV" column="NO5-of-sb0" id="bqq-bL-9Pl"/>
-                        <gridCell row="CzJ-Tf-HfV" column="uPx-20-9xx" id="Qmc-R4-isS">
-                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aw4-GM-arw">
-                                <rect key="frame" x="142" y="118" width="204" height="18"/>
-                                <buttonCell key="cell" type="check" title="Send anonymous diagnostics" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="IQS-AB-ICc">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="diagnosticsCheckboxPressed:" target="-2" id="JAv-o7-onv"/>
-                                </connections>
-                            </button>
-                        </gridCell>
                         <gridCell row="GzN-yr-how" column="NO5-of-sb0" id="Tmr-gs-Z0b"/>
-                        <gridCell row="GzN-yr-how" column="uPx-20-9xx" id="MGS-D6-fdC">
-                            <stackView key="contentView" distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dio-FC-8bm">
-                                <rect key="frame" x="144" y="38" width="296" height="75"/>
-                                <subviews>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="v9R-dN-yqL">
-                                        <rect key="frame" x="-2" y="0.0" width="272" height="75"/>
-                                        <textFieldCell key="cell" selectable="YES" id="zfg-We-Uzx">
-                                            <font key="font" metaFont="cellTitle"/>
-                                            <string key="title">This includes anonymous, automatic bug reports, usage statistics and more. All anonymous and very appreciated. Will never include information about your internet activity or what sites you visit.</string>
-                                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LhV-SQ-aau">
-                                        <rect key="frame" x="273" y="51" width="25" height="25"/>
-                                        <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uUy-nm-6Og">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="supportPressed:" target="-2" id="L7e-CI-9Wk"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
-                        </gridCell>
+                        <gridCell row="GzN-yr-how" column="uPx-20-9xx" id="MGS-D6-fdC"/>
                         <gridCell row="tcJ-ng-lvY" column="NO5-of-sb0" id="Wfg-3Y-R4l"/>
                         <gridCell row="tcJ-ng-lvY" column="uPx-20-9xx" id="cVR-6l-sJ5">
                             <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PqS-42-cwu">
@@ -325,7 +277,7 @@
                 <constraint firstAttribute="trailing" secondItem="3gh-55-140" secondAttribute="trailing" constant="20" symbolic="YES" id="Ax7-vq-M8b"/>
                 <constraint firstItem="3gh-55-140" firstAttribute="centerX" secondItem="avZ-so-Lsx" secondAttribute="centerX" id="Nol-Pc-PQf"/>
             </constraints>
-            <point key="canvasLocation" x="155" y="269"/>
+            <point key="canvasLocation" x="155" y="217.5"/>
         </customView>
     </objects>
     <resources>
