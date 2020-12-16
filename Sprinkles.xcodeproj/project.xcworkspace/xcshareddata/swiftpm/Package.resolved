@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/robbiehanson/CocoaAsyncSocket.git",
         "state": {
           "branch": null,
-          "revision": "0e00c967a010fc43ce528bd633d032f17158d393",
-          "version": "7.6.4"
+          "revision": "dbdc00669c1ced63b27c3c5f052ee4d28f10150c",
+          "version": "7.6.5"
         }
       },
       {
@@ -60,8 +60,8 @@
         "repositoryURL": "https://github.com/getsentry/sentry-cocoa.git",
         "state": {
           "branch": null,
-          "revision": "d27b7331c867421b0de697c0b8ad9eb99a3acd46",
-          "version": "6.0.10"
+          "revision": "9828e2815a5addc5cb490a26472868496e9633d9",
+          "version": "6.0.12"
         }
       },
       {
