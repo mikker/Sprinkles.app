@@ -120,6 +120,7 @@ func injectStyleElement(_ css: String) -> String {
     function _SprinklesInjectStyles() {
       var d = document;
       var e = d.createElement('style');
+      e.dataset.sprinklesInjected = 1;
       e.innerHTML = `\(css)`;
       d.body.appendChild(e);
     };
