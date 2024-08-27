@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,7 +28,7 @@
 		42755C3B24D89B1500B146A8 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42755C3A24D89B1500B146A8 /* SafariWebExtensionHandler.swift */; };
 		42755C4024D89B1500B146A8 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 42755C3F24D89B1500B146A8 /* images */; };
 		42755C4224D89B1500B146A8 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 42755C4124D89B1500B146A8 /* manifest.json */; };
-		42755C5124D89B1500B146A8 /* Sprinkles Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 42755C3724D89B1500B146A8 /* Sprinkles Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		42755C5124D89B1500B146A8 /* Sprinkles Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 42755C3724D89B1500B146A8 /* Sprinkles Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		42755C5624D89C4B00B146A8 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 42755C5524D89C4B00B146A8 /* script.js */; };
 		42755C6324D8B18700B146A8 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 42755C6224D8B18700B146A8 /* popup.html */; };
 		42755C6524D8B8C900B146A8 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 42755C6424D8B8C900B146A8 /* background.js */; };
@@ -36,8 +36,8 @@
 		429543E121F27387007EBAF3 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429543E021F27387007EBAF3 /* Bookmark.swift */; };
 		42ABC9692400A0E3009CA2CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42ABC9682400A0E2009CA2CE /* Main.storyboard */; };
 		42ABC96B240265FB009CA2CE /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABC96A240265FB009CA2CE /* StatusItem.swift */; };
-		42ABC96F24026A70009CA2CE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ABC96E24026A70009CA2CE /* logo.png */; };
 		42BC395A244450890082F7EB /* General.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42BC3959244450890082F7EB /* General.xib */; };
+		42BD715A2C7DC5D8009C5C78 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42BD71592C7DC5D8009C5C78 /* logo.png */; };
 		42C05EB72513F7E400220AD0 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 42C05EB62513F7E400220AD0 /* LaunchAtLogin */; };
 		42D952422575ABC500CBF4A4 /* Telegraph in Frameworks */ = {isa = PBXBuildFile; productRef = 42D952412575ABC500CBF4A4 /* Telegraph */; };
 		42DFEDDF234E204400916DCB /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 42DFEDDE234E204400916DCB /* Defaults */; };
@@ -73,15 +73,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		425A17B621EFC86700C57D44 /* Embed App Extensions */ = {
+		425A17B621EFC86700C57D44 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				42755C5124D89B1500B146A8 /* Sprinkles Extension.appex in Embed App Extensions */,
+				42755C5124D89B1500B146A8 /* Sprinkles Extension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		425A17D521F0CCD000C57D44 /* Embed Frameworks */ = {
@@ -133,8 +133,8 @@
 		429543E021F27387007EBAF3 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		42ABC9682400A0E2009CA2CE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		42ABC96A240265FB009CA2CE /* StatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItem.swift; sourceTree = "<group>"; };
-		42ABC96E24026A70009CA2CE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		42BC3959244450890082F7EB /* General.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = General.xib; sourceTree = "<group>"; };
+		42BD71592C7DC5D8009C5C78 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Resources/AppIcon.appiconset/logo.png; sourceTree = SOURCE_ROOT; };
 		42FA61AE23528A1E006A1029 /* Onboarding.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Onboarding.xib; sourceTree = "<group>"; };
 		42FA61B12353449E006A1029 /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
 		42FBC4EA23EEA9E0004C710E /* GeneralPreferencesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesController.swift; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 				42690B632216D0A300DF8AB3 /* favicon.ico */,
 				42690B622216D0A300DF8AB3 /* favicon.png */,
 				42690B602216CCC400DF8AB3 /* index.html */,
-				42ABC96E24026A70009CA2CE /* logo.png */,
+				42BD71592C7DC5D8009C5C78 /* logo.png */,
 			);
 			path = Static;
 			sourceTree = "<group>";
@@ -313,13 +313,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 425A17B721EFC86700C57D44 /* Build configuration list for PBXNativeTarget "Sprinkles" */;
 			buildPhases = (
+				42BD715B2C7DC660009C5C78 /* ShellScript */,
 				425A176F21EFC86500C57D44 /* Sources */,
 				425A177021EFC86500C57D44 /* Frameworks */,
 				425A177121EFC86500C57D44 /* Resources */,
-				425A17B621EFC86700C57D44 /* Embed App Extensions */,
+				425A17B621EFC86700C57D44 /* Embed Foundation Extensions */,
 				428DA6AC255DF4F7005E01F7 /* Add LaunchAtLogin helper */,
 				425A17D521F0CCD000C57D44 /* Embed Frameworks */,
-				42012E0822273222001F5F4F /* Upload DSYM to Sentry */,
 			);
 			buildRules = (
 			);
@@ -398,7 +398,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1420;
 				ORGANIZATIONNAME = Brainbow;
 				TargetAttributes = {
 					425A177221EFC86500C57D44 = {
@@ -472,9 +472,9 @@
 				423D94F6224C1DED0079CEFE /* gen_cert.sh in Resources */,
 				42ABC9692400A0E3009CA2CE /* Main.storyboard in Resources */,
 				425A178021EFC86700C57D44 /* Assets.xcassets in Resources */,
-				42ABC96F24026A70009CA2CE /* logo.png in Resources */,
 				423D94FE224C1DED0079CEFE /* v3.ext in Resources */,
 				42FA61AF23528A1E006A1029 /* Onboarding.xib in Resources */,
+				42BD715A2C7DC5D8009C5C78 /* logo.png in Resources */,
 				42690B652216D0A300DF8AB3 /* favicon.ico in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,24 +509,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		42012E0822273222001F5F4F /* Upload DSYM to Sentry */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Upload DSYM to Sentry";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"${CONFIGURATION}\" != \"Release\" ]; then\n    exit 0\nfi\n\nif which sentry-cli >/dev/null; then\n    export SENTRY_ORG=brainbow\n    export SENTRY_PROJECT=sprinklesapp\n    export SENTRY_AUTH_TOKEN=\"27b17a4769dc45f7bf42df5b08a1c1a98442d83e133143c996e9dcf8903e9e29\"\n    ERROR=$(sentry-cli upload-dif \"$DWARF_DSYM_FOLDER_PATH\" 2>&1 >/dev/null)\n    if [ ! $? -eq 0 ]; then\n        echo \"warning: sentry-cli - $ERROR\"\n    fi\nelse\n    echo \"warning: sentry-cli not installed, download from https://github.com/getsentry/sentry-cli/releases\"\nfi\n";
-		};
 		428DA6AC255DF4F7005E01F7 /* Add LaunchAtLogin helper */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -544,6 +526,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh\"\n";
+		};
+		42BD715B2C7DC660009C5C78 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/opt/homebrew/bin/swift-format . --recursive --in-place\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -648,6 +647,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -711,6 +711,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -740,6 +741,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -748,7 +750,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.Sprinkles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -765,6 +767,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Sprinkles/Info.plist;
@@ -772,7 +775,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brnbw.Sprinkles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -787,6 +790,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				INFOPLIST_FILE = SprinklesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -808,6 +812,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				INFOPLIST_FILE = SprinklesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -828,6 +833,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				INFOPLIST_FILE = SprinklesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -848,6 +854,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				INFOPLIST_FILE = SprinklesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -868,6 +875,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Sprinkles Extension/Sprinkles_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Sprinkles Extension/Info.plist";
@@ -876,7 +884,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brnbw.Sprinkles.Sprinkles-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -890,6 +898,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Sprinkles Extension/Sprinkles_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = DDB8SQMXS9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Sprinkles Extension/Info.plist";
@@ -898,7 +907,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brnbw.Sprinkles.Sprinkles-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -986,7 +995,7 @@
 			repositoryURL = "git@github.com:sindresorhus/Defaults.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
+				minimumVersion = 6.3.0;
 			};
 		};
 		42DFEDE3234E217C00916DCB /* XCRemoteSwiftPackageReference "Regex" */ = {

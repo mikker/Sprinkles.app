@@ -1,11 +1,3 @@
-//
-//  DirectoryPermissions.swift
-//  Sprinkles
-//
-//  Created by Mikkel Malmberg on 18/01/2019.
-//  Copyright © 2019 Brainbow. All rights reserved.
-//
-
 import Cocoa
 
 public class Bookmark {

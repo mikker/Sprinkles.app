@@ -1,11 +1,3 @@
-//
-//  Certificate.swift
-//  Sprinkles
-//
-//  Created by Mikkel Malmberg on 14/02/2019.
-//  Copyright © 2019 Brainbow. All rights reserved.
-//
-
 import Defaults
 import Foundation
 import Security

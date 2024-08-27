@@ -1,9 +1,9 @@
 let attempt = 0;
 
 function log(title, msg) {
-  console.groupCollapsed(`%c${title}`, msg.error ? "color:red" : "");
-  if (msg.error) console.error(msg.error);
-  if (msg.debug) console.debug(msg.debug);
+  console.groupCollapsed(`%c${title}`, msg && msg.error ? "color:red" : "");
+  if (msg && msg.error) console.error(msg.error);
+  if (msg && msg.debug) console.debug(msg.debug);
   console.groupEnd();
 }
 
@@ -43,12 +43,29 @@ function apply(script) {
   }
 }
 
-const filename = location.hostname.replace(/^www\./, "") + ".js";
+const ignoreList = [/stripe/];
 
-fetch("https://localhost:3133/s/" + filename)
-  .then((resp) => resp.text())
-  .then(apply)
-  .catch((error) => {
+async function main() {
+  const host = location.hostname.replace(/^www\./, "");
+
+  for (const re of ignoreList) {
+    if (re.test(host)) {
+      log(`Ignoring host "${host}"`);
+      return;
+    }
+  }
+
+  const filename = host + ".js";
+
+  try {
+    const js = await fetch("https://localhost:3133/s/" + filename).then(
+      (resp) => resp.text()
+    );
+    apply(js);
+  } catch (error) {
     log("Sprinkles failed requesting your scripts", { error });
     dispatch({ event: "request_failed", error: `${error}` });
-  });
+  }
+}
+
+main();

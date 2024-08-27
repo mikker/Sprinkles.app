@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Sprinkles
-//
-//  Created by Mikkel Malmberg on 16/01/2019.
-//  Copyright © 2019 Brainbow. All rights reserved.
-//
-
 import Cocoa
 import Defaults
 import Preferences

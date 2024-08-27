@@ -1,11 +1,3 @@
-//
-//  OpenPanel.swift
-//  Sprinkles
-//
-//  Created by Mikkel Malmberg on 31/10/2019.
-//  Copyright © 2019 Brainbow. All rights reserved.
-//
-
 import Cocoa
 
 class OpenPanel {

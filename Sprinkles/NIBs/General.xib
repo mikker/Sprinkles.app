@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment version="101400" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22690"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -52,7 +52,7 @@
                     </columns>
                     <gridCells>
                         <gridCell row="pYC-iD-R0M" column="NO5-of-sb0" id="UPN-ma-7ci">
-                            <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZGV-Xg-rSb">
+                            <textField key="contentView" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZGV-Xg-rSb">
                                 <rect key="frame" x="47" y="346" width="85" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Server status" id="hKl-PB-LKp">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -77,7 +77,7 @@
                         </gridCell>
                         <gridCell row="Pji-6q-Ygl" column="uPx-20-9xx" headOfMergedCell="DAX-YI-hti" id="uNr-m6-lHN"/>
                         <gridCell row="bE9-d5-oCP" column="NO5-of-sb0" id="poh-5S-ZPm">
-                            <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0aN-vh-i0G">
+                            <textField key="contentView" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0aN-vh-i0G">
                                 <rect key="frame" x="27" y="293" width="105" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Scripts directory" id="1eu-6g-Oim">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -133,7 +133,7 @@
                         </gridCell>
                         <gridCell row="iZI-g9-HUE" column="NO5-of-sb0" id="jvL-DT-29y"/>
                         <gridCell row="iZI-g9-HUE" column="uPx-20-9xx" id="rJh-IX-XeF">
-                            <textField key="contentView" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="nZ6-Dc-cQ8">
+                            <textField key="contentView" focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="nZ6-Dc-cQ8">
                                 <rect key="frame" x="142" y="212" width="300" height="45"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="left" id="vbT-CB-CkK">
                                     <font key="font" metaFont="cellTitle"/>
@@ -150,7 +150,7 @@
                         </gridCell>
                         <gridCell row="ZdY-h6-gHm" column="uPx-20-9xx" headOfMergedCell="tsF-vh-oc0" id="Ghu-g5-oFc"/>
                         <gridCell row="Fki-IN-P30" column="NO5-of-sb0" yPlacement="center" id="Gdp-li-t6l">
-                            <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UdT-iX-TkQ">
+                            <textField key="contentView" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UdT-iX-TkQ">
                                 <rect key="frame" x="10" y="142" width="122" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Browser extensions" id="O5a-qu-3DR">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -165,42 +165,42 @@
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dhA-G8-yFI">
                                         <rect key="frame" x="0.0" y="-1" width="50" height="52"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="5Lo-pV-HsS"/>
-                                            <constraint firstAttribute="height" constant="50" id="cz5-fF-n0f"/>
-                                        </constraints>
                                         <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="Safari" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1tJ-tK-nkQ">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="5Lo-pV-HsS"/>
+                                            <constraint firstAttribute="height" constant="50" id="cz5-fF-n0f"/>
+                                        </constraints>
                                         <connections>
                                             <action selector="safariPressed:" target="-2" id="xFf-pT-Ilx"/>
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IJb-Yo-Uds">
                                         <rect key="frame" x="58" y="-1" width="50" height="52"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="4JD-oh-9pW"/>
-                                            <constraint firstAttribute="height" constant="50" id="Uh7-5z-Ajn"/>
-                                        </constraints>
                                         <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="Firefox" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0wX-ak-OFo">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="4JD-oh-9pW"/>
+                                            <constraint firstAttribute="height" constant="50" id="Uh7-5z-Ajn"/>
+                                        </constraints>
                                         <connections>
                                             <action selector="firefoxPressed:" target="-2" id="CZh-YB-6gB"/>
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="owZ-vd-m3x">
                                         <rect key="frame" x="116" y="-1" width="50" height="52"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="RcF-xt-fVk"/>
-                                            <constraint firstAttribute="width" constant="50" id="urO-Ai-7rF"/>
-                                        </constraints>
                                         <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="Chrome" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="N76-KE-lZu">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="RcF-xt-fVk"/>
+                                            <constraint firstAttribute="width" constant="50" id="urO-Ai-7rF"/>
+                                        </constraints>
                                         <connections>
                                             <action selector="chromePressed:" target="-2" id="oE9-Pc-6Tz"/>
                                         </connections>
@@ -257,7 +257,7 @@
                         <gridCell row="tcJ-ng-lvY" column="NO5-of-sb0" id="Wfg-3Y-R4l"/>
                         <gridCell row="tcJ-ng-lvY" column="uPx-20-9xx" id="cVR-6l-sJ5">
                             <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PqS-42-cwu">
-                                <rect key="frame" x="137" y="-7" width="141" height="32"/>
+                                <rect key="frame" x="137" y="-7" width="140" height="32"/>
                                 <buttonCell key="cell" type="push" title="Reset certificates" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="99F-kH-vly">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>

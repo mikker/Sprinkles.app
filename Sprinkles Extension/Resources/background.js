@@ -34,5 +34,5 @@ function setBadge(text, sender) {
   browser.browserAction.setBadgeText(args);
 
   return null;
-//  return { badge: args };
+  //  return { badge: args };
 }

@@ -1,11 +1,3 @@
-//
-//  MainWindow.swift
-//  Sprinkles
-//
-//  Created by Mikkel Malmberg on 08/02/2020.
-//  Copyright © 2020 Brainbow. All rights reserved.
-//
-
 import Cocoa
 import Defaults
 import LaunchAtLogin

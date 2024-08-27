@@ -1,4 +1,6 @@
+*xcuserdata*
 /Carthage
 /Resources
 /Updates/Sprinkles.app
 /Updates/Sprinkles*.zip
+.DS_Store

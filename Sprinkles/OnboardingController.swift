@@ -1,11 +1,3 @@
-//
-//  OnboardingWindow.swift
-//  Sprinkles
-//
-//  Created by Mikkel Malmberg on 13/10/2019.
-//  Copyright © 2019 Brainbow. All rights reserved.
-//
-
 import Cocoa
 import Defaults
 import LaunchAtLogin

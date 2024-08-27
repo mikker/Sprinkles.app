@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22690"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,7 +19,7 @@
         <window title="Setting up Sprinkles" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="Mfr-h5-bc1">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="427" y="270" width="450" height="600"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1536" height="937"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
             <view key="contentView" wantsLayer="YES" id="fZc-5R-Xb1">
                 <rect key="frame" x="0.0" y="0.0" width="450" height="600"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -31,7 +30,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="450" height="200"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wFU-HI-x7T">
+                                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wFU-HI-x7T">
                                     <rect key="frame" x="43" y="120" width="161" height="19"/>
                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Setting up Sprinkles" id="gLf-J2-xHP">
                                         <font key="font" metaFont="systemBold" size="16"/>
@@ -39,7 +38,7 @@
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ARP-IE-BxD">
+                                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ARP-IE-BxD">
                                     <rect key="frame" x="43" y="40" width="364" height="72"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="360" id="QKM-OG-R5y"/>
@@ -75,7 +74,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <subviews>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2kO-kj-bW7">
+                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2kO-kj-bW7">
                                             <rect key="frame" x="45" y="335" width="49" height="19"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Step 1" id="Uel-7k-maP">
                                                 <font key="font" metaFont="label" size="16"/>
@@ -83,7 +82,7 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iOe-iP-2Ds">
+                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iOe-iP-2Ds">
                                             <rect key="frame" x="45" y="315" width="286" height="19"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Pick your Sprinkles scripts directory" id="zsM-1y-aVr">
                                                 <font key="font" metaFont="systemBold" size="16"/>
@@ -91,7 +90,7 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h2n-i7-uKW">
+                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h2n-i7-uKW">
                                             <rect key="frame" x="45" y="259" width="360" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="356" id="SLK-V4-PHE"/>
@@ -110,7 +109,7 @@
                                             </pathCell>
                                         </pathControl>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zbU-k2-67f">
-                                            <rect key="frame" x="41" y="151" width="123" height="32"/>
+                                            <rect key="frame" x="40" y="152" width="117" height="32"/>
                                             <buttonCell key="cell" type="push" title="Set location…" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aGy-So-aDz">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -120,7 +119,7 @@
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BTu-0a-F6i">
-                                            <rect key="frame" x="337" y="13" width="99" height="32"/>
+                                            <rect key="frame" x="344" y="13" width="93" height="32"/>
                                             <buttonCell key="cell" type="push" title="Next step" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FlP-vo-qjx">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -172,7 +171,7 @@
             <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0dS-dO-idU">
+                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0dS-dO-idU">
                     <rect key="frame" x="45" y="335" width="52" height="19"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Step 2" id="H4C-Jn-FNG">
                         <font key="font" metaFont="label" size="16"/>
@@ -180,8 +179,8 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MdO-IE-qfj">
-                    <rect key="frame" x="45" y="315" width="300" height="19"/>
+                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MdO-IE-qfj">
+                    <rect key="frame" x="45" y="315" width="299" height="19"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Generate and trust unique certificates" id="7yi-d6-G4J">
                         <font key="font" metaFont="systemBold" size="16"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -189,7 +188,7 @@
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bPR-hf-JhW">
-                    <rect key="frame" x="337" y="13" width="99" height="32"/>
+                    <rect key="frame" x="344" y="13" width="93" height="32"/>
                     <buttonCell key="cell" type="push" title="Next step" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MfS-Ex-AtT">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -198,7 +197,7 @@
                         <action selector="didPressNext:" target="zHn-oz-BJc" id="eQ4-dp-iwu"/>
                     </connections>
                 </button>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LZ2-F6-4bP">
+                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LZ2-F6-4bP">
                     <rect key="frame" x="45" y="211" width="360" height="96"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="356" id="hGQ-z3-F97"/>
@@ -212,8 +211,8 @@ You will be asked your password. This is necessary to mark the freshly generated
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button verticalHuggingPriority="750" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnE-9e-60f">
-                    <rect key="frame" x="41" y="163" width="242" height="32"/>
+                <button imageHugsTitle="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cnE-9e-60f">
+                    <rect key="frame" x="40" y="164" width="236" height="32"/>
                     <buttonCell key="cell" type="push" title="Generate and trust certificates" bezelStyle="rounded" image="NSLockLockedTemplate" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LeJ-52-Bc6">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -222,8 +221,8 @@ You will be asked your password. This is necessary to mark the freshly generated
                         <action selector="didPressGenerate:" target="zHn-oz-BJc" id="EgA-q8-nfM"/>
                     </connections>
                 </button>
-                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AeX-gf-Pb0">
-                    <rect key="frame" x="283" y="171" width="28" height="18"/>
+                <textField hidden="YES" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AeX-gf-Pb0">
+                    <rect key="frame" x="275" y="171" width="28" height="18"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="18" id="JxG-rR-Q7X"/>
                         <constraint firstAttribute="width" constant="24" id="poo-f9-Nkz"/>
@@ -261,7 +260,7 @@ You will be asked your password. This is necessary to mark the freshly generated
             <rect key="frame" x="0.0" y="0.0" width="450" height="400"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eQL-aB-hhn">
+                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eQL-aB-hhn">
                     <rect key="frame" x="45" y="335" width="52" height="19"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Step 3" id="ThV-5x-86f">
                         <font key="font" metaFont="label" size="16"/>
@@ -269,8 +268,8 @@ You will be asked your password. This is necessary to mark the freshly generated
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Itr-g4-E0o">
-                    <rect key="frame" x="45" y="315" width="294" height="19"/>
+                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Itr-g4-E0o">
+                    <rect key="frame" x="45" y="315" width="293" height="19"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Install or activate browser extensions" id="1bc-l4-hkX">
                         <font key="font" metaFont="systemBold" size="16"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -278,7 +277,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U28-Lz-l7z">
-                    <rect key="frame" x="361" y="13" width="75" height="32"/>
+                    <rect key="frame" x="368" y="13" width="69" height="32"/>
                     <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SMo-bQ-nco">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -287,7 +286,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                         <action selector="closePressed:" target="7Pa-qY-U6y" id="7fy-x4-TbT"/>
                     </connections>
                 </button>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bAM-T9-mhu">
+                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bAM-T9-mhu">
                     <rect key="frame" x="45" y="275" width="360" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="356" id="LbK-D0-mFn"/>
@@ -299,7 +298,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UE4-Ss-UJq">
-                    <rect key="frame" x="41" y="217" width="203" height="32"/>
+                    <rect key="frame" x="40" y="218" width="195" height="32"/>
                     <buttonCell key="cell" type="push" title="Open Safari Extensions" bezelStyle="rounded" image="Safari" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nZC-O8-LDP">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -309,7 +308,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="O7U-AH-WP8">
-                    <rect key="frame" x="41" y="184" width="250" height="32"/>
+                    <rect key="frame" x="40" y="186" width="242" height="32"/>
                     <buttonCell key="cell" type="push" title="Install Mozilla Firefox extension" bezelStyle="rounded" image="Firefox" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4dC-O5-7HP">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -319,7 +318,7 @@ You will be asked your password. This is necessary to mark the freshly generated
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1c8-cV-8ON">
-                    <rect key="frame" x="41" y="151" width="258" height="32"/>
+                    <rect key="frame" x="40" y="154" width="250" height="32"/>
                     <buttonCell key="cell" type="push" title="Install Google Chrome extension" bezelStyle="rounded" image="Chrome" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OnO-jb-KCc">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -358,7 +357,7 @@ You will be asked your password. This is necessary to mark the freshly generated
     <resources>
         <image name="Chrome" width="48" height="48"/>
         <image name="Firefox" width="48" height="48"/>
-        <image name="NSLockLockedTemplate" width="10" height="14"/>
+        <image name="NSLockLockedTemplate" width="19" height="19"/>
         <image name="Safari" width="48" height="48"/>
     </resources>
 </document>
