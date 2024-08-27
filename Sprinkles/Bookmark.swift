@@ -41,20 +41,22 @@ public class Bookmark {
     let restored: URL?
 
     do {
-      let fileData = try Data(contentsOf: fileURL())
-      guard
-        let permissions =
-          try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(fileData) as? Permissions
-      else { return nil }
-      guard let (_, data) = permissions.first else { return nil }
-      restored =
-        try NSURL.init(
-          resolvingBookmarkData: data,
-          options: .withSecurityScope,
-          relativeTo: nil, bookmarkDataIsStale: &isStale) as URL
+        let fileData = try Data(contentsOf: fileURL())
+        let unarchiver = try NSKeyedUnarchiver(forReadingFrom: fileData)
+        unarchiver.requiresSecureCoding = false
+        NSKeyedUnarchiver.setClass(NSURL.self, forClassName: "NSURL")
+        NSKeyedUnarchiver.setClass(NSData.self, forClassName: "NSData")
+        
+        guard let permissions = unarchiver.decodeObject(of: [NSDictionary.self, NSURL.self, NSData.self], forKey: NSKeyedArchiveRootObjectKey) as? Permissions
+        else { return nil }
+        guard let (_, data) = permissions.first else { return nil }
+        restored = try NSURL(resolvingBookmarkData: data,
+                             options: .withSecurityScope,
+                             relativeTo: nil,
+                             bookmarkDataIsStale: &isStale) as URL
     } catch {
-      print(error)
-      return nil
+        print(error)
+        return nil
     }
 
     guard !isStale.boolValue else { return nil }
@@ -80,8 +82,9 @@ public class Bookmark {
     let permission = [url: bookmarkData]
 
     do {
-      let data = try NSKeyedArchiver.archivedData(
-        withRootObject: permission, requiringSecureCoding: false)
+      let archiver = NSKeyedArchiver(requiringSecureCoding: false)
+      archiver.encode(permission, forKey: NSKeyedArchiveRootObjectKey)
+      let data = archiver.encodedData
       try data.write(to: fileURL())
     } catch {
       fatalError(error.localizedDescription)
