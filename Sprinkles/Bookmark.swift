@@ -41,22 +41,27 @@ public class Bookmark {
     let restored: URL?
 
     do {
-        let fileData = try Data(contentsOf: fileURL())
-        let unarchiver = try NSKeyedUnarchiver(forReadingFrom: fileData)
-        unarchiver.requiresSecureCoding = false
-        NSKeyedUnarchiver.setClass(NSURL.self, forClassName: "NSURL")
-        NSKeyedUnarchiver.setClass(NSData.self, forClassName: "NSData")
-        
-        guard let permissions = unarchiver.decodeObject(of: [NSDictionary.self, NSURL.self, NSData.self], forKey: NSKeyedArchiveRootObjectKey) as? Permissions
-        else { return nil }
-        guard let (_, data) = permissions.first else { return nil }
-        restored = try NSURL(resolvingBookmarkData: data,
-                             options: .withSecurityScope,
-                             relativeTo: nil,
-                             bookmarkDataIsStale: &isStale) as URL
+      let fileData = try Data(contentsOf: fileURL())
+      let unarchiver = try NSKeyedUnarchiver(forReadingFrom: fileData)
+      unarchiver.requiresSecureCoding = false
+      NSKeyedUnarchiver.setClass(NSURL.self, forClassName: "NSURL")
+      NSKeyedUnarchiver.setClass(NSData.self, forClassName: "NSData")
+
+      guard
+        let permissions = unarchiver.decodeObject(
+          of: [NSDictionary.self, NSURL.self, NSData.self], forKey: NSKeyedArchiveRootObjectKey)
+          as? Permissions
+      else { return nil }
+      guard let (_, data) = permissions.first else { return nil }
+      restored =
+        try NSURL(
+          resolvingBookmarkData: data,
+          options: .withSecurityScope,
+          relativeTo: nil,
+          bookmarkDataIsStale: &isStale) as URL
     } catch {
-        print(error)
-        return nil
+      print(error)
+      return nil
     }
 
     guard !isStale.boolValue else { return nil }
