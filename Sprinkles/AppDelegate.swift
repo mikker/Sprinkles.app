@@ -1,8 +1,8 @@
 import Cocoa
 import Defaults
-import Preferences
+import Settings
 
-extension Preferences.PaneIdentifier {
+extension Settings.PaneIdentifier {
   static let general = Self("general")
 }
 
@@ -10,8 +10,8 @@ extension Preferences.PaneIdentifier {
 class AppDelegate: NSObject, NSApplicationDelegate {
   @IBOutlet var onboarding: OnboardingController!
 
-  lazy var preferences = PreferencesWindowController(
-    preferencePanes: [GeneralPreferencesController()], style: .segmentedControl)
+  lazy var preferences = SettingsWindowController(
+    panes: [GeneralPreferencesController()], style: .segmentedControl)
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     if Defaults[.userId] == nil {

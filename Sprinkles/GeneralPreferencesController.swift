@@ -1,13 +1,13 @@
 import Cocoa
 import Defaults
 import LaunchAtLogin
-import Preferences
+import Settings
 import SafariServices
 
-class GeneralPreferencesController: NSViewController, PreferencePane {
-  var preferencePaneIdentifier = Preferences.PaneIdentifier.general
-  var preferencePaneTitle = "General"
-
+class GeneralPreferencesController: NSViewController, SettingsPane {
+    var paneIdentifier = Settings.PaneIdentifier.general
+    var paneTitle: String = "General"
+    
   override var nibName: NSNib.Name? { "General" }
 
   @IBOutlet var statusLight: NSButton!

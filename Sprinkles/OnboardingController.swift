@@ -153,7 +153,7 @@ class OnboardingStep3View: NSView {
     controller.close()
 
     if let delegate = NSApplication.shared.delegate as? AppDelegate {
-      delegate.preferences.show(preferencePane: .general)
+      delegate.preferences.show()
     }
   }
 }

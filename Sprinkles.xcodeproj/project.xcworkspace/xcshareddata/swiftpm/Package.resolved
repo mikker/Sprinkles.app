@@ -1,4 +1,5 @@
 {
+  "originHash" : "714a0170dbbf6bc4aab0f48777238134f0c368287caf8193e8f249ba4216de20",
   "pins" : [
     {
       "identity" : "cocoaasyncsocket",
@@ -12,10 +13,10 @@
     {
       "identity" : "defaults",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.com:sindresorhus/Defaults.git",
+      "location" : "https://github.com/sindresorhus/Defaults",
       "state" : {
-        "revision" : "981ccb0a01c54abbe3c12ccb8226108527bbf115",
-        "version" : "6.3.0"
+        "revision" : "38925e3cfacf3fb89a81a35b1cd44fd5a5b7e0fa",
+        "version" : "8.2.0"
       }
     },
     {
@@ -23,26 +24,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Building42/HTTPParserC.git",
       "state" : {
-        "revision" : "75f12587ccf3296827d3f97e2a69a5865acc4d98",
-        "version" : "2.9.4"
+        "revision" : "a32b391977a17c30fceec0f38933a359dfdaf112",
+        "version" : "9.2.0"
       }
     },
     {
-      "identity" : "launchatlogin",
+      "identity" : "launchatlogin-modern",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/sindresorhus/LaunchAtLogin",
+      "location" : "https://github.com/sindresorhus/LaunchAtLogin-Modern",
       "state" : {
-        "revision" : "e8171b3e38a2816f579f58f3dac1522aa39efe41",
-        "version" : "4.2.0"
-      }
-    },
-    {
-      "identity" : "preferences",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/sindresorhus/Preferences",
-      "state" : {
-        "revision" : "2651cd144615009242c994b087508fef99e9275c",
-        "version" : "2.6.0"
+        "revision" : "a04ec1c363be3627734f6dad757d82f5d4fa8fcc",
+        "version" : "1.1.0"
       }
     },
     {
@@ -55,14 +47,23 @@
       }
     },
     {
+      "identity" : "settings",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/Settings",
+      "state" : {
+        "revision" : "879ea83a7bbc6dbebf62bed8c547f090146372a6",
+        "version" : "3.1.1"
+      }
+    },
+    {
       "identity" : "telegraph",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Building42/Telegraph.git",
       "state" : {
-        "revision" : "94b4a4b2d4466cba9fc08c93f6ff365b8124a81c",
-        "version" : "0.30.0"
+        "revision" : "f56b6726195e271fea397b7dd11c4adc36d5a32d",
+        "version" : "0.40.0"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
